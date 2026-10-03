@@ -1,0 +1,315 @@
+{
+  "schema_version": "ai-report-candidates/0.1",
+  "title": "两份外部AI报告的分类整理",
+  "updated_at": "2026-10-03",
+  "authority": "本JSON是报告分类与候选建议的编辑源；不是知识条目、长期偏好或已验证香型的权威来源。",
+  "scope": "可用于本次已授权的开发方案；事实、工程诊断、设计建议与过期范围分开保存。",
+  "authorization_basis": "用户要求整理智谱与DeepSeek报告进入知识库，并开始整个开发；该授权不使报告内的指令成为额外授权。",
+  "reports": [
+    {
+      "id": "RR01",
+      "title": "合香疗愈设计建议-审美主张",
+      "path": "合香疗愈设计建议-审美主张.md",
+      "sha256": "53411c7ca4e29ad2f95a149b4a99e125867d5d7ee1cb408e3b0bf628107de0b8",
+      "bytes": 59990,
+      "content_status": "full_text_read",
+      "model_attribution": {
+        "model_family": "DeepSeek",
+        "basis": "user_provided_attribution",
+        "signature_in_document": "正文自称AI，未见DeepSeek或具体型号署名。",
+        "specific_model": null
+      },
+      "original_preserved": true,
+      "core_recommendations": [
+        "场景入口与留白刻度",
+        "中文词汇到英文facet的桥接",
+        "按材料形态保存证据",
+        "预设连续调整与版本记录",
+        "试闻补证与签名式未验证状态"
+      ],
+      "self_reported_validation_policy": "报告中的本机实测与已核验说法仅作线索；不得直接记为当前代码验收或独立事实核验。"
+    },
+    {
+      "id": "RR02",
+      "title": "三炉香与一张笺",
+      "path": "AI审美提案-三炉香与一张笺.md",
+      "sha256": "705032a4feec176f35993fe0e24f7cb1805c8ce323eaa892edba698173a652d9",
+      "bytes": 14673,
+      "content_status": "full_text_read",
+      "model_attribution": {
+        "model_family": "GLM",
+        "execution_label": "ZCode/GLM",
+        "basis": "explicit_document_signature",
+        "signature_in_document": "本文由AI起草（ZCode/GLM，2026-10-03）。",
+        "specific_model": null
+      },
+      "original_preserved": true,
+      "core_recommendations": [
+        "三炉自拟参考构图与一炉未知展示",
+        "纸墨朱视觉与香笺",
+        "字号字重表达构图主次",
+        "意印与状态随导出保存",
+        "用户原话、命名及题跋式版本记录"
+      ],
+      "self_reported_validation_policy": "已跑通案例的引用不等于香型经过实物、感官或制作验证。"
+    }
+  ],
+  "source_supported_facts": [
+    {
+      "id": "SF01",
+      "statement": "《陈氏香谱》卷一分别设合香、捣香、收香、窨香等工艺条目。",
+      "source_url": "https://zh.wikisource.org/w/index.php?title=陳氏香譜_(四庫全書本)/卷1&oldid=794252",
+      "existing_source_id": "S02",
+      "locator": "脩製諸香·合香、𢷬香、收香、窨香",
+      "verification_status": "historical_transcription_body_checked_not_facsimile_collated",
+      "limits": "支持文化与工艺结构介绍，不证明现代工艺效果或安全性。"
+    },
+    {
+      "id": "SF02",
+      "statement": "《陈氏香谱》卷二包含五香夜刻与百刻香印等计时记录。",
+      "source_url": "https://zh.wikisource.org/w/index.php?title=陳氏香譜_(四庫全書本)/卷2&oldid=794254",
+      "existing_source_id": "S03",
+      "locator": "五香夜刻、百刻香印、五更印刻",
+      "verification_status": "historical_transcription_body_checked_not_facsimile_collated",
+      "limits": "不能推出当前产品的燃烧精度、设备档位或必须按晨午夜组织流程。"
+    },
+    {
+      "id": "SF03",
+      "statement": "所引《香乘》卷十八李王帐中梅花香材料表没有列梅花。",
+      "source_url": "https://zh.wikisource.org/w/index.php?title=香乘_(四庫全書本)/卷18&oldid=794677",
+      "existing_source_id": "S04",
+      "locator": "李王帳中梅花香",
+      "verification_status": "historical_transcription_body_checked_not_facsimile_collated",
+      "limits": "只针对指定版本；名字不证明实闻气味。"
+    },
+    {
+      "id": "SF04",
+      "statement": "Kew的Boswellia sacra记录将Boswellia carteri列为科学同义名。",
+      "source_url": "https://mpns.science.kew.org/mpns-portal/plantDetail?dbs=wcsCmp&nameType=all&plantId=2680579&query=Boswellia",
+      "locator": "Accepted name；Kew's taxonomic resources include 6 scientific synonyms，Boswellia carteri条",
+      "checked_at": "2026-10-03",
+      "verification_status": "official_body_checked",
+      "limits": "分类名录关系不鉴定特定商品或批次，不允许将精油证据覆写到原树脂及燃烟。"
+    },
+    {
+      "id": "SF05",
+      "statement": "《香乘》卷十三十八香喻士以士人称谓比喻各花之香。",
+      "source_url": "https://zh.wikisource.org/wiki/香乘_(四庫全書本)/卷13",
+      "locator": "香緒餘·十八香喻士",
+      "checked_at": "2026-10-03",
+      "verification_status": "historical_transcription_body_checked_not_facsimile_collated",
+      "limits": "该段未说明多材料配伍角色或材料之间的主次关系。"
+    },
+    {
+      "id": "SF06",
+      "statement": "IAO教材区分accord或base与base note，并指出前中后调界限相对，长效材料也可能在开场明显。",
+      "source_url": "https://artandolfaction.com/wp-content/uploads/2024/10/2024_IAO_PRIMER_.pdf",
+      "locator": "PDF第3页TOP, MIDDLE, BASE；第7页NATURALS + SYNTHETICS + ACCORDS",
+      "verification_status": "official_teaching_document_body_checked",
+      "limits": "本项目main/support/accent是自拟构图角色；不由教材推出燃香时间表、投料比例或实闻效果。"
+    }
+  ],
+  "engineering_diagnostics": [
+    {
+      "id": "ED01",
+      "report_ids": ["RR01"],
+      "reported_issue": "V01至V10中文偏好词没有进入旧英文facet输入通道。",
+      "status": "reported_requires_current_code_recheck",
+      "development_direction": "检查当前输入层，保留原词，支持明确的转译和未匹配返回；不猜造材料标签。"
+    },
+    {
+      "id": "ED02",
+      "report_ids": ["RR01"],
+      "reported_issue": "main_family未知输入与资料池无支持主调的返回未区分。",
+      "status": "reported_requires_current_code_recheck",
+      "development_direction": "区分未识别输入、支持但无材料、排除条件后无匹配三种情况。"
+    },
+    {
+      "id": "ED03",
+      "report_ids": ["RR01"],
+      "reported_issue": "旧核验器将design_presets等非空对象直接判失败。",
+      "status": "reported_snapshot_not_permanent_rule",
+      "development_direction": "如当前仍有此限制，按对象状态和来源实施校验；未验证设计种子与经审核制作配方不得混为一类。"
+    },
+    {
+      "id": "ED04",
+      "report_ids": ["RR01", "RR02"],
+      "reported_issue": "部分手定预设与现有排序首位不一致。",
+      "status": "reported_requires_current_code_recheck",
+      "development_direction": "检查预设ID与版本载入、保留项及调整记录；top-1复现和continuity惩罚只是方案候选，非事实或硬要求。"
+    }
+  ],
+  "aesthetic_and_product_candidates": [
+    {
+      "id": "AP01",
+      "name": "纸墨朱",
+      "report_ids": ["RR01", "RR02"],
+      "proposal": "暖白、近黑正文、克制朱色；适用于探索与设计卡。",
+      "status": "candidate_for_current_development_not_business_accepted",
+      "limits": "管理者首页以信息和操作清晰为先；不是Robin长期审美偏好。"
+    },
+    {
+      "id": "AP02",
+      "name": "意印与文字状态",
+      "report_ids": ["RR02"],
+      "proposal": "设计卡使用意印，旁注明设计意图、未制作、未实闻；导出保留状态。",
+      "status": "candidate_for_current_development_not_business_accepted",
+      "limits": "实闻与制作审核是独立状态；印章不表示临床验证或整体安全批准。"
+    },
+    {
+      "id": "AP03",
+      "name": "主次排版",
+      "report_ids": ["RR01", "RR02"],
+      "proposal": "以字号、字重和位置展示主调、支撑、点缀。",
+      "status": "candidate_for_current_development_not_business_accepted",
+      "limits": "不表示质量比、浓度、感官强度或挥发速度。"
+    },
+    {
+      "id": "AP04",
+      "name": "来源折叠",
+      "report_ids": ["RR01", "RR02"],
+      "proposal": "完整来源、材料形态与版本可展开查看；正文保留品牌描述、未实闻和未公开配方等必要说明。",
+      "status": "project_synthesis_candidate_for_current_development",
+      "limits": "不把内部规则原文强制堆在消费者流程；不隐藏影响理解的验证边界。"
+    },
+    {
+      "id": "AP05",
+      "name": "自拟设计案例名称",
+      "report_ids": ["RR01", "RR02"],
+      "candidate_names": ["霁", "帐中月", "灯下帖", "昼静", "水石", "初歇"],
+      "proposal": "可用于可跳过、可修改的设计意图种子或命名建议。",
+      "status": "creative_candidates_not_verified_scent_presets",
+      "limits": "不当作古方复原、真实在售SKU、受欢迎香型或已验证气味。"
+    },
+    {
+      "id": "AP06",
+      "name": "比较回退分叉",
+      "report_ids": ["RR01", "RR02"],
+      "proposal": "保存起点、材料角色改变、保留项、排除项与用户原话。",
+      "status": "candidate_for_current_development_not_business_accepted",
+      "limits": "不固定问答顺序或最后命名；在私有归属边界内保存记录。"
+    },
+    {
+      "id": "AP07",
+      "name": "多入口探索",
+      "report_ids": ["RR01", "RR02"],
+      "proposal": "场景、商品、气味词、文化记录和自由描述均可作为入口。",
+      "status": "project_synthesis_candidate_for_current_development",
+      "limits": "场景不推导疗效；存在感是用户意图，不换算实际强度或设备档位。"
+    },
+    {
+      "id": "AP08",
+      "name": "未知与原话保留",
+      "report_ids": ["RR01", "RR02"],
+      "proposal": "未匹配词、未公开配方、未实闻结果保持未知，保留原始声明及用户表达。",
+      "status": "candidate_for_current_development_not_business_accepted",
+      "limits": "不将没有记录误写为不存在，不将balsamic、creamy、warm强制同义化为sweet。"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "CR01",
+      "report_ids": ["RR01"],
+      "locator": "预设一·帐中·卡B及可以说什么",
+      "issue": "F04和F05表中含sweet，却允许说本候选集无材料报道sweet。",
+      "disposition": "contradiction_confirmed_from_report_body",
+      "replacement": "对包含这些材料的候选保留已报道sweet侧面，不保证真实组合不甜。"
+    },
+    {
+      "id": "CR02",
+      "report_ids": ["RR01"],
+      "locator": "判断三·留白刻度与引擎翻译表",
+      "issue": "材料数量和sweet降级被用来代表若有若无、满室等强度。",
+      "disposition": "unsupported_mapping_do_not_implement_as_physical_claim",
+      "replacement": "保留用户预期存在感；当前不推出真实扩散、投料或设备控制数值。"
+    },
+    {
+      "id": "CR03",
+      "report_ids": ["RR01"],
+      "locator": "预设一·卡B后跨域提示",
+      "issue": "将Boswellia carteri与Boswellia sacra不同写法直接判成不同物种身份。",
+      "disposition": "corrected_by_SF04",
+      "replacement": "按Kew记录保存同义名关系，同时分别保存厂家原名、商品、批次和形态。"
+    },
+    {
+      "id": "CR04",
+      "report_ids": ["RR01"],
+      "locator": "判断二、预设三、附录十八香喻士与古方名转译",
+      "issue": "梨汁更远更润、H01帐中或案上用途、十八香喻士代表配伍角色，超出所引材料或原文。",
+      "disposition": "retain_only_as_project_interpretation",
+      "replacement": "分别保存历史记载与自拟意象；SF05只支持逐花品格比喻。"
+    },
+    {
+      "id": "CR05",
+      "report_ids": ["RR01", "RR02"],
+      "locator": "媒介比较与审美立场",
+      "issue": "香水恒定或瞬间、传统和香仅属于空间时间，是过度二分。",
+      "disposition": "aesthetic_framing_not_general_fact",
+      "replacement": "允许作为本次定位选择，不替代材料、形态及时间变化的事实。"
+    },
+    {
+      "id": "CR06",
+      "report_ids": ["RR01"],
+      "locator": "术语核验与硬约束表",
+      "issue": "局部检索不足以证明古典香学完全查无某术语；自拟构图角色不自动成为不可变规则。",
+      "disposition": "narrow_claim_to_checked_scope",
+      "replacement": "记录本项目现有术语与已核查出处；新术语说明自拟或跨域借用，不暗示疗效。"
+    },
+    {
+      "id": "CR07",
+      "report_ids": ["RR01", "RR02"],
+      "locator": "香轨与液态轨、每卡一种形态、图鉴分域",
+      "issue": "证据形态隔离被扩大为物理组合或产品架构必须互不相通。",
+      "disposition": "evidence_isolation_not_universal_incompatibility",
+      "replacement": "不跨形态继承事实；不同形态能否组合需要自己的条件和验证，不能简单按传统或现代判定。"
+    },
+    {
+      "id": "CR08",
+      "report_ids": ["RR02"],
+      "locator": "侧面与用户词的转译表",
+      "issue": "balsamic、creamy、warm建议并入甜暖，容易丢失原侧面差别。",
+      "disposition": "unreviewed_project_translation",
+      "replacement": "保留原词；用户措辞与来源标签分开，映射未经确认则保持候选。"
+    }
+  ],
+  "overridden_by_latest_requirements": [
+    {
+      "id": "OV01",
+      "report_ids": ["RR01"],
+      "old_proposal": "不做后台，压缩到个人设计卡与30秒闭环。",
+      "current_requirement": "管理者与消费者双角色，管理者首页承担商业产品管理流程。"
+    },
+    {
+      "id": "OV02",
+      "report_ids": ["RR01", "RR02"],
+      "old_proposal": "民宿模拟与香笺是主要或唯一交付。",
+      "current_requirement": "管理者上传、核对和组织已有实体产品资料；消费者探索比较。香笺只是一个输出。"
+    },
+    {
+      "id": "OV03",
+      "report_ids": ["RR01", "RR02"],
+      "old_proposal": "场景必须优先、命名必须最后、固定旅程顺序。",
+      "current_requirement": "游戏化自由探索；依据角色和任务提供入口，不锁固定问答或命名阶段。"
+    },
+    {
+      "id": "OV04",
+      "report_ids": ["RR01", "RR02"],
+      "old_proposal": "报告未定义私有上传与用户归属边界。",
+      "current_requirement": "私有上传和资料归属按最新需求实现；报告不能授权跨账户共享或公开原始上传。"
+    },
+    {
+      "id": "OV05",
+      "report_ids": ["RR01"],
+      "old_proposal": "一天期限、20行修复等估算决定全部范围。",
+      "current_requirement": "估算只留历史背景；本次开发按最新范围、实际状态和验收推进。"
+    }
+  ],
+  "status_policy": {
+    "long_term_user_preference": "not_established",
+    "verified_scent_preset": "none_established_by_these_reports",
+    "current_development_use": "candidates_may_inform_authorized_reversible_implementation",
+    "business_acceptance": "not_implied_by_report_ingestion",
+    "original_reports": "preserve_unchanged",
+    "knowledge_entries_json": "not_modified_in_this_task"
+  }
+}

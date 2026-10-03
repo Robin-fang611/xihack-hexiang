@@ -1,0 +1,164 @@
+{
+  "schema_version": "design-presets/0.1",
+  "presets": [
+    {
+      "id": "preset_ji",
+      "name": "霁",
+      "subtitle": "木质与柑橘侧面的设计",
+      "scenario": "晨间阅读",
+      "intent": "以雪松作主调、乳香精油作点缀，探索木质与厂家报道的青绿、柑橘侧面。",
+      "components": [
+        {
+          "profile_id": "F02",
+          "role": "main",
+          "name": "阿特拉斯雪松精油 IFF参照",
+          "form": "essential_oil",
+          "source_id": "P04",
+          "source_url": "https://www.iff.com/scent/lmr-compendium/cedarwood-oil-atlas-org/",
+          "source_locator": "Olfactive Description；Type of Extract；Processed Part"
+        },
+        {
+          "profile_id": "F04",
+          "role": "accent",
+          "name": "乳香精油 dsm参照",
+          "form": "essential_oil",
+          "source_id": "P06",
+          "source_url": "https://studio.dsm-firmenich.com/product/olibanum-eo-cert-pe-967844",
+          "source_locator": "Olfactive description；Technology；Extracted part"
+        }
+      ],
+      "preferred_facets": [
+        "woody",
+        "citrus"
+      ],
+      "deemphasized_facets": [],
+      "excluded_ids": [],
+      "kind": "project_authored_design_intent",
+      "status": "untested_composite_design",
+      "stamp": "意",
+      "manufacturing_approved": false,
+      "sensory_verified": false,
+      "historical_reconstruction": false,
+      "proposal_source": "AI审美提案-三炉香与一张笺.md（GLM草案，项目择取构图）",
+      "limitations": [
+        "气味文字是设计意图，未实际混合或实闻",
+        "不输出比例、克数或制造工艺",
+        "非古方复原，无健康疗效或真实混合气味保证"
+      ]
+    },
+    {
+      "id": "preset_moon",
+      "name": "帐中月",
+      "subtitle": "木质、甜香与辛香的设计",
+      "scenario": "夜间阅读",
+      "intent": "以澳洲檀香作主调、安息香提取物作支撑、丁香花蕾精油作点缀，探索这些已报道侧面的主次。",
+      "components": [
+        {
+          "profile_id": "F01",
+          "role": "main",
+          "name": "澳洲檀香精油 Givaudan参照",
+          "form": "essential_oil",
+          "source_id": "P03",
+          "source_url": "https://www.givaudan.com/fragrance-beauty/fragrance-ingredients-business/natural-ingredients/sandalwood-oil-australia",
+          "source_locator": "Olfactive paragraph；General information"
+        },
+        {
+          "profile_id": "F03",
+          "role": "support",
+          "name": "暹罗安息香乙醇提取物 IFF参照",
+          "form": "resinoid_extract",
+          "source_id": "P05",
+          "source_url": "https://www.iff.com/scent/lmr-compendium/benzoin-resoid-siam/",
+          "source_locator": "Olfactive Description；Extraction with ethyl alcohol；Gum-resin"
+        },
+        {
+          "profile_id": "F05",
+          "role": "accent",
+          "name": "丁香花蕾精油 IFF参照",
+          "form": "essential_oil",
+          "source_id": "P07",
+          "source_url": "https://www.iff.com/scent/lmr-compendium/clove-bud-oil-org/",
+          "source_locator": "Olfactive Description；Type of Extract；Processed Part"
+        }
+      ],
+      "preferred_facets": [
+        "woody",
+        "sweet",
+        "spicy"
+      ],
+      "deemphasized_facets": [],
+      "excluded_ids": [],
+      "culture_reference": {
+        "historical_formula_id": "H02",
+        "relation": "仅借用帐中香的命名意境，不借用古方配料或工艺"
+      },
+      "kind": "project_authored_design_intent",
+      "status": "untested_composite_design",
+      "stamp": "意",
+      "manufacturing_approved": false,
+      "sensory_verified": false,
+      "historical_reconstruction": false,
+      "proposal_source": "AI审美提案-三炉香与一张笺.md（GLM草案，项目择取构图）",
+      "limitations": [
+        "气味文字是设计意图，未实际混合或实闻",
+        "不输出比例、克数或制造工艺",
+        "非古方复原，无健康疗效或真实混合气味保证"
+      ]
+    },
+    {
+      "id": "preset_letter",
+      "name": "灯下帖",
+      "subtitle": "辛香与木质的设计",
+      "scenario": "待客与阅读",
+      "intent": "以丁香花蕾精油作主调、雪松作支撑、乳香精油作点缀，探索辛香、木质与树脂侧面。",
+      "components": [
+        {
+          "profile_id": "F05",
+          "role": "main",
+          "name": "丁香花蕾精油 IFF参照",
+          "form": "essential_oil",
+          "source_id": "P07",
+          "source_url": "https://www.iff.com/scent/lmr-compendium/clove-bud-oil-org/",
+          "source_locator": "Olfactive Description；Type of Extract；Processed Part"
+        },
+        {
+          "profile_id": "F02",
+          "role": "support",
+          "name": "阿特拉斯雪松精油 IFF参照",
+          "form": "essential_oil",
+          "source_id": "P04",
+          "source_url": "https://www.iff.com/scent/lmr-compendium/cedarwood-oil-atlas-org/",
+          "source_locator": "Olfactive Description；Type of Extract；Processed Part"
+        },
+        {
+          "profile_id": "F04",
+          "role": "accent",
+          "name": "乳香精油 dsm参照",
+          "form": "essential_oil",
+          "source_id": "P06",
+          "source_url": "https://studio.dsm-firmenich.com/product/olibanum-eo-cert-pe-967844",
+          "source_locator": "Olfactive description；Technology；Extracted part"
+        }
+      ],
+      "preferred_facets": [
+        "spicy",
+        "woody",
+        "resinous"
+      ],
+      "deemphasized_facets": [],
+      "excluded_ids": [],
+      "kind": "project_authored_design_intent",
+      "status": "untested_composite_design",
+      "stamp": "意",
+      "manufacturing_approved": false,
+      "sensory_verified": false,
+      "historical_reconstruction": false,
+      "proposal_source": "AI审美提案-三炉香与一张笺.md（GLM草案，项目择取构图）",
+      "limitations": [
+        "气味文字是设计意图，未实际混合或实闻",
+        "不输出比例、克数或制造工艺",
+        "非古方复原，无健康疗效或真实混合气味保证"
+      ]
+    }
+  ]
+}

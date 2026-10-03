@@ -1,0 +1,13 @@
+# 本机账号、私人上传、数据库与会话永不公开
+**/.local/
+**/__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+*.sqlite
+*.sqlite3
+*.db
+*.log
+.venv/
+node_modules/

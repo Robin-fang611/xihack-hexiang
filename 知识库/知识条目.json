@@ -1,0 +1,1142 @@
+{
+  "schema_version": "scent-knowledge/0.1",
+  "title": "合香知识库首版",
+  "updated_at": "2026-10-03",
+  "authority": "本JSON是知识条目的编辑源；可读版由此生成。",
+  "purpose": "支持数字合香文化探索、偏好表达与有来源的设计说明；流程和玩法不固定。",
+  "review_boundary": "source_statement_checked只代表所引正文支持陈述，不代表实物身份、感官、制作或临床验证。",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "和香制作技艺",
+      "publisher": "北京市石景山区政府",
+      "url": "https://www.bjsjs.gov.cn/gongkai/zwgkpd/ztzl/2024/fyjxmsg/fwzwhycml/sjxm/202410/t20241018_86288.shtml",
+      "type": "official_culture",
+      "locator": "正文唯一介绍段，取材、炮制、配伍及成品形态",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "未核实全文/图片再分发许可；只留自主简述与链接",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "特定非遗项目介绍，养生表述不作为临床证据。"
+    },
+    {
+      "id": "S02",
+      "title": "陈氏香谱 四库全书本 卷一",
+      "publisher": "陈敬；维基文库转录",
+      "url": "https://zh.wikisource.org/w/index.php?title=%E9%99%B3%E6%B0%8F%E9%A6%99%E8%AD%9C_(%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC)%2F%E5%8D%B71&oldid=794252",
+      "type": "primary_historical_transcription",
+      "locator": "脩製諸香·合香/𢷬香/收香/窨香；香草名釋",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "页面声明古籍正文公有领域，页面编辑文字CC BY-SA 4.0；保留署名与版本",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "已核对转录，未逐字校勘影印；古代经验不等同现代验证。"
+    },
+    {
+      "id": "S03",
+      "title": "陈氏香谱 四库全书本 卷二",
+      "publisher": "陈敬；维基文库转录",
+      "url": "https://zh.wikisource.org/w/index.php?title=%E9%99%B3%E6%B0%8F%E9%A6%99%E8%AD%9C_(%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC)%2F%E5%8D%B72&oldid=794254",
+      "type": "primary_historical_transcription",
+      "locator": "赵清献公香；江南李主帳中香及其又方；五香夜刻/百刻香印",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "页面声明古籍正文公有领域，页面编辑文字CC BY-SA 4.0；保留署名与版本",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "已核对转录，未逐字校勘影印；不同变体不能合并。"
+    },
+    {
+      "id": "S04",
+      "title": "香乘 四库全书本 卷十八",
+      "publisher": "周嘉胄；维基文库转录",
+      "url": "https://zh.wikisource.org/w/index.php?title=%E9%A6%99%E4%B9%98_(%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC)%2F%E5%8D%B718&oldid=794677",
+      "type": "primary_historical_transcription",
+      "locator": "李王帳中梅花香",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "页面声明古籍正文公有领域，页面编辑文字CC BY-SA 4.0；保留署名与版本",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "材料古名未作现代身份映射；仅历史参考。"
+    },
+    {
+      "id": "S05",
+      "title": "Benzoe tonkinensis 2014规格",
+      "publisher": "FAO/WHO JECFA",
+      "url": "https://www.fao.org/fileadmin/user_upload/jecfa_additives/docs/monograph16/additive-522-m16.pdf",
+      "type": "official_material_specification",
+      "locator": "PDF第1页 DEFINITION、DESCRIPTION",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "未核实批量再分发许可；只留自主简述与链接",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "2014版替代2011暂定版；食品香料规格不能解释为燃香安全或疗效许可。"
+    },
+    {
+      "id": "S06",
+      "title": "Monograph on Benzoin Chapter 8 Marketing",
+      "publisher": "FAO",
+      "url": "https://www.fao.org/4/ac776e/ac776e0e.htm",
+      "type": "official_technical_monograph",
+      "locator": "8.1.2.1 Intrinsic quality；8.1.2.3 Quality criteria",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "未核实全文再分发许可；只留自主简述与链接",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "旧技术资料，仅用来区分树脂来源与原料描述，不采用旧行情。"
+    },
+    {
+      "id": "S07",
+      "title": "Santalum album Ecocrop 9546",
+      "publisher": "FAO",
+      "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/cropView?id=9546",
+      "type": "official_plant_record",
+      "locator": "Notes·USES",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "未核实批量再分发许可；只留自主简述与链接",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "只支持该物种部位与用途，不鉴定市售檀香。"
+    },
+    {
+      "id": "S08",
+      "title": "Flavours and fragrances of plant origin",
+      "publisher": "FAO",
+      "url": "https://www.fao.org/4/v5350e/v5350e.pdf",
+      "type": "official_technical_monograph",
+      "locator": "Chapter 6 Sandalwood oil·DESCRIPTION AND USES；PDF第62页/印刷第53页",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "未核实全文再分发许可；只留自主简述与链接",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "1995技术资料；气味陈述只针对Santalum album精油，不适用于木粉、燃香或现行贸易。"
+    },
+    {
+      "id": "S09",
+      "title": "Boswellia sacra General information",
+      "publisher": "Kew POWO",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:127065-1/general-information",
+      "type": "botanical_institution",
+      "locator": "Taxonomy；Kew Species Profiles·General Description、Uses",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "分类骨架列CC BY 3.0，Species Profiles列CC BY-NC-SA 3.0；不复制图文，不整体导入模型",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "同页来源与许可分层；种属身份与感官用途分开。"
+    },
+    {
+      "id": "S10",
+      "title": "Syzygium aromaticum General information",
+      "publisher": "Kew POWO",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:601421-1/general-information",
+      "type": "botanical_institution",
+      "locator": "Taxonomy；Kew Species Profiles·General Description、Flowers、Perfumery",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "分类骨架列CC BY 3.0，Species Profiles列CC BY-NC-SA 3.0；不复制图文，不整体导入模型",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "花蕾、叶、精油分开；药理信息不纳入闻香功效。"
+    },
+    {
+      "id": "S11",
+      "title": "Commiphora myrrha Taxonomy",
+      "publisher": "Kew POWO",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:127741-1",
+      "type": "botanical_institution",
+      "locator": "Taxonomy，accepted name与synonyms",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "分类骨架CC BY 3.0；其他分源内容单独核对",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "学名核对不能替代原料鉴定。"
+    },
+    {
+      "id": "S12",
+      "title": "Santalum album Taxonomy",
+      "publisher": "Kew POWO",
+      "url": "https://powo.science.kew.org/taxon/780592-1",
+      "type": "botanical_institution",
+      "locator": "Taxonomy，accepted name",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "分类骨架CC BY 3.0；其他分源内容单独核对",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "不直接把古籍白檀、紫檀、黄檀归并为该物种。"
+    },
+    {
+      "id": "S13",
+      "title": "Aquilaria sinensis Taxonomy",
+      "publisher": "Kew POWO",
+      "url": "https://powo.science.kew.org/taxon/830849-1",
+      "type": "botanical_institution",
+      "locator": "Taxonomy，accepted name",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "分类骨架CC BY 3.0；其他分源内容单独核对",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "只确认植物学名，不能证明任一沉香商品都来自该物种。"
+    },
+    {
+      "id": "S14",
+      "title": "线香之源 从选用宜忌到保育",
+      "publisher": "香港消费者委员会",
+      "url": "https://www.consumer.org.hk/tc/article/578-incense-sticks/578-incense-sticks-fragrance",
+      "type": "official_consumer_publication",
+      "locator": "香料、香材介绍段",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "未核实全文/图片再分发许可；只留自主简述与链接",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "当代线香材料介绍，不提供统一气味量表或本项目配方审核。"
+    },
+    {
+      "id": "S15",
+      "title": "Myrrha herbal medicinal product",
+      "publisher": "European Medicines Agency",
+      "url": "https://www.ema.europa.eu/en/medicines/herbal/myrrha",
+      "type": "official_herbal_monograph",
+      "locator": "Overview·myrrh resin、preparations",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "只留自主简述与链接，不复制正文",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "药用提取物评估不能迁移为燃香/吸入疗效或安全结论。"
+    },
+    {
+      "id": "S16",
+      "title": "Analysis for Characteristic Chemicals of Incense of Burning Agarwood from Three Production Zones",
+      "publisher": "林业科学；中国林科院相关研究作者",
+      "url": "https://www.linyekexue.net/EN/abstract/abstract9655.shtml",
+      "type": "original_research",
+      "locator": "Abstract·Methods/Results",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "未核实全文批量再分发许可；只留自主简述与链接",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "研究燃烧烟气与化学分析，不支持将色谱峰面积作为用户香气强度。"
+    },
+    {
+      "id": "S17",
+      "title": "An olfactory demography of a diverse metropolitan population",
+      "publisher": "Keller等；BMC Neuroscience 2012",
+      "url": "https://link.springer.com/article/10.1186/1471-2202-13-122",
+      "type": "original_research",
+      "locator": "Abstract·Results；Conclusions；Rights and permissions",
+      "content_status": "relevant_body_read",
+      "checked_at": "2026-10-03",
+      "rights_note": "CC BY 2.0；留作者、出处与改写标记",
+      "ingestion": "own_short_factual_paraphrase_and_link; no_images_or_fulltext",
+      "limitations": "人群嗅觉差异研究，不直接提供中国合香材料的气味映射。"
+    }
+  ],
+  "materials": [
+    {
+      "id": "M01",
+      "name": "沉香",
+      "identity_status": "trade_name_to_species_not_fully_mapped",
+      "source_plant_candidate": "Aquilaria sinensis (Lour.) Spreng.",
+      "forms": [
+        {
+          "id": "M01_unidentified_incense_material",
+          "object_form": "unidentified_material",
+          "name": "沉香香材，具体来源与部位待核对",
+          "sensory_tags": []
+        }
+      ],
+      "facts": [
+        {
+          "id": "M01F1",
+          "text": "Kew将Aquilaria sinensis列为接受的植物学名。",
+          "kind": "botanical_identity",
+          "evidence": [
+            {
+              "source_id": "S13",
+              "locator": "Taxonomy，accepted name",
+              "object_form": "plant_taxonomy",
+              "support_status": "direct_text_support"
+            }
+          ],
+          "limitations": "",
+          "content_status": "source_statement_checked"
+        },
+        {
+          "id": "M01F2",
+          "text": "香港消委会将沉香列为线香使用的香材。",
+          "kind": "modern_source_statement",
+          "evidence": [
+            {
+              "source_id": "S14",
+              "locator": "香材介绍中的沉香",
+              "object_form": "incense_ingredient",
+              "support_status": "direct_text_support"
+            }
+          ],
+          "limitations": "",
+          "content_status": "source_statement_checked"
+        },
+        {
+          "id": "M01F3",
+          "text": "该林业研究分析燃烧沉香的烟气化学特征。",
+          "kind": "study_scope",
+          "evidence": [
+            {
+              "source_id": "S16",
+              "locator": "Abstract·Methods",
+              "object_form": "burning_fumes",
+              "support_status": "direct_text_support"
+            }
+          ],
+          "limitations": "不将化合物检测当作整块原料实闻。",
+          "content_status": "source_statement_checked"
+        }
+      ],
+      "gaps": [
+        "市售材料与物种、树脂部位对应",
+        "原料实闻细标签",
+        "经审核配伍"
+      ],
+      "sample_smelling_status": "not_performed"
+    },
+    {
+      "id": "M02",
+      "name": "檀香 Santalum album限定资料",
+      "identity_status": "source_species_named; trade_lot_not_authenticated",
+      "source_plant_candidate": "Santalum album L.",
+      "forms": [
+        {
+          "id": "M02_wood",
+          "object_form": "wood",
+          "name": "该物种木材/木屑",
+          "sensory_tags": []
+        },
+        {
+          "id": "M02_oil",
+          "object_form": "essential_oil",
+          "name": "该物种根和心材蒸馏油",
+          "sensory_tags": [
+            {
+              "tag_id": "V01",
+              "label": "木质",
+              "evidence": {
+                "source_id": "S08",
+                "locator": "Chapter 6 DESCRIPTION AND USES",
+                "object_form": "essential_oil",
+                "support_status": "direct_text_support"
+              },
+              "mapping_status": "project_translation_of_source_description"
+            },
+            {
+              "tag_id": "V08",
+              "label": "甜香",
+              "evidence": {
+                "source_id": "S08",
+                "locator": "Chapter 6 DESCRIPTION AND USES",
+                "object_form": "essential_oil",
+                "support_status": "direct_text_support"
+              },
+              "mapping_status": "project_translation_of_source_description"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "M02F1",
+          "text": "Kew列Santalum album为接受学名；FAO记录其根和心材用于提油，木屑用于制香。",
+          "kind": "modern_source_statement",
+          "evidence": [
+            {
+              "source_id": "S12",
+              "locator": "Taxonomy",
+              "object_form": "plant_taxonomy",
+              "support_status": "direct_text_support"
+            },
+            {
+              "source_id": "S07",
+              "locator": "Notes·USES",
+              "object_form": "wood_and_oil_source",
+              "support_status": "direct_text_support"
+            }
+          ],
+          "limitations": "",
+          "content_status": "source_statement_checked"
+        },
+        {
+          "id": "M02F2",
+          "text": "FAO专著将该物种檀香油描述为带甜感的木质气味。",
+          "kind": "form_specific_sensory_statement",
+          "evidence": [
+            {
+              "source_id": "S08",
+              "locator": "Chapter 6 DESCRIPTION AND USES；印刷53页",
+              "object_form": "essential_oil",
+              "support_status": "direct_text_support"
+            }
+          ],
+          "limitations": "不能转给木粉、燃烧烟气或任何新配方。",
+          "content_status": "source_statement_checked"
+        }
+      ],
+      "gaps": [
+        "古籍白檀/紫檀与现代物种对勘",
+        "原料木粉和燃香的具体气味"
+      ],
+      "sample_smelling_status": "not_performed"
+    },
+    {
+      "id": "M03",
+      "name": "丁香 Clove限定资料",
+      "identity_status": "source_species_named; historical_name_mapping_pending",
+      "source_plant_candidate": "Syzygium aromaticum (L.) Merr. & L.M.Perry",
+      "forms": [
+        {
+          "id": "M03_dried_bud",
+          "object_form": "dried_flower_bud",
+          "name": "干燥未开放花蕾",
+          "sensory_tags": []
+        },
+        {
+          "id": "M03_bud_oil",
+          "object_form": "essential_oil",
+          "name": "花蕾提取油",
+          "sensory_tags": []
+        },
+        {
+          "id": "M03_leaf_oil",
+          "object_form": "essential_oil",
+          "name": "叶提取油",
+          "sensory_tags": []
+        }
+      ],
+      "facts": [
+        {
+          "id": "M03F1",
+          "text": "Kew所述clove为收获并干燥的未开放花蕾。",
+          "kind": "modern_source_statement",
+          "evidence": [
+            {
+              "source_id": "S10",
+              "locator": "Flowers；General Description",
+              "object_form": "dried_flower_bud",
+              "support_status": "direct_text_support"
+            }
+          ],
+          "limitations": "",
+          "content_status": "source_statement_checked"
+        },
+        {
+          "id": "M03F2",
+          "text": "该来源另记花蕾与叶可以提油用于香料制造。",
+          "kind": "modern_source_statement",
+          "evidence": [
+            {
+              "source_id": "S10",
+              "locator": "Perfumery",
+              "object_form": "buds_and_leaves_for_oil",
+              "support_status": "direct_text_support"
+            }
+          ],
+          "limitations": "",
+          "content_status": "source_statement_checked"
+        },
+        {
+          "id": "M03F3",
+          "text": "《香乘》卷十八的李王帐中梅花香列有丁香。",
+          "kind": "historical_statement",
+          "evidence": [
+            {
+              "source_id": "S04",
+              "locator": "李王帳中梅花香材料表",
+              "object_form": "historical_name",
+              "support_status": "direct_text_support"
+            }
+          ],
+          "limitations": "古籍名称与当前样品身份尚未对勘。",
+          "content_status": "source_statement_checked"
+        }
+      ],
+      "gaps": [
+        "原花蕾细嗅觉标签",
+        "具体材料与历史丁香的对应",
+        "气味及配伍实闻"
+      ],
+      "sample_smelling_status": "not_performed"
+    },
+    {
+      "id": "M04",
+      "name": "乳香 Boswellia sacra限定资料",
+      "identity_status": "source_species_named; generic_frankincense_not_single_species",
+      "source_plant_candidate": "Boswellia sacra Flück.",
+      "forms": [
+        {
+          "id": "M04_resin",
+          "object_form": "oleo_gum_resin",
+          "name": "该来源油胶树脂",
+          "sensory_tags": []
+        },
+        {
+          "id": "M04_burned_fumes",
+          "object_form": "burning_fumes",
+          "name": "该来源树脂燃烧烟气",
+          "sensory_tags": []
+        }
+      ],
+      "facts": [
+        {
+          "id": "M04F1",
+          "text": "Kew确认该植物为乳香油胶树脂来源之一，乳香商品通称还涉及相关物种。",
+          "kind": "modern_source_statement",
+          "evidence": [
+            {
+              "source_id": "S09",
+              "locator": "Kew Species Profiles·General Description",
+              "object_form": "oleo_gum_resin",
+              "support_status": "direct_text_support"
+            }
+          ],
+          "limitations": "",
+          "content_status": "source_statement_checked"
+        },
+        {
+          "id": "M04F2",
+          "text": "Kew记录该来源乳香燃烧时产生芳香烟气。",
+          "kind": "form_specific_sensory_statement",
+          "evidence": [
+            {
+              "source_id": "S09",
+              "locator": "Kew Species Profiles·Uses",
+              "object_form": "burning_fumes",
+              "support_status": "direct_text_support"
+            }
+          ],
+          "limitations": "不细化为未经该来源支持的柑橘、松针得分。",
+          "content_status": "source_statement_checked"
+        }
+      ],
+      "gaps": [
+        "具体采购样品身份",
+        "原树脂与精油细标签",
+        "历史乳香现代映射"
+      ],
+      "sample_smelling_status": "not_performed"
+    },
+    {
+      "id": "M05",
+      "name": "暹罗安息香 Siam benzoin限定资料",
+      "identity_status": "source_definition_named; Chinese_trade_name_mapping_pending",
+      "source_plant_candidate": "Styrax tonkinensis Pierre.",
+      "forms": [
+        {
+          "id": "M05_resin",
+          "object_form": "raw_resin",
+          "name": "暹罗安息香原树脂",
+          "sensory_tags": [
+            {
+              "tag_id": "V08",
+              "label": "香草样甜香参照",
+              "evidence": {
+                "source_id": "S05",
+                "locator": "PDF第1页 DESCRIPTION",
+                "object_form": "raw_resin",
+                "support_status": "direct_text_support"
+              },
+              "mapping_status": "project_translation_of_source_description"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "M05F1",
+          "text": "FAO2014规格定义该物质为Styrax tonkinensis来源的天然香脂树脂，并排除苏门答腊安息香。",
+          "kind": "modern_source_statement",
+          "evidence": [
+            {
+              "source_id": "S05",
+              "locator": "PDF第1页 DEFINITION",
+              "object_form": "raw_resin",
+              "support_status": "direct_text_support"
+            }
+          ],
+          "limitations": "",
+          "content_status": "source_statement_checked"
+        },
+        {
+          "id": "M05F2",
+          "text": "同一规格描述原树脂具有明显香草样气味。",
+          "kind": "form_specific_sensory_statement",
+          "evidence": [
+            {
+              "source_id": "S05",
+              "locator": "PDF第1页 DESCRIPTION",
+              "object_form": "raw_resin",
+              "support_status": "direct_text_support"
+            }
+          ],
+          "limitations": "不外推燃烧后气味、混合效果或吸入安全。",
+          "content_status": "source_statement_checked"
+        },
+        {
+          "id": "M05F3",
+          "text": "FAO另指出安息香不同物种和产地可有不同感官特点。",
+          "kind": "modern_source_statement",
+          "evidence": [
+            {
+              "source_id": "S06",
+              "locator": "8.1.2.1 Intrinsic quality",
+              "object_form": "benzoin_resin",
+              "support_status": "direct_text_support"
+            }
+          ],
+          "limitations": "",
+          "content_status": "source_statement_checked"
+        }
+      ],
+      "gaps": [
+        "中文商品名与来源定义的逐项对照",
+        "燃烧与混合后的实闻",
+        "与同名benzoin化合物的消歧"
+      ],
+      "sample_smelling_status": "not_performed"
+    },
+    {
+      "id": "M06",
+      "name": "没药 Commiphora myrrha限定资料",
+      "identity_status": "source_species_named; trade_lot_not_authenticated",
+      "source_plant_candidate": "Commiphora myrrha (T.Nees) Engl.",
+      "forms": [
+        {
+          "id": "M06_resin",
+          "object_form": "resin",
+          "name": "没药树脂",
+          "sensory_tags": []
+        },
+        {
+          "id": "M06_medicinal_extract",
+          "object_form": "medicinal_extract",
+          "name": "药用溶剂提取物资料对象",
+          "sensory_tags": []
+        }
+      ],
+      "facts": [
+        {
+          "id": "M06F1",
+          "text": "Kew列Commiphora myrrha为接受学名；EMA以Commiphora molmol Engler为来源名称说明myrrh树脂及药用制剂，来源原名分别保留。",
+          "kind": "modern_source_statement",
+          "evidence": [
+            {
+              "source_id": "S11",
+              "locator": "Taxonomy",
+              "object_form": "plant_taxonomy",
+              "support_status": "direct_text_support"
+            },
+            {
+              "source_id": "S15",
+              "locator": "Overview",
+              "object_form": "resin_and_medicinal_preparation",
+              "support_status": "direct_text_support"
+            }
+          ],
+          "limitations": "这里仅取身份与形态；不采用药用疗效作为闻香结论。",
+          "content_status": "source_statement_checked"
+        },
+        {
+          "id": "M06F2",
+          "text": "香港消委会将没药列为线香使用的材料。",
+          "kind": "modern_source_statement",
+          "evidence": [
+            {
+              "source_id": "S14",
+              "locator": "香材介绍中的没药",
+              "object_form": "incense_ingredient",
+              "support_status": "direct_text_support"
+            }
+          ],
+          "limitations": "",
+          "content_status": "source_statement_checked"
+        }
+      ],
+      "gaps": [
+        "原树脂气味细标签",
+        "古名与具体样品对应",
+        "燃香用途的具体配方与审核"
+      ],
+      "sample_smelling_status": "not_performed"
+    }
+  ],
+  "culture_claims": [
+    {
+      "id": "C01",
+      "text": "该非遗项目把和香描述为包含选材、炮制与配伍的工艺。",
+      "kind": "modern_culture_statement",
+      "evidence": [
+        {
+          "source_id": "S01",
+          "locator": "正文首段",
+          "object_form": "specific_heritage_project",
+          "support_status": "direct_text_support"
+        }
+      ],
+      "limitations": "",
+      "content_status": "source_statement_checked"
+    },
+    {
+      "id": "C02",
+      "text": "《陈氏香谱》把合香、捣香、收香和窨香分别列为工艺条目。",
+      "kind": "historical_statement",
+      "evidence": [
+        {
+          "source_id": "S02",
+          "locator": "脩製諸香各子条目",
+          "object_form": "historical_process",
+          "support_status": "direct_text_support"
+        }
+      ],
+      "limitations": "",
+      "content_status": "source_statement_checked"
+    },
+    {
+      "id": "C03",
+      "text": "《陈氏香谱》的香草名释讨论古今异名和解释分歧。",
+      "kind": "historical_statement",
+      "evidence": [
+        {
+          "source_id": "S02",
+          "locator": "香草名釋",
+          "object_form": "historical_naming",
+          "support_status": "direct_text_support"
+        }
+      ],
+      "limitations": "不据古代考释确定现代物种。",
+      "content_status": "source_statement_checked"
+    },
+    {
+      "id": "C04",
+      "text": "《陈氏香谱》有五香夜刻与百刻香印等计时条目。",
+      "kind": "historical_statement",
+      "evidence": [
+        {
+          "source_id": "S03",
+          "locator": "五香夜刻；百刻香印",
+          "object_form": "historical_timekeeping",
+          "support_status": "direct_text_support"
+        }
+      ],
+      "limitations": "数字计时玩法不能视为实物燃烧精度复原。",
+      "content_status": "source_statement_checked"
+    },
+    {
+      "id": "C05",
+      "text": "《香乘》该梅花香材料表没有列梅花。",
+      "kind": "historical_statement",
+      "evidence": [
+        {
+          "source_id": "S04",
+          "locator": "李王帳中梅花香",
+          "object_form": "this_specific_formula",
+          "support_status": "direct_text_support"
+        }
+      ],
+      "limitations": "只针对这个版本，名称不直接等于材料或真实气味。",
+      "content_status": "source_statement_checked"
+    },
+    {
+      "id": "C06",
+      "text": "一项391名成人、66种气味的研究记录了人群间嗅觉感知差异。",
+      "kind": "research_observation",
+      "evidence": [
+        {
+          "source_id": "S17",
+          "locator": "Abstract·Results；Conclusions",
+          "object_form": "study_population_and_odorants",
+          "support_status": "direct_text_support"
+        }
+      ],
+      "limitations": "不提供本项目六种香材的统一感官标签。",
+      "content_status": "source_statement_checked"
+    }
+  ],
+  "historical_formulas": [
+    {
+      "id": "H01",
+      "name": "赵清献公香",
+      "source_id": "S03",
+      "locator": "赵清献公香",
+      "ingredients_original": [
+        "白檀香",
+        "乳香纒末",
+        "𤣥參",
+        "熟蜜（工序中另用）"
+      ],
+      "record_kind": "historical_reference",
+      "text_status": "transcription_checked_not_facsimile_collated",
+      "modern_identity_mapping": "not_completed",
+      "historical_quantities": null,
+      "quantity_policy": "not_extracted_in_this_release",
+      "manufacturing_recipe": null,
+      "production_approved": false,
+      "sensory_profile": null,
+      "popularity_evidence": [],
+      "allowed_use": [
+        "historical_exploration",
+        "source_explanation"
+      ],
+      "not_allowed": [
+        "direct_manufacturing",
+        "dosage_conversion",
+        "automatic_material_substitution",
+        "health_claim"
+      ],
+      "limitations": "标题不证明人物实际使用史；没有现代制作审核。"
+    },
+    {
+      "id": "H02",
+      "name": "江南李主帐中香 梨汁变体",
+      "source_id": "S03",
+      "locator": "江南李主帳中香后的第一个又方",
+      "ingredients_original": [
+        "沉香",
+        "鵝梨取汁"
+      ],
+      "record_kind": "historical_reference",
+      "text_status": "transcription_checked_not_facsimile_collated",
+      "modern_identity_mapping": "not_completed",
+      "historical_quantities": null,
+      "quantity_policy": "not_extracted_in_this_release",
+      "manufacturing_recipe": null,
+      "production_approved": false,
+      "sensory_profile": null,
+      "popularity_evidence": [],
+      "allowed_use": [
+        "historical_exploration",
+        "source_explanation"
+      ],
+      "not_allowed": [
+        "direct_manufacturing",
+        "dosage_conversion",
+        "automatic_material_substitution",
+        "health_claim"
+      ],
+      "limitations": "与前后苏合香方、沉檀入梨方分别建档；鹅梨现代品种未确认。"
+    },
+    {
+      "id": "H03",
+      "name": "李王帐中梅花香 香乘卷十八版",
+      "source_id": "S04",
+      "locator": "李王帳中梅花香",
+      "ingredients_original": [
+        "丁香",
+        "沉香",
+        "紫檀香",
+        "甘松",
+        "零陵香",
+        "龍腦",
+        "麝香",
+        "杉松麩炭末",
+        "製甲香",
+        "煉蜜（工序中另用）"
+      ],
+      "record_kind": "historical_reference",
+      "text_status": "transcription_checked_not_facsimile_collated",
+      "modern_identity_mapping": "not_completed",
+      "historical_quantities": null,
+      "quantity_policy": "not_extracted_in_this_release",
+      "manufacturing_recipe": null,
+      "production_approved": false,
+      "sensory_profile": null,
+      "popularity_evidence": [],
+      "allowed_use": [
+        "historical_exploration",
+        "source_explanation"
+      ],
+      "not_allowed": [
+        "direct_manufacturing",
+        "dosage_conversion",
+        "automatic_material_substitution",
+        "health_claim"
+      ],
+      "limitations": "古名、加工和来源待核对；不与其他书中的同名方合并。"
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "V01",
+      "term": "木质",
+      "definition": "让人联想到木头、木屑或干燥木材。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。"
+    },
+    {
+      "id": "V02",
+      "term": "树脂",
+      "definition": "让人联想到松脂等树脂。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。"
+    },
+    {
+      "id": "V03",
+      "term": "草本",
+      "definition": "让人联想到草叶或干燥草本。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。"
+    },
+    {
+      "id": "V04",
+      "term": "花香",
+      "definition": "让人联想到花朵。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。"
+    },
+    {
+      "id": "V05",
+      "term": "果香",
+      "definition": "让人联想到果肉或果皮。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。"
+    },
+    {
+      "id": "V06",
+      "term": "柑橘",
+      "definition": "让人联想到柑橘果皮，可与果香重叠。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。"
+    },
+    {
+      "id": "V07",
+      "term": "辛香",
+      "definition": "让人联想到香辛料，不代表刺激强度。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。"
+    },
+    {
+      "id": "V08",
+      "term": "甜香",
+      "definition": "让人联想到香草或糖的气味，不表示含糖。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。"
+    },
+    {
+      "id": "V09",
+      "term": "泥土",
+      "definition": "让人联想到土壤，不据此判断霉变。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。"
+    },
+    {
+      "id": "V10",
+      "term": "烟熏",
+      "definition": "让人联想到烟气或熏制，不证明正在燃烧。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。"
+    }
+  ],
+  "rules": [
+    {
+      "id": "R01",
+      "name": "证据可定位",
+      "policy": "每条外部陈述要有直接支持的来源、条目或段落定位与适用范围。",
+      "kind": "project_authoring_and_generation_policy",
+      "status": "proposed_product_policy",
+      "source_ids": []
+    },
+    {
+      "id": "R02",
+      "name": "形态分开",
+      "policy": "木材、树脂、花蕾、精油、提取物、燃烧烟气不自动继承彼此的描述。",
+      "kind": "project_authoring_and_generation_policy",
+      "status": "proposed_product_policy",
+      "source_ids": []
+    },
+    {
+      "id": "R03",
+      "name": "古名不自动归并",
+      "policy": "原名与候选现代身份分开；未核对就不替换。",
+      "kind": "project_authoring_and_generation_policy",
+      "status": "proposed_product_policy",
+      "source_ids": []
+    },
+    {
+      "id": "R04",
+      "name": "历史方保持历史身份",
+      "policy": "书中出现不代表当前可制造、受欢迎或已获审核；本版不导出比例和工艺。",
+      "kind": "project_authoring_and_generation_policy",
+      "status": "proposed_product_policy",
+      "source_ids": []
+    },
+    {
+      "id": "R05",
+      "name": "描述词保持项目身份",
+      "policy": "语义标签不当成实测成分、含量或香气分数。",
+      "kind": "project_authoring_and_generation_policy",
+      "status": "proposed_product_policy",
+      "source_ids": []
+    },
+    {
+      "id": "R06",
+      "name": "排除项与未知保留",
+      "policy": "用户排除条件持续保留；未知数据不由模型补齐，缺配伍证据时明确返回未找到。",
+      "kind": "project_authoring_and_generation_policy",
+      "status": "proposed_product_policy",
+      "source_ids": []
+    },
+    {
+      "id": "R07",
+      "name": "组合效果待验证",
+      "policy": "历史同方出现或两个单材描述，不足以保证现代混合气味与疗效。",
+      "kind": "project_authoring_and_generation_policy",
+      "status": "proposed_product_policy",
+      "source_ids": []
+    },
+    {
+      "id": "R08",
+      "name": "来源分层与许可",
+      "policy": "正文读取、转录校勘、材料实闻、配方审核分别记录；只许可链接或未读正文的线索不进入确定事实。",
+      "kind": "project_authoring_and_generation_policy",
+      "status": "proposed_product_policy",
+      "source_ids": []
+    }
+  ],
+  "unverified_leads": [
+    {
+      "title": "HKBU沉香B00421",
+      "url": "https://sys01.lib.hkbu.edu.hk/cmed/mmid/detail.php?pid=B00421",
+      "body_status": "not_obtained_403",
+      "allowed_use": "bibliographic_lead_only",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "title": "HKBU檀香B00148",
+      "url": "https://sys01.lib.hkbu.edu.hk/cmed/mmid/detail.php?pid=B00148",
+      "body_status": "not_obtained_403",
+      "allowed_use": "bibliographic_lead_only",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "title": "HKBU丁香B00299",
+      "url": "https://sys01.lib.hkbu.edu.hk/cmed/mmid/detail.php?pid=B00299",
+      "body_status": "not_obtained_403",
+      "allowed_use": "bibliographic_lead_only",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "title": "HKBU乳香B00365",
+      "url": "https://sys01.lib.hkbu.edu.hk/cmed/mmid/detail.php?pid=B00365",
+      "body_status": "not_obtained_403",
+      "allowed_use": "bibliographic_lead_only",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "title": "HKBU没药B00364",
+      "url": "https://sys01.lib.hkbu.edu.hk/cmed/mmid/detail.php?pid=B00364",
+      "body_status": "not_obtained_403",
+      "allowed_use": "bibliographic_lead_only",
+      "checked_at": "2026-10-03"
+    }
+  ],
+  "design_presets": [],
+  "modern_pairing_evidence": [],
+  "production_approved_formulas": [],
+  "unresolved": [
+    "缺实物试闻与混合实验",
+    "缺经审核的现代制作香方",
+    "缺大众受欢迎数据",
+    "部分古名与商品物种未对勘",
+    "尚无根据这些事实完成的可推荐设计预设"
+  ],
+  "interaction_policy": "游戏化探索优先；用户偏好可由选卡、比较、试搭配或自然语言获得，不绑定固定问卷。",
+  "qa_cases": [
+    {
+      "id": "Q01",
+      "question": "檀香油的木质描述能否直接给檀香粉？",
+      "answer": "不能直接转移；现有细标签支持的是精油。",
+      "evidence_ids": [
+        "M02F2"
+      ],
+      "rule_ids": [
+        "R02"
+      ]
+    },
+    {
+      "id": "Q02",
+      "question": "叫梅花香的这个历史方一定有梅花吗？",
+      "answer": "本库所引《香乘》卷十八版本材料表没有列梅花。",
+      "evidence_ids": [
+        "C05"
+      ],
+      "historical_formula_ids": [
+        "H03"
+      ],
+      "rule_ids": [
+        "R03"
+      ]
+    },
+    {
+      "id": "Q03",
+      "question": "把梨汁变体与沉檀入梨变体合成一个通行古方可以吗？",
+      "answer": "不可以；先保留各自书、卷和条目变体，未核对就不合并。",
+      "historical_formula_ids": [
+        "H02"
+      ],
+      "rule_ids": [
+        "R04"
+      ]
+    },
+    {
+      "id": "Q04",
+      "question": "能按这三个历史方直接生成制作克数吗？",
+      "answer": "本版未采集可制造配方，也未审核试制，不能生成制作克数。",
+      "historical_formula_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "rule_ids": [
+        "R04",
+        "R06"
+      ]
+    },
+    {
+      "id": "Q05",
+      "question": "两种单材都香，合起来能保证好闻或助眠吗？",
+      "answer": "不能保证；当前无现代配伍实闻证据或临床结果。",
+      "rule_ids": [
+        "R07"
+      ]
+    },
+    {
+      "id": "Q06",
+      "question": "这十个词是统一行业标准吗？",
+      "answer": "是本项目拟定的偏好表达词汇，不是材料鉴定或统一感官标准。",
+      "rule_ids": [
+        "R05"
+      ]
+    },
+    {
+      "id": "Q07",
+      "question": "HKBU链接存在，能说资料全文已核对吗？",
+      "answer": "不能；这五条当前只保留待复核入口，直接正文未取得。",
+      "rule_ids": [
+        "R08"
+      ]
+    }
+  ]
+}

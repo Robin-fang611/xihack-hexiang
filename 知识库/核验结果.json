@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-03",
+  "errors": [],
+  "structural_validation_passed": true,
+  "rejection_tests": [
+    {
+      "case": "外部陈述缺证据",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "引用不存在的来源",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "缺原文定位",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "把精油描述挂到木材",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "历史方冒充可制作",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "自定义词冒充标准",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "正文未读却支持事实",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "实闻状态无依据变更",
+      "expected": "reject",
+      "passed": true
+    }
+  ],
+  "limitation": "只核对引用和明确边界；事实支持依赖本轮人工审读，未验证气味、配伍、制作或模型回答。"
+}

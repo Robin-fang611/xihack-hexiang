@@ -1,0 +1,199 @@
+{
+  "example": "保留木质主调，降低已报道甜香参照的设计主次",
+  "before": {
+    "components": [
+      {
+        "profile_id": "F01",
+        "role": "main",
+        "name": "澳洲檀香精油 Givaudan参照"
+      },
+      {
+        "profile_id": "F03",
+        "role": "support",
+        "name": "暹罗安息香乙醇提取物 IFF参照"
+      },
+      {
+        "profile_id": "F05",
+        "role": "accent",
+        "name": "丁香花蕾精油 IFF参照"
+      }
+    ],
+    "metrics_for_updated_intent": {
+      "design_match_index": 4,
+      "reported_deemphasized_facet_index": 3,
+      "ranking_score": 1
+    },
+    "status": "project_authored_untested_starting_design"
+  },
+  "after": {
+    "status": "ok",
+    "mode": "modern_fragrance_design_reference",
+    "request": {
+      "preferred_facets": [
+        "woody"
+      ],
+      "deemphasized_facets": [
+        "sweet"
+      ],
+      "locked_main_id": "F01",
+      "limit": 2
+    },
+    "data_version": "composite-fragrance-design/0.1",
+    "candidates": [
+      {
+        "composition_kind": "composite_concept",
+        "components": [
+          {
+            "profile_id": "F01",
+            "name": "澳洲檀香精油 Givaudan参照",
+            "role": "main",
+            "role_label": "主调",
+            "form": "essential_oil",
+            "reported_facets": [
+              "woody",
+              "balsamic",
+              "creamy",
+              "earthy",
+              "smoky",
+              "resinous",
+              "terpenic"
+            ],
+            "source_url": "https://www.givaudan.com/fragrance-beauty/fragrance-ingredients-business/natural-ingredients/sandalwood-oil-australia"
+          },
+          {
+            "profile_id": "F02",
+            "name": "阿特拉斯雪松精油 IFF参照",
+            "role": "support",
+            "role_label": "支撑",
+            "form": "essential_oil",
+            "reported_facets": [
+              "woody",
+              "warm",
+              "creamy",
+              "leathery",
+              "resinous",
+              "amber"
+            ],
+            "source_url": "https://www.iff.com/scent/lmr-compendium/cedarwood-oil-atlas-org/"
+          }
+        ],
+        "metrics": {
+          "design_match_index": 5,
+          "reported_deemphasized_facet_index": 0,
+          "ranking_score": 48
+        },
+        "matched_preferences": [
+          "woody"
+        ],
+        "unmatched_preferences": [],
+        "status": "untested_composite_design",
+        "manufacturing_approved": false,
+        "unknowns": [
+          "标签未报道不等于不存在",
+          "组合气味尚未实闻",
+          "没有制作比例或载体适配",
+          "排序不是感官强度预测"
+        ],
+        "changes_from_start": {
+          "added": [
+            "阿特拉斯雪松精油 IFF参照"
+          ],
+          "removed": [
+            "暹罗安息香乙醇提取物 IFF参照",
+            "丁香花蕾精油 IFF参照"
+          ],
+          "role_changes": [],
+          "kept_main": true
+        }
+      },
+      {
+        "composition_kind": "composite_concept",
+        "components": [
+          {
+            "profile_id": "F01",
+            "name": "澳洲檀香精油 Givaudan参照",
+            "role": "main",
+            "role_label": "主调",
+            "form": "essential_oil",
+            "reported_facets": [
+              "woody",
+              "balsamic",
+              "creamy",
+              "earthy",
+              "smoky",
+              "resinous",
+              "terpenic"
+            ],
+            "source_url": "https://www.givaudan.com/fragrance-beauty/fragrance-ingredients-business/natural-ingredients/sandalwood-oil-australia"
+          },
+          {
+            "profile_id": "F02",
+            "name": "阿特拉斯雪松精油 IFF参照",
+            "role": "support",
+            "role_label": "支撑",
+            "form": "essential_oil",
+            "reported_facets": [
+              "woody",
+              "warm",
+              "creamy",
+              "leathery",
+              "resinous",
+              "amber"
+            ],
+            "source_url": "https://www.iff.com/scent/lmr-compendium/cedarwood-oil-atlas-org/"
+          },
+          {
+            "profile_id": "F04",
+            "name": "乳香精油 dsm参照",
+            "role": "accent",
+            "role_label": "点缀",
+            "form": "essential_oil",
+            "reported_facets": [
+              "sweet",
+              "woody",
+              "balsamic",
+              "green",
+              "terpenic",
+              "citrus",
+              "peppery",
+              "resinous",
+              "amber"
+            ],
+            "source_url": "https://studio.dsm-firmenich.com/product/olibanum-eo-cert-pe-967844"
+          }
+        ],
+        "metrics": {
+          "design_match_index": 6,
+          "reported_deemphasized_facet_index": 1,
+          "ranking_score": 45
+        },
+        "matched_preferences": [
+          "woody"
+        ],
+        "unmatched_preferences": [],
+        "status": "untested_composite_design",
+        "manufacturing_approved": false,
+        "unknowns": [
+          "标签未报道不等于不存在",
+          "组合气味尚未实闻",
+          "没有制作比例或载体适配",
+          "排序不是感官强度预测"
+        ],
+        "changes_from_start": {
+          "added": [
+            "阿特拉斯雪松精油 IFF参照",
+            "乳香精油 dsm参照"
+          ],
+          "removed": [
+            "暹罗安息香乙醇提取物 IFF参照",
+            "丁香花蕾精油 IFF参照"
+          ],
+          "role_changes": [],
+          "kept_main": true
+        }
+      }
+    ],
+    "scope": "有来源的数字构图候选；未进行真实配伍与闻香验证。"
+  },
+  "meaning": "同一资料域内改换构图角色与参照，指标只检查设计改动，不证明混合后更木质或不甜。"
+}

@@ -1,0 +1,490 @@
+{
+  "schema_version": "composite-fragrance-design/0.2",
+  "updated_at": "2026-10-03",
+  "mode": "modern_fragrance_design_reference",
+  "authority": "此文件是外部调香参照与数字构图规则的编辑源，独立于传统香材知识条目。",
+  "sources": [
+    {
+      "id": "P01",
+      "title": "The Basics of Perfume A Primer",
+      "publisher": "Institute for Art and Olfaction",
+      "url": "https://artandolfaction.com/wp-content/uploads/2024/10/2024_IAO_PRIMER_.pdf",
+      "locator": "PDF第3页时序、第4至5页家族、第7页accord、第13页记录",
+      "rights": "CC BY-SA 4.0；保留IAO与贡献者署名；本轮只自主概括概念、不复制图表",
+      "kind": "perfumery_education",
+      "status": "relevant_body_read",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "id": "P02",
+      "title": "How blending works",
+      "publisher": "Experimental Perfume Club",
+      "url": "https://experimentalperfumeclub.com/en-us/pages/create-custom-perfume",
+      "locator": "Designed to blend；FAQ Every Essential is a complete Eau de Parfum",
+      "rights": "未核实再分发许可；只留短事实简述与链接",
+      "kind": "manufacturer_product_system",
+      "status": "relevant_body_read",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "id": "P03",
+      "title": "Sandalwood Oil Australia",
+      "publisher": "Givaudan",
+      "url": "https://www.givaudan.com/fragrance-beauty/fragrance-ingredients-business/natural-ingredients/sandalwood-oil-australia",
+      "locator": "Olfactive paragraph；General information",
+      "rights": "未核实再分发许可；自主短事实简述与链接，不复制图表",
+      "kind": "manufacturer_material_profile",
+      "status": "relevant_body_read",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "id": "P04",
+      "title": "Cedarwood Oil Atlas Org",
+      "publisher": "IFF LMR",
+      "url": "https://www.iff.com/scent/lmr-compendium/cedarwood-oil-atlas-org/",
+      "locator": "Olfactive Description；Type of Extract；Processed Part",
+      "rights": "未核实再分发许可；自主短事实简述与链接，不复制图表",
+      "kind": "manufacturer_material_profile",
+      "status": "relevant_body_read",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "id": "P05",
+      "title": "Benzoin Resoid Siam",
+      "publisher": "IFF LMR",
+      "url": "https://www.iff.com/scent/lmr-compendium/benzoin-resoid-siam/",
+      "locator": "Olfactive Description；Extraction with ethyl alcohol；Gum-resin",
+      "rights": "未核实再分发许可；自主短事实简述与链接，不复制图表",
+      "kind": "manufacturer_material_profile",
+      "status": "relevant_body_read",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "id": "P06",
+      "title": "Olibanum EO Cert 967844",
+      "publisher": "dsm-firmenich",
+      "url": "https://studio.dsm-firmenich.com/product/olibanum-eo-cert-pe-967844",
+      "locator": "Olfactive description；Technology；Extracted part",
+      "rights": "未核实再分发许可；自主短事实简述与链接，不复制图表",
+      "kind": "manufacturer_material_profile",
+      "status": "relevant_body_read",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "id": "P07",
+      "title": "Clove Bud Oil Org",
+      "publisher": "IFF LMR",
+      "url": "https://www.iff.com/scent/lmr-compendium/clove-bud-oil-org/",
+      "locator": "Olfactive Description；Type of Extract；Processed Part",
+      "rights": "未核实再分发许可；自主短事实简述与链接，不复制图表",
+      "kind": "manufacturer_material_profile",
+      "status": "relevant_body_read",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "id": "P08",
+      "title": "Javanol Demo Formulas",
+      "publisher": "Givaudan",
+      "url": "https://www.givaudan.com/files/8754013_formula.pdf",
+      "locator": "PDF第3、4页for Agarbatti",
+      "rights": "只保存用途与对照结构，不复制完整示例配方或图表",
+      "kind": "manufacturer_application_example",
+      "status": "relevant_body_read",
+      "checked_at": "2026-10-03"
+    },
+    {
+      "id": "P09",
+      "title": "Perceptual interactions among food odors",
+      "publisher": "Ma等；Food Chemistry 2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33740506/",
+      "locator": "原始研究Abstract",
+      "rights": "只留短事实简述与链接",
+      "kind": "original_research",
+      "status": "original_abstract_read",
+      "checked_at": "2026-10-03"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "F01",
+      "name": "澳洲檀香精油 Givaudan参照",
+      "supplier": "Givaudan",
+      "source_id": "P03",
+      "source_plant_name": "Santalum spicatum",
+      "form": "essential_oil",
+      "process": "steam_distillation",
+      "processed_part": "wood",
+      "primary_family": "woody",
+      "reported_facets": [
+        "woody",
+        "balsamic",
+        "creamy",
+        "earthy",
+        "smoky",
+        "resinous",
+        "terpenic"
+      ],
+      "temporal_note": "来源描述树脂样开场与更土、萜烯、烟熏的后段；没有本项目实测曲线。",
+      "domain": "modern_fragrance_design_reference",
+      "profile_status": "supplier_report_checked",
+      "sample_status": "not_smelt_by_team",
+      "mixing_evidence": "none_for_project_combinations",
+      "dilution": null,
+      "manufacturing_approved": false
+    },
+    {
+      "id": "F02",
+      "name": "阿特拉斯雪松精油 IFF参照",
+      "supplier": "IFF LMR",
+      "source_id": "P04",
+      "source_plant_name": "Cedrus atlantica (Manetti ex Endl.)",
+      "form": "essential_oil",
+      "process": "hydro_distillation",
+      "processed_part": "wood",
+      "primary_family": "woody",
+      "reported_facets": [
+        "woody",
+        "warm",
+        "creamy",
+        "leathery",
+        "resinous",
+        "amber"
+      ],
+      "temporal_note": "厂家定性描述较持久；本版不换算成皮肤、房间或燃香分钟数。",
+      "domain": "modern_fragrance_design_reference",
+      "profile_status": "supplier_report_checked",
+      "sample_status": "not_smelt_by_team",
+      "mixing_evidence": "none_for_project_combinations",
+      "dilution": null,
+      "manufacturing_approved": false
+    },
+    {
+      "id": "F03",
+      "name": "暹罗安息香乙醇提取物 IFF参照",
+      "supplier": "IFF LMR",
+      "source_id": "P05",
+      "source_plant_name": "Styrax tonkinensis (Pierre) Craib Ex Hartwich",
+      "form": "resinoid_extract",
+      "process": "ethanol_extraction",
+      "processed_part": "gum_resin",
+      "primary_family": "balsamic",
+      "reported_facets": [
+        "sweet",
+        "powdery",
+        "vanilla",
+        "balsamic",
+        "resinous",
+        "amber",
+        "cinnamic"
+      ],
+      "temporal_note": null,
+      "domain": "modern_fragrance_design_reference",
+      "profile_status": "supplier_report_checked",
+      "sample_status": "not_smelt_by_team",
+      "mixing_evidence": "none_for_project_combinations",
+      "dilution": null,
+      "manufacturing_approved": false
+    },
+    {
+      "id": "F04",
+      "name": "乳香精油 dsm参照",
+      "supplier": "dsm-firmenich",
+      "source_id": "P06",
+      "source_plant_name": "Boswellia carteri（按来源保留）",
+      "form": "essential_oil",
+      "process": "water_or_steam_distillation",
+      "processed_part": "gum",
+      "primary_family": "balsamic",
+      "reported_facets": [
+        "sweet",
+        "woody",
+        "balsamic",
+        "green",
+        "terpenic",
+        "citrus",
+        "peppery",
+        "resinous",
+        "amber"
+      ],
+      "temporal_note": "来源比较该精油与resinoid，称精油更清新；不转成原树脂或燃烟属性。",
+      "domain": "modern_fragrance_design_reference",
+      "profile_status": "supplier_report_checked",
+      "sample_status": "not_smelt_by_team",
+      "mixing_evidence": "none_for_project_combinations",
+      "dilution": null,
+      "manufacturing_approved": false
+    },
+    {
+      "id": "F05",
+      "name": "丁香花蕾精油 IFF参照",
+      "supplier": "IFF LMR",
+      "source_id": "P07",
+      "source_plant_name": "Syzygium aromaticum (L.) Merr. & Perry",
+      "form": "essential_oil",
+      "process": "hydro_distillation",
+      "processed_part": "buds",
+      "primary_family": "spicy",
+      "reported_facets": [
+        "warm",
+        "spicy",
+        "powdery",
+        "woody",
+        "sweet",
+        "smoky",
+        "medicinal"
+      ],
+      "temporal_note": null,
+      "domain": "modern_fragrance_design_reference",
+      "profile_status": "supplier_report_checked",
+      "sample_status": "not_smelt_by_team",
+      "mixing_evidence": "none_for_project_combinations",
+      "dilution": null,
+      "manufacturing_approved": false
+    }
+  ],
+  "facets": {
+    "woody": "木质",
+    "balsamic": "香脂",
+    "creamy": "奶油感",
+    "earthy": "泥土感",
+    "smoky": "烟熏感",
+    "resinous": "树脂感",
+    "terpenic": "萜烯感",
+    "warm": "温暖感",
+    "leathery": "皮革感",
+    "amber": "琥珀香韵",
+    "sweet": "甜香",
+    "powdery": "粉感",
+    "vanilla": "香草感",
+    "cinnamic": "肉桂样侧面",
+    "green": "青绿",
+    "citrus": "柑橘",
+    "peppery": "胡椒感",
+    "spicy": "辛香",
+    "medicinal": "药感气味",
+    "herbal": "草本",
+    "floral": "花香",
+    "fruity": "果香"
+  },
+  "borrowed_methods": [
+    {
+      "concept": "复合香韵 accord",
+      "source_id": "P01",
+      "paraphrase": "多种材料可构成整体香韵；它与后调不是同一个概念。"
+    },
+    {
+      "concept": "分类、角色、时间分开",
+      "source_id": "P01",
+      "paraphrase": "家族是分类；前中后调是持续性参照，边界相对；本项目主调/支撑/点缀是自拟构图角色。"
+    },
+    {
+      "concept": "模块化调香体验",
+      "source_id": "P02",
+      "paraphrase": "该产品使用专门设计为可相互混合的完整香水模块；可借体验结构，不扩为任意香材兼容保证。"
+    },
+    {
+      "concept": "现代材料也有燃香应用",
+      "source_id": "P08",
+      "paraphrase": "厂家提供Agarbatti用途示例，可研究应用条件和对照；不复制配方或将其替换为传统原料。"
+    },
+    {
+      "concept": "真实混合非简单加法",
+      "source_id": "P09",
+      "paraphrase": "研究记录气味混合中的非线性与遮蔽；其食品条件不能变成本项目固定配伍公式。"
+    }
+  ],
+  "composition_policy": {
+    "roles": [
+      "main",
+      "support",
+      "accent"
+    ],
+    "role_display": {
+      "main": "主调",
+      "support": "支撑",
+      "accent": "点缀"
+    },
+    "max_components_in_seed": 3,
+    "role_score_weights": {
+      "main": 3,
+      "support": 2,
+      "accent": 1
+    },
+    "ranking_coefficients": {
+      "preferred": 10,
+      "deemphasized": 12,
+      "complexity": 1
+    },
+    "score_meaning": "仅用报道标签、用户偏好和构图角色排序；系数由项目设置，不是投料比、强度或真实混合预测。",
+    "unknown_meaning": "标签未报道不等于不存在；尤其不能保证无甜、无刺激或无过敏原。",
+    "hard_constraints": [
+      "仅限当前资料域",
+      "排除指定材料",
+      "固定主调如有",
+      "仅从已核对厂家档案取标签"
+    ],
+    "operations": [
+      "replace_support",
+      "remove_accent",
+      "change_main_with_user_choice",
+      "branch_candidate",
+      "compare_versions"
+    ],
+    "unsupported_outputs": [
+      "grams",
+      "dose",
+      "safety_certificate",
+      "odor_intensity_prediction",
+      "evaporation_curve",
+      "burning_transfer",
+      "clinical_effect"
+    ],
+    "result_status": "untested_composite_design"
+  },
+  "cross_domain_links": [
+    {
+      "profile_id": "F01",
+      "traditional_material_id": "M02",
+      "relation": "same_common_name_different_species_and_form",
+      "rule": "S.spicatum精油不覆写S.album木粉资料"
+    },
+    {
+      "profile_id": "F03",
+      "traditional_material_id": "M05",
+      "relation": "related_source_tree_different_form",
+      "rule": "乙醇提取物不覆写原树脂气味"
+    },
+    {
+      "profile_id": "F04",
+      "traditional_material_id": "M04",
+      "relation": "related_trade_name_different_form",
+      "rule": "精油不覆写树脂燃烟资料"
+    },
+    {
+      "profile_id": "F05",
+      "traditional_material_id": "M03",
+      "relation": "same_source_plant_different_form",
+      "rule": "花蕾精油不覆写花蕾原料资料"
+    }
+  ],
+  "confirmed_pairwise_combinations": [],
+  "production_formulas": [],
+  "notes": [
+    "构图角色是本项目建议，不是材料的永久属性。",
+    "琥珀、香脂、温暖等词指气味表达，不鉴定物质或推导疗效。",
+    "本版没有真实混合、消费者喜好或制作验证。",
+    "V01–V10与canonical描述词的对应是独立的项目词汇桥；herbal/floral/fruity虽可表达偏好，当前厂家档案没有对应报道，不给材料补造标签。"
+  ],
+  "vocabulary_bridge": [
+    {
+      "id": "V01",
+      "term": "木质",
+      "definition": "让人联想到木头、木屑或干燥木材。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。",
+      "canonical_facet": "woody",
+      "mapping_status": "project_authored_language_bridge_not_material_evidence"
+    },
+    {
+      "id": "V02",
+      "term": "树脂",
+      "definition": "让人联想到松脂等树脂。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。",
+      "canonical_facet": "resinous",
+      "mapping_status": "project_authored_language_bridge_not_material_evidence"
+    },
+    {
+      "id": "V03",
+      "term": "草本",
+      "definition": "让人联想到草叶或干燥草本。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。",
+      "canonical_facet": "herbal",
+      "mapping_status": "project_authored_language_bridge_not_material_evidence"
+    },
+    {
+      "id": "V04",
+      "term": "花香",
+      "definition": "让人联想到花朵。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。",
+      "canonical_facet": "floral",
+      "mapping_status": "project_authored_language_bridge_not_material_evidence"
+    },
+    {
+      "id": "V05",
+      "term": "果香",
+      "definition": "让人联想到果肉或果皮。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。",
+      "canonical_facet": "fruity",
+      "mapping_status": "project_authored_language_bridge_not_material_evidence"
+    },
+    {
+      "id": "V06",
+      "term": "柑橘",
+      "definition": "让人联想到柑橘果皮，可与果香重叠。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。",
+      "canonical_facet": "citrus",
+      "mapping_status": "project_authored_language_bridge_not_material_evidence"
+    },
+    {
+      "id": "V07",
+      "term": "辛香",
+      "definition": "让人联想到香辛料，不代表刺激强度。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。",
+      "canonical_facet": "spicy",
+      "mapping_status": "project_authored_language_bridge_not_material_evidence"
+    },
+    {
+      "id": "V08",
+      "term": "甜香",
+      "definition": "让人联想到香草或糖的气味，不表示含糖。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。",
+      "canonical_facet": "sweet",
+      "mapping_status": "project_authored_language_bridge_not_material_evidence"
+    },
+    {
+      "id": "V09",
+      "term": "泥土",
+      "definition": "让人联想到土壤，不据此判断霉变。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。",
+      "canonical_facet": "earthy",
+      "mapping_status": "project_authored_language_bridge_not_material_evidence"
+    },
+    {
+      "id": "V10",
+      "term": "烟熏",
+      "definition": "让人联想到烟气或熏制，不证明正在燃烧。",
+      "kind": "project_authored_vocabulary",
+      "status": "proposed_not_user_validated",
+      "source_ids": [],
+      "limitations": "用于表达偏好，不鉴定材料，不推导化学成分、安全、疗效；未知和用户原词可以保留。",
+      "canonical_facet": "smoky",
+      "mapping_status": "project_authored_language_bridge_not_material_evidence"
+    }
+  ]
+}

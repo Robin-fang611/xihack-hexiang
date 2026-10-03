@@ -1,0 +1,292 @@
+{
+  "date": "2026-10-03",
+  "repository": "https://github.com/Robin-fang611/xihack-hexiang",
+  "scope": "完整项目资料与需求决策记录；不公开私人运行数据或系统会话",
+  "original_project_files": [
+    {
+      "path": "AI审美提案-三炉香与一张笺.md",
+      "source_sha256": "705032a4feec176f35993fe0e24f7cb1805c8ce323eaa892edba698173a652d9",
+      "published_sha256": "705032a4feec176f35993fe0e24f7cb1805c8ce323eaa892edba698173a652d9",
+      "source_bytes": 14673,
+      "byte_identical": true
+    },
+    {
+      "path": "app/.gitignore",
+      "source_sha256": "5fe496a917a6009e370a0368f1f3bf898b3972513ffa0ba7bb8d4ff69c67fdf5",
+      "published_sha256": "5fe496a917a6009e370a0368f1f3bf898b3972513ffa0ba7bb8d4ff69c67fdf5",
+      "source_bytes": 21,
+      "byte_identical": true
+    },
+    {
+      "path": "app/API契约.md",
+      "source_sha256": "6ba5cc37fc5c4ac730d6a520e956718098f70369888a96c63b90edbeaa79a411",
+      "published_sha256": "6ba5cc37fc5c4ac730d6a520e956718098f70369888a96c63b90edbeaa79a411",
+      "source_bytes": 4312,
+      "byte_identical": true
+    },
+    {
+      "path": "app/README.md",
+      "source_sha256": "cc5e370552973ee69d95576f034ec680944a14c34c1284e543dc9c105fd11cc1",
+      "published_sha256": "155b5c2e816a233d66c24ec4b1311d54f0c5e70f0160b7d25aeafe2afb5a78d0",
+      "source_bytes": 3316,
+      "byte_identical": false
+    },
+    {
+      "path": "app/ocr.swift",
+      "source_sha256": "16672a6267d2d162850d13e0b2d3a467b4848b05c1d1ecdae715b8b18c20aeda",
+      "published_sha256": "16672a6267d2d162850d13e0b2d3a467b4848b05c1d1ecdae715b8b18c20aeda",
+      "source_bytes": 975,
+      "byte_identical": true
+    },
+    {
+      "path": "app/presets.json",
+      "source_sha256": "3256e6cc3770afebaa612e82e8002298566d4601be30333837bd07acf154731e",
+      "published_sha256": "3256e6cc3770afebaa612e82e8002298566d4601be30333837bd07acf154731e",
+      "source_bytes": 6294,
+      "byte_identical": true
+    },
+    {
+      "path": "app/qa_browser.cjs",
+      "source_sha256": "c215682752591de69740846f7028dc70b981cbd869f7f2b751ace08406bedc09",
+      "published_sha256": "006b2a0c8353d7b5476873b420d6d9c92c674ab8b7c7e5ca9e8887eb75214bf2",
+      "source_bytes": 9316,
+      "byte_identical": false
+    },
+    {
+      "path": "app/server.py",
+      "source_sha256": "1902c4d5064d120a929c54d99a2e374b00d370dea07516ca0d32910688ee9dc2",
+      "published_sha256": "1902c4d5064d120a929c54d99a2e374b00d370dea07516ca0d32910688ee9dc2",
+      "source_bytes": 31001,
+      "byte_identical": true
+    },
+    {
+      "path": "app/services.py",
+      "source_sha256": "31bb566bb2118e279f8eff98d251c1fe04ac94e7603c5a870a5b3835a436941a",
+      "published_sha256": "31bb566bb2118e279f8eff98d251c1fe04ac94e7603c5a870a5b3835a436941a",
+      "source_bytes": 21787,
+      "byte_identical": true
+    },
+    {
+      "path": "app/static/app.js",
+      "source_sha256": "7d0111740981a8f5ee772616344de14478dd413bc0e9c770cf59c901cb2038a7",
+      "published_sha256": "7d0111740981a8f5ee772616344de14478dd413bc0e9c770cf59c901cb2038a7",
+      "source_bytes": 74676,
+      "byte_identical": true
+    },
+    {
+      "path": "app/static/index.html",
+      "source_sha256": "a94dd414bc731fec37a1bb3e6acd0005a3936462c161dfec96058367322401d0",
+      "published_sha256": "a94dd414bc731fec37a1bb3e6acd0005a3936462c161dfec96058367322401d0",
+      "source_bytes": 17410,
+      "byte_identical": true
+    },
+    {
+      "path": "app/static/style.css",
+      "source_sha256": "53fe73a328047f0519170cb34ac31089ff3384db2fd1555d0baf9381a550550b",
+      "published_sha256": "53fe73a328047f0519170cb34ac31089ff3384db2fd1555d0baf9381a550550b",
+      "source_bytes": 22278,
+      "byte_identical": true
+    },
+    {
+      "path": "app/test_app.py",
+      "source_sha256": "cbd8c159ab0037ef4818e7e37e583b6f5adb456634119628f24c14277a01e28d",
+      "published_sha256": "cbd8c159ab0037ef4818e7e37e583b6f5adb456634119628f24c14277a01e28d",
+      "source_bytes": 11745,
+      "byte_identical": true
+    },
+    {
+      "path": "app/verification/手机调香.png",
+      "source_sha256": "645c46412a9be8e31ec96b5b602f0f4a9138aa8296003bc6e82ecf8b1ce413e3",
+      "published_sha256": "645c46412a9be8e31ec96b5b602f0f4a9138aa8296003bc6e82ecf8b1ce413e3",
+      "source_bytes": 397938,
+      "byte_identical": true
+    },
+    {
+      "path": "app/verification/接口验收.json",
+      "source_sha256": "f45b2ef0f64f2fdc9150a53fa3b1f66c3f9af9343eba4c11dd1e49ec4efe3b8e",
+      "published_sha256": "f45b2ef0f64f2fdc9150a53fa3b1f66c3f9af9343eba4c11dd1e49ec4efe3b8e",
+      "source_bytes": 201,
+      "byte_identical": true
+    },
+    {
+      "path": "app/verification/浏览器验收.json",
+      "source_sha256": "2e218b0d563aa16c16cc6865f93223f52a0ef4de8c235c8ebe5880a790c47c32",
+      "published_sha256": "2e218b0d563aa16c16cc6865f93223f52a0ef4de8c235c8ebe5880a790c47c32",
+      "source_bytes": 561,
+      "byte_identical": true
+    },
+    {
+      "path": "app/verification/调香工作台.png",
+      "source_sha256": "5479b05c12467411f08a0f12cf43e4ba6950b54751ad48a55c494fdfd9737675",
+      "published_sha256": "5479b05c12467411f08a0f12cf43e4ba6950b54751ad48a55c494fdfd9737675",
+      "source_bytes": 476991,
+      "byte_identical": true
+    },
+    {
+      "path": "app/verification/香笺.png",
+      "source_sha256": "6c9d32ea7a238dc8257730909ddee0491306489fcd915509f0bf9fffd014a95f",
+      "published_sha256": "6c9d32ea7a238dc8257730909ddee0491306489fcd915509f0bf9fffd014a95f",
+      "source_bytes": 209461,
+      "byte_identical": true
+    },
+    {
+      "path": "app/启动软件.command",
+      "source_sha256": "461bf04c349f849db17932fc4e0c23e0a9d5f6a96ba90ef53557db474006834b",
+      "published_sha256": "ccc8885309f3daa53b937567cce6397fb345990ab81d33bce79726161de353bb",
+      "source_bytes": 229,
+      "byte_identical": false
+    },
+    {
+      "path": "合香定制原型交付规格.md",
+      "source_sha256": "a056f18ea26eaf2521794a284b670b0294855ed51e4ee23f95647515c76a0f69",
+      "published_sha256": "58c17b8c48e7563a6fdb903628ed3678c1f3d72d3785a3993097201328545632",
+      "source_bytes": 23743,
+      "byte_identical": false
+    },
+    {
+      "path": "合香疗愈设计建议-审美主张.md",
+      "source_sha256": "53411c7ca4e29ad2f95a149b4a99e125867d5d7ee1cb408e3b0bf628107de0b8",
+      "published_sha256": "53411c7ca4e29ad2f95a149b4a99e125867d5d7ee1cb408e3b0bf628107de0b8",
+      "source_bytes": 59990,
+      "byte_identical": true
+    },
+    {
+      "path": "知识库/AI报告候选.json",
+      "source_sha256": "7193b74b53d5821e185c329b125e2347b8f0d20f1ad4bd83af0b9a42309fe40d",
+      "published_sha256": "c06f3f13fd45dd31af5209354f6234fff1e3ff7fe67959ce8921bdf1981d2c75",
+      "source_bytes": 15727,
+      "byte_identical": false
+    },
+    {
+      "path": "知识库/合香知识库.md",
+      "source_sha256": "83f101093c35afbd9e3c4c9eed0abe67f6b64ade82ddc86683d3939c32a011ad",
+      "published_sha256": "db3d1038c4635d7d867416b1aa6e15bb1a3141a98c3b183e984b7a4685cdf3dc",
+      "source_bytes": 22664,
+      "byte_identical": false
+    },
+    {
+      "path": "知识库/复合调香机制.md",
+      "source_sha256": "1fca7d20a6a79cb7288b9446d0041c1efbaa6510580f72c78cfa9dcbde80f5f8",
+      "published_sha256": "d633736d3353575107ee0d705335388abef22c3094cb676fc805285a665a7f96",
+      "source_bytes": 9862,
+      "byte_identical": false
+    },
+    {
+      "path": "知识库/复合调香演示结果.json",
+      "source_sha256": "7eeceff7ddefd451dd355c9b95c0b45af08e22e5b6361974770f8985b9419730",
+      "published_sha256": "7eeceff7ddefd451dd355c9b95c0b45af08e22e5b6361974770f8985b9419730",
+      "source_bytes": 5973,
+      "byte_identical": true
+    },
+    {
+      "path": "知识库/复合调香规则.json",
+      "source_sha256": "ba181abe397226e76419684c89e4510f8565225064b9a51b838d8dc4f06ae7de",
+      "published_sha256": "ba181abe397226e76419684c89e4510f8565225064b9a51b838d8dc4f06ae7de",
+      "source_bytes": 18164,
+      "byte_identical": true
+    },
+    {
+      "path": "知识库/外部报告整理.md",
+      "source_sha256": "c71058d4b268f538e179e8b72efd191bedb32c8702dc48a094fafe30b229e864",
+      "published_sha256": "0393eee5dcc9248189e4f8b32911dc487dabf76a4fd382baa06b523501474426",
+      "source_bytes": 7351,
+      "byte_identical": false
+    },
+    {
+      "path": "知识库/数字调香.py",
+      "source_sha256": "e1abaf5e1f78b158e09a3da2b738167e969aa8138ec7303eef197603aff69e40",
+      "published_sha256": "e1abaf5e1f78b158e09a3da2b738167e969aa8138ec7303eef197603aff69e40",
+      "source_bytes": 11615,
+      "byte_identical": true
+    },
+    {
+      "path": "知识库/数字调香核验结果.json",
+      "source_sha256": "187ee9aafd3b8b2f6eef2acabfe139eafba1ce2402adf99b9b09f8abc3d3ff8f",
+      "published_sha256": "187ee9aafd3b8b2f6eef2acabfe139eafba1ce2402adf99b9b09f8abc3d3ff8f",
+      "source_bytes": 2689,
+      "byte_identical": true
+    },
+    {
+      "path": "知识库/核验知识库.py",
+      "source_sha256": "c20d538996bf1dafae67cabbb71d20da67985f1114b4a80a57046f98e887d118",
+      "published_sha256": "c20d538996bf1dafae67cabbb71d20da67985f1114b4a80a57046f98e887d118",
+      "source_bytes": 6221,
+      "byte_identical": true
+    },
+    {
+      "path": "知识库/核验结果.json",
+      "source_sha256": "083a3749592df90dfa7a6d897e48fd845878e18bf0976981784b86a29a71f61c",
+      "published_sha256": "083a3749592df90dfa7a6d897e48fd845878e18bf0976981784b86a29a71f61c",
+      "source_bytes": 1082,
+      "byte_identical": true
+    },
+    {
+      "path": "知识库/知识条目.json",
+      "source_sha256": "a4dc5c4baca258132788a8a815ea04e25a3439d4cae331c053a491786878c7c9",
+      "published_sha256": "a4dc5c4baca258132788a8a815ea04e25a3439d4cae331c053a491786878c7c9",
+      "source_bytes": 43021,
+      "byte_identical": true
+    },
+    {
+      "path": "知识库/验证数字调香.py",
+      "source_sha256": "bd9b2e3e6ecfeb63a9acba1c81443c94ac04607df10e296f965a6461a3eac07b",
+      "published_sha256": "bd9b2e3e6ecfeb63a9acba1c81443c94ac04607df10e296f965a6461a3eac07b",
+      "source_bytes": 5357,
+      "byte_identical": true
+    },
+    {
+      "path": "西客松XiHack2026-企业真实命题赛道参赛创作与提交指南（选手版）.docx",
+      "source_sha256": "5f0180fabd693f430af049de436c56b3f3d022ceeef19ea656a40a429bbeefb1",
+      "published_sha256": "5f0180fabd693f430af049de436c56b3f3d022ceeef19ea656a40a429bbeefb1",
+      "source_bytes": 49718,
+      "byte_identical": true
+    },
+    {
+      "path": "账号权限与已有香品分析.md",
+      "source_sha256": "dfc040e48abfea147f5931d7545a745e64b65081738c3869ab05fe926f26cc9e",
+      "published_sha256": "dfc040e48abfea147f5931d7545a745e64b65081738c3869ab05fe926f26cc9e",
+      "source_bytes": 6732,
+      "byte_identical": true
+    }
+  ],
+  "added_public_files": [
+    {
+      "path": ".gitignore",
+      "sha256": "fa3ab1177f102df5719c721eceeee828d02f32397b1e2a5c10e4bf46fdfbcc01"
+    },
+    {
+      "path": "README.md",
+      "sha256": "2ed4dc41d2aad41a5fa99a6e8cdeb68108218dae7124b9519089d9d8fcf2b5a9"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "5333b970513579d8649015a92676065be1627fedfa48b28662d8d2563af740c0"
+    },
+    {
+      "path": "项目现状.md",
+      "sha256": "a216c0bedbe570dd69592b0f9daef83b6808a263521ab6b2ef79290368e6f79b"
+    },
+    {
+      "path": "前期讨论与决策记录.md",
+      "sha256": "035a38bfdd0fe638a4a8985852153dc1eaff91526299ebb0266e7ecb3842b8ae"
+    },
+    {
+      "path": "app/test-fixtures/label.jpg",
+      "sha256": "73827ce7978d7a7a1774291e3b0ea7370c3250feeb82b6abf70cc588f8bdd718"
+    }
+  ],
+  "excluded_categories": [
+    ".local/ 全部本机运行数据",
+    "账号凭据、密码、令牌",
+    "私人上传、咨询与个人设计数据库",
+    "会话、缓存、日志和上层 Git 历史"
+  ],
+  "adaptations": [
+    "Markdown 本机文件链接转换为仓库相对链接",
+    "报告候选元数据使用仓库相对路径",
+    "启动脚本使用可配置 Python 与仓库虚拟环境",
+    "浏览器维护工具允许环境配置，提供模拟标签图片"
+  ],
+  "two_model_reports_byte_identical": true,
+  "collaboration_document": "https://wcnzcbnb3bym.feishu.cn/docx/RmaDdMgvzoLHfHxuYtQcHBJKnJc"
+}

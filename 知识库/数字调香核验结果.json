@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-03",
+  "passed": true,
+  "checks": [
+    {
+      "case": "同输入同版本可复现",
+      "passed": true
+    },
+    {
+      "case": "硬排除优先",
+      "passed": true
+    },
+    {
+      "case": "固定主调被排除时报告冲突",
+      "passed": true
+    },
+    {
+      "case": "排除全部木质主调时不放松条件",
+      "passed": true
+    },
+    {
+      "case": "传统燃香请求不继承精油参照",
+      "passed": true
+    },
+    {
+      "case": "未知标签不编造",
+      "passed": true
+    },
+    {
+      "case": "未知材料排除不静默忽略",
+      "passed": true
+    },
+    {
+      "case": "跨形态原料拒绝进入该池",
+      "passed": true
+    },
+    {
+      "case": "来源不存在时拒绝",
+      "passed": true
+    },
+    {
+      "case": "项目推测不能冒充厂家档案",
+      "passed": true
+    },
+    {
+      "case": "通用教材不能支持材料标签",
+      "passed": true
+    },
+    {
+      "case": "固定主调F03不被默认家族覆盖",
+      "passed": true
+    },
+    {
+      "case": "固定主调F04不被默认家族覆盖",
+      "passed": true
+    },
+    {
+      "case": "固定主调F05不被默认家族覆盖",
+      "passed": true
+    },
+    {
+      "case": "显式家族与固定主调冲突时报告",
+      "passed": true
+    },
+    {
+      "case": "调整后设计木质指标增加",
+      "passed": true
+    },
+    {
+      "case": "调整后已报道甜香参照指标减少",
+      "passed": true
+    },
+    {
+      "case": "主调保留且有明确变化",
+      "passed": true
+    },
+    {
+      "case": "双候选有不同材料构成",
+      "passed": true
+    },
+    {
+      "case": "候选保留未验证状态",
+      "passed": true
+    },
+    {
+      "case": "单材结果不冒充复合结果",
+      "passed": true
+    },
+    {
+      "case": "十个V编号独立映射到项目描述词",
+      "passed": true
+    },
+    {
+      "case": "中文与V编号不改变原构图候选",
+      "passed": true
+    },
+    {
+      "case": "未报道偏好草本明确未找到",
+      "passed": true
+    },
+    {
+      "case": "未报道偏好V04明确未找到",
+      "passed": true
+    },
+    {
+      "case": "未报道偏好fruity明确未找到",
+      "passed": true
+    },
+    {
+      "case": "无明确目标不强行默认木质",
+      "passed": true
+    },
+    {
+      "case": "辛香偏好可选择辛香主调",
+      "passed": true
+    },
+    {
+      "case": "喜欢与减弱同词时报告冲突",
+      "passed": true
+    }
+  ],
+  "scope": "来源和资料域、排除、可复现及数字构图变化；无实物、剂量、配伍或感官预测验证。"
+}
