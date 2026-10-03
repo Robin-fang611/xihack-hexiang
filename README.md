@@ -16,7 +16,7 @@
 
 ## 本机运行
 
-需要 Python 3.11 或更高版本。以下安装动作由拉取仓库的人在自己的环境执行；项目公开时没有更改原机依赖。
+需要 Python 3.11 或更高版本。以下命令面向 macOS/Linux 的本地环境，完整功能本轮在 macOS 验证；安装动作由拉取仓库的人在自己的环境执行，项目公开时没有更改原机依赖。
 
 ```sh
 python3 -m venv .venv
@@ -24,7 +24,7 @@ python3 -m venv .venv
 .venv/bin/python app/server.py --port 8870
 ```
 
-Windows 使用 `.venv\Scripts\python` 替换上述 Python 路径。打开 http://127.0.0.1:8870 。macOS 也可双击 `app/启动软件.command`，它优先使用仓库的虚拟环境。
+打开 http://127.0.0.1:8870 。macOS 也可双击 `app/启动软件.command`，它优先使用仓库的虚拟环境。Windows 的时区数据与 OCR 环境尚未适配和验证。
 
 首次启动自动生成本机管理者账号，存放于 `app/.local/本机管理者账号.txt`；普通用户从界面注册。每位协作者获得自己的新账号与空数据库，仓库没有默认密码或私人资料。服务默认仅监听本机。
 
