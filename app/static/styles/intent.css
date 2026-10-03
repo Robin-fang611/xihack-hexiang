@@ -1,0 +1,33 @@
+.words-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 44px; }
+.words-heading > label { font-size: 14px; }
+.words-heading > label .subtle { font-size: 11px; }
+#interpret-words { min-height: 44px; padding: 6px 0 6px 8px; font-size: 12px; flex-shrink: 0; }
+.intent-preview { background: #f0ecdf; border: 1px solid #d5c7ab; padding: 16px; font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
+.intent-preview h3 { font: 18px/1.7 var(--serif); margin: 0 0 8px; }
+.intent-preview p { margin: 7px 0; }
+.intent-recognized { padding: 0; margin: 12px 0; list-style: none; }
+.intent-recognized li { margin: 7px 0; }
+.intent-quote { display: block; font-size: 11px; color: var(--muted); }
+.intent-conditions { padding: 10px 12px; background: #fbf8ee; }
+.intent-conditions strong { color: #817259; font-size: 12px; }
+.intent-unknown { font-size: 12px; color: var(--muted); }
+.intent-conflicts { padding: 10px 12px; border-left: 3px solid var(--red); background: #f5e6db; }
+.intent-conflicts ul { margin: 6px 0; padding-left: 17px; font-size: 12px; }
+.intent-resolution { display: flex; flex-direction: column; gap: 7px; margin: 12px 0; }
+.intent-resolution select { min-height: 44px; font-size: 13px; width: 100%; }
+.intent-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
+.intent-actions .button { min-height: 44px; font-size: 12px; }
+.intent-method { color: var(--muted); font-size: 11px; }
+.intent-applied { border-left: 3px solid #8d9678; }
+.intent-current { margin-top: 10px; }
+.intent-current > summary { min-height: 44px; display: flex; align-items: center; color: var(--muted); font-size: 12px; cursor: pointer; }
+.intent-current > summary::before { content: '▸'; margin-right: 7px; color: var(--red); }
+.intent-current[open] > summary::before { content: '▾'; }
+@media (max-width: 760px) {
+  .composition-panel .field.design-words-field { margin: 10px 0; }
+  .words-heading > label { font-size: 13px; }
+  .words-heading > label .subtle { display: block; font-size: 10px; }
+  .design-words-field textarea { height: 64px; min-height: 64px; }
+  .intent-preview { padding: 13px; }
+  .intent-resolution select { font-size: 16px; }
+}

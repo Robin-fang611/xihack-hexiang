@@ -1,0 +1,733 @@
+{
+  "date": "2026-10-03",
+  "repository": "https://github.com/Robin-fang611/xihack-hexiang",
+  "scope": "本地原型五轮结果的公开摘录；不发布原私人数据、系统会话、完整本机收据或过程快照。此摘要不替代原不可变收据。",
+  "historical_rounds": [
+    {
+      "round": 1,
+      "passed": true,
+      "checks": 7,
+      "receipt_sha256": "06664c14f7349a830468e5898baaa704ba4258fe09d1dd9282b2b9f085122102",
+      "changed_runtime_files": [
+        "app/static/app.js",
+        "app/static/index.html",
+        "app/static/modules/studio.js",
+        "app/static/style.css",
+        "app/static/styles/iteration.css"
+      ]
+    },
+    {
+      "round": 2,
+      "passed": true,
+      "checks": 9,
+      "receipt_sha256": "1077ea06e180fc61f7f1eebf502fceb8d4c55ab56382e35374398a77b764d05a",
+      "changed_runtime_files": [
+        "app/intent.py",
+        "app/server.py",
+        "app/services.py",
+        "app/static/app.js",
+        "app/static/index.html",
+        "app/static/modules/account.js",
+        "app/static/modules/intent.js",
+        "app/static/modules/studio.js",
+        "app/static/style.css",
+        "app/static/styles/intent.css"
+      ]
+    },
+    {
+      "round": 3,
+      "passed": true,
+      "checks": 10,
+      "receipt_sha256": "46462003700a5f2016ce8a9ec1146a8349e66e2081496238cc4f60ab48a731a9",
+      "changed_runtime_files": [
+        "app/server.py",
+        "app/static/app.js",
+        "app/static/index.html",
+        "app/static/modules/account.js",
+        "app/static/modules/card.js",
+        "app/static/modules/core.js",
+        "app/static/modules/draft.js",
+        "app/static/modules/studio.js",
+        "app/static/style.css",
+        "app/static/styles/作品.css"
+      ]
+    },
+    {
+      "round": 4,
+      "passed": true,
+      "checks": 9,
+      "receipt_sha256": "948bed221ce20cc600078f6614d40107b29e3513d887d55cc3c5343cd36d1249",
+      "changed_runtime_files": [
+        "app/server.py",
+        "app/simulation.py",
+        "app/static/app.js",
+        "app/static/index.html",
+        "app/static/modules/integration.js",
+        "app/static/modules/products.js",
+        "app/static/style.css",
+        "app/static/styles/接入.css"
+      ]
+    },
+    {
+      "round": 5,
+      "passed": true,
+      "checks": 36,
+      "receipt_sha256": "961e59715b2c0a164f48be2a119e444d7ab5695314619c1e26bacd15fdcf6aa0",
+      "changed_runtime_files": [
+        "app/intent.py",
+        "app/server.py",
+        "app/static/app.js",
+        "app/static/index.html",
+        "app/static/modules/card.js",
+        "app/static/modules/core.js",
+        "app/static/modules/intent.js",
+        "app/static/modules/library.js",
+        "app/static/styles/intent.css",
+        "app/static/styles/records-library.css"
+      ]
+    }
+  ],
+  "current_runtime_source_sha256": {
+    "app/intent.py": "ae4977560d02bf26c8c60d4e86179e40d46b7acfb550f6dd576145cdad5b8577",
+    "app/ocr.swift": "16672a6267d2d162850d13e0b2d3a467b4848b05c1d1ecdae715b8b18c20aeda",
+    "app/presets.json": "3256e6cc3770afebaa612e82e8002298566d4601be30333837bd07acf154731e",
+    "app/server.py": "0b57a36bf4a4389ee951b9ce3b911e846572466cfe0cbb79bf6b20727fc53729",
+    "app/services.py": "d059661b01010cc2b7d5f51193456ae4b936e1577094582cf96586e67f781e73",
+    "app/simulation.py": "0e72f80ec49df68b2c33025d7413ef6b1756b475c60f6e496cb553cf0d029549",
+    "app/static/app.js": "82e482108d36e259c5de74a8d5915d394d02fd7c879d4814561d307061e9abc9",
+    "app/static/assets/夜间草案.svg": "b034a43ea966a681b6b272ab2028bcbd1ab97c68e78d8a050bf4c4865baa253c",
+    "app/static/assets/待客草案.svg": "9751df4a205811b0526c076a2e566092f29e9d0bb465e45e731302316fb0a7ca",
+    "app/static/assets/晨间草案.svg": "c983ae0e30566af2418651d1094ce673895583903ec4130bbffb30981feb725e",
+    "app/static/assets/香事案头.svg": "80e28fb7a0a87bd8855061babd2a665b389d98783cd257623fbc2493ee1e74db",
+    "app/static/index.html": "ffa63690cdf2d97ca8848f070bfea0e64f7f574d5cddabda2518c3d66fadb59c",
+    "app/static/modules/account.js": "128f91896c7de0804b8e1134e2433627221edbddd5415834860d2146f05f17a2",
+    "app/static/modules/card.js": "2766d6da5d219640b879c979e8137b0d284fc9036fa3ab7494d54a31ec939703",
+    "app/static/modules/core.js": "067e96b1ec75b5245712d50dec7c5e93ab61e0d0fed2a7417844b36ad3b8af93",
+    "app/static/modules/draft.js": "4f46175e0be585f8984639abc75a04976fb1d355fb1a22031c732421eaed25b8",
+    "app/static/modules/home.js": "893c7517b9e885ec9a3cd0ec57c5a8cad17cc0eb028f49a6d6e3ab55c7f1af0e",
+    "app/static/modules/integration.js": "3c51d71850e0f534cc2a6670c234a461e34888daeae8335a7ed2ac9c56c51a28",
+    "app/static/modules/intent.js": "ac63be0eb8f29cc0d86c28514e22421a0c771838e07e3bf3a162c1acf4c9c5c9",
+    "app/static/modules/library.js": "63183fdb6bc889020a8f8cca31fee5e9b5c1678c0ec4a636a0103edf8ff3a4d9",
+    "app/static/modules/navigation.js": "ee24ee1ff315cb979ca582bd83c7ef24d79f7055f96310207d98b3459abdd284",
+    "app/static/modules/products.js": "1e0bcf50e249dd240ce2ac6aad195a213a8103a9e95c7bd8fcedc5c28af76b28",
+    "app/static/modules/studio.js": "9210974fd7b9cd5cfbc3c4d6e8e03ee94b93d98d7439f1233aecc74f7251ab98",
+    "app/static/style.css": "df239f2413fa02fcbd04627af9bb69ae6a14a699b5de3e2b493c55de4ccb360c",
+    "app/static/styles/base.css": "5d5cabef7af11fc255be8b846e1ce9ff236ae3215e29be24d2fd4b711f9cab5a",
+    "app/static/styles/components.css": "bcacb102c9a244a376d9a9cd60662997a0377ba6f535b469a2dd1edf364516bb",
+    "app/static/styles/intent.css": "cc432fe5e2669bb6d5c4ba9714892c524d185e727271c736a772a1231765bdeb",
+    "app/static/styles/iteration.css": "51d2a6cbbfb49424189d02361313a0f531f205b9dbeccd31a5107c9100310cf5",
+    "app/static/styles/layout.css": "cb828b819ca71c7f38ae4bf0e5be0c45266ce396f10562edc2944c62fda1e736",
+    "app/static/styles/records-library.css": "e3b7344138558d3824966cc995d5b89ad1c1813c7d0d4d8a0ff71e19fb9b408d",
+    "app/static/styles/responsive.css": "d3b5fc9324fcfa2e463367dff60f381df0a58177eed6d7f8cdaf1e3915ee048f",
+    "app/static/styles/studio.css": "53416ec0989a85c0486c25c340f7cf31bddbcecb68566f4c4a5555e0cfbda247",
+    "app/static/styles/tokens.css": "772c44c00f9802785b1d35ab7519b5c000b5200be30048619e484558fb22d4b6",
+    "app/static/styles/作品.css": "000dc70026367dbf7b7080891fa327e997b645bea83f3ec0c487087d10bf6671",
+    "app/static/styles/接入.css": "95b380e070f7ced67b7b506ff30c5130b3fa7613a0196c9da53e88c9fe2f1f90",
+    "知识库/复合调香规则.json": "ba181abe397226e76419684c89e4510f8565225064b9a51b838d8dc4f06ae7de",
+    "知识库/数字调香.py": "e1abaf5e1f78b158e09a3da2b738167e969aa8138ec7303eef197603aff69e40",
+    "知识库/知识条目.json": "a4dc5c4baca258132788a8a815ea04e25a3439d4cae331c053a491786878c7c9"
+  },
+  "current_acceptance": {
+    "passed": true,
+    "checks": [
+      {
+        "id": "r1-mobile-main-path",
+        "description": "360/390px primary composition precedes materials, user words stay visible, generation distance improves by at least 40%",
+        "passed": true,
+        "measurements": [
+          {
+            "width": 390,
+            "generate_top": 1320,
+            "composition_top": 473.046875,
+            "palette_top": 1593.375,
+            "document_width": 390,
+            "words_inside_details": false,
+            "adjustments_open": false,
+            "baseline_top": 2218,
+            "reduction_percent": 40.49
+          },
+          {
+            "width": 360,
+            "generate_top": 1311,
+            "composition_top": 471.34375,
+            "palette_top": 1583.96875,
+            "document_width": 360,
+            "words_inside_details": false,
+            "adjustments_open": false,
+            "baseline_top": 2218,
+            "reduction_percent": 40.89
+          }
+        ]
+      },
+      {
+        "id": "r1-folded-exclusions",
+        "description": "Summary and always visible constraint text preserve excluded material across a conflicting preset",
+        "passed": true
+      },
+      {
+        "id": "r1-direct-and-keyboard",
+        "description": "Every material exposes 44px main/support/accent buttons; mouse and native Enter assign roles, undo restores composition",
+        "passed": true,
+        "controls": [
+          {
+            "id": "F01",
+            "role": "main",
+            "width": 58.65625,
+            "height": 44,
+            "tag": "BUTTON"
+          },
+          {
+            "id": "F01",
+            "role": "support",
+            "width": 58.671875,
+            "height": 44,
+            "tag": "BUTTON"
+          },
+          {
+            "id": "F01",
+            "role": "accent",
+            "width": 58.671875,
+            "height": 44,
+            "tag": "BUTTON"
+          },
+          {
+            "id": "F02",
+            "role": "main",
+            "width": 58.65625,
+            "height": 44,
+            "tag": "BUTTON"
+          },
+          {
+            "id": "F02",
+            "role": "support",
+            "width": 58.671875,
+            "height": 44,
+            "tag": "BUTTON"
+          },
+          {
+            "id": "F02",
+            "role": "accent",
+            "width": 58.671875,
+            "height": 44,
+            "tag": "BUTTON"
+          },
+          {
+            "id": "F03",
+            "role": "main",
+            "width": 58.65625,
+            "height": 44,
+            "tag": "BUTTON"
+          },
+          {
+            "id": "F03",
+            "role": "support",
+            "width": 58.671875,
+            "height": 44,
+            "tag": "BUTTON"
+          },
+          {
+            "id": "F03",
+            "role": "accent",
+            "width": 58.671875,
+            "height": 44,
+            "tag": "BUTTON"
+          },
+          {
+            "id": "F04",
+            "role": "main",
+            "width": 58.65625,
+            "height": 44,
+            "tag": "BUTTON"
+          },
+          {
+            "id": "F04",
+            "role": "support",
+            "width": 58.671875,
+            "height": 44,
+            "tag": "BUTTON"
+          },
+          {
+            "id": "F04",
+            "role": "accent",
+            "width": 58.671875,
+            "height": 44,
+            "tag": "BUTTON"
+          },
+          {
+            "id": "F05",
+            "role": "main",
+            "width": 58.65625,
+            "height": 44,
+            "tag": "BUTTON"
+          },
+          {
+            "id": "F05",
+            "role": "support",
+            "width": 58.671875,
+            "height": 44,
+            "tag": "BUTTON"
+          },
+          {
+            "id": "F05",
+            "role": "accent",
+            "width": 58.671875,
+            "height": 44,
+            "tag": "BUTTON"
+          }
+        ]
+      },
+      {
+        "id": "r1-candidate-explanations",
+        "description": "Two candidates expose different meaningful titles and explanations grounded in their own reported facets",
+        "passed": true,
+        "titles": [
+          "点缀取澳洲檀香精油",
+          "点缀取丁香花蕾精油"
+        ],
+        "explanations": [
+          "澳洲檀香精油的资料记录了香脂、奶油感、泥土感。这里比较点缀的选择，组合气味仍待实闻。",
+          "丁香花蕾精油的资料记录了温暖感、辛香、粉感。这里比较点缀的选择，组合气味仍待实闻。"
+        ]
+      },
+      {
+        "id": "r1-single-reference-export",
+        "description": "A one-material constrained result remains selectable and produces an actual valid PNG",
+        "passed": true,
+        "png": {
+          "width": 1080,
+          "height": 1200,
+          "bytes": 955687
+        }
+      },
+      {
+        "id": "r1-browser-errors",
+        "description": "No browser pageerror in either mobile viewport",
+        "passed": true
+      },
+      {
+        "id": "r2-text-changes-real-candidates",
+        "description": "Opposite explicit user statements become opposite conditions and different actual candidate compositions; explicit no-clove excludes F05",
+        "passed": true,
+        "first": {
+          "preferred_facets": [
+            "woody"
+          ],
+          "deemphasized_facets": [
+            "sweet"
+          ],
+          "excluded_ids": [
+            "F05"
+          ]
+        },
+        "opposite": {
+          "preferred_facets": [
+            "sweet"
+          ],
+          "deemphasized_facets": [
+            "woody"
+          ],
+          "excluded_ids": []
+        },
+        "signatures": [
+          [
+            "accent:F04|main:F01|support:F02",
+            "main:F01|support:F02"
+          ],
+          [
+            "main:F03",
+            "main:F03|support:F04"
+          ]
+        ]
+      },
+      {
+        "id": "r2-ambiguity-and-conflict-boundaries",
+        "description": "Manual choices and exclusions remain intact until resolution; contradictory words require confirmation and unknown questions/scenes/effects stay unmapped",
+        "passed": true
+      },
+      {
+        "id": "r2-preview-before-apply",
+        "description": "The proposal leaves current conditions unchanged until an actual apply click, then the browser uses its exclusion during generation",
+        "passed": true
+      },
+      {
+        "id": "r2-ui-current-and-text-resolution",
+        "description": "Actual current/text selection either keeps manual choices or adopts opposite text, preserves exclusions, and changes generated candidate signatures",
+        "passed": true,
+        "current": {
+          "preferred": [
+            "woody"
+          ],
+          "deemphasized": [
+            "sweet"
+          ],
+          "excluded": [
+            "F05"
+          ]
+        },
+        "text": {
+          "preferred": [
+            "sweet"
+          ],
+          "deemphasized": [
+            "woody"
+          ],
+          "excluded": [
+            "F05"
+          ]
+        },
+        "signatures": [
+          [
+            "accent:F04|main:F01|support:F02",
+            "main:F01|support:F02"
+          ],
+          [
+            "main:F03",
+            "main:F03|support:F04"
+          ]
+        ]
+      },
+      {
+        "id": "r2-stale-success-feedback-cleared",
+        "description": "After real successful generation, editing words clears both obsolete candidates and their old success feedback",
+        "passed": true
+      },
+      {
+        "id": "r2-proposal-invalidated-by-edits",
+        "description": "Editing words invalidates the old apply action; interpreting a question cannot rewrite actual selected conditions",
+        "passed": true
+      },
+      {
+        "id": "r2-browser-errors",
+        "description": "No browser script errors in explicit proposal and conflict flows",
+        "passed": true
+      },
+      {
+        "id": "r3-refresh-restores-only-input",
+        "description": "Actual refresh retains components, preferences, exclusions, scene, exact words, lock and name; no old candidates/card/simulation are restored",
+        "passed": true,
+        "snapshot": {
+          "components": [
+            {
+              "profile_id": "F04",
+              "role": "accent"
+            },
+            {
+              "profile_id": "F01",
+              "role": "main"
+            }
+          ],
+          "preferred": [
+            "woody",
+            "citrus"
+          ],
+          "deemphasized": [
+            "sweet"
+          ],
+          "excluded": [
+            "F05"
+          ],
+          "scene": "第三轮 · 私人阅读角",
+          "words": "  想保留木质，甜香少一点。\n不要丁香。保留这句自己的原话。  ",
+          "locked": false,
+          "name": "第三轮私笺-mus4f9a9t5vi"
+        }
+      },
+      {
+        "id": "r3-save-deduplicates-download-does-not-save",
+        "description": "Explicit save creates one owner record; same normalized design returns existing id, and two actual PNG downloads send zero save requests and leave count unchanged",
+        "passed": true,
+        "exported": [
+          {
+            "width": 1080,
+            "height": 1404,
+            "bytes": 1090570,
+            "rendered_name": "第三轮私笺-mus4f9a9t5vi"
+          },
+          {
+            "width": 1080,
+            "height": 1404,
+            "bytes": 1090570,
+            "rendered_name": "第三轮私笺-mus4f9a9t5vi"
+          }
+        ]
+      },
+      {
+        "id": "r3-save-failure-keeps-export",
+        "description": "Injected save HTTP 500 retains the current named card and actual PNG download works without retrying save",
+        "passed": true
+      },
+      {
+        "id": "r3-view-saved-card-does-not-adopt",
+        "description": "Viewing and closing an old work preserves the differently named current draft through reload; actual reopened payload retains raw fields and deduplicates by server record id",
+        "passed": true
+      },
+      {
+        "id": "r3-saved-card-continues-editing",
+        "description": "The saved card returns its original conditions, scene, words and name to studio; an actual support assignment edits a new draft",
+        "passed": true
+      },
+      {
+        "id": "r3-account-boundary-clears-storage",
+        "description": "Actual UI logout, account switch, and a real server-revoked session 401 clear private words and storage; reload cannot revive old drafts",
+        "passed": true
+      },
+      {
+        "id": "r3-malformed-draft-no-partial-injection",
+        "description": "Unknown profile and exclusion cause whole draft rejection; no illegal material or private words are injected, and the original stored exclusion data is preserved with visible feedback",
+        "passed": true
+      },
+      {
+        "id": "r3-mobile-primary-action-preserved",
+        "description": "360/390px fresh draft generation stays within 1330px despite new recovery/save capabilities",
+        "passed": true,
+        "metrics": [
+          {
+            "width": 360,
+            "generate_top": 1310.6875
+          },
+          {
+            "width": 390,
+            "generate_top": 1320.09375
+          }
+        ]
+      },
+      {
+        "id": "r3-browser-errors",
+        "description": "No browser script errors across refresh, pure export, save failure, account changes, invalid storage and mobile layouts",
+        "passed": true
+      },
+      {
+        "id": "r4-confirm-scope-and-strict-timer",
+        "description": "Actual HTTP rejects unconfirmed start/timer, requires server confirmation, rejects noninteger/out-of-range timers, hides foreign instances and revokes replaced/logout instances",
+        "passed": true,
+        "invalid": [
+          {
+            "value": 1.9,
+            "status": 400,
+            "code": "invalid_timer"
+          },
+          {
+            "value": true,
+            "status": 400,
+            "code": "invalid_timer"
+          },
+          {
+            "value": "5",
+            "status": 400,
+            "code": "invalid_timer"
+          },
+          {
+            "value": 0,
+            "status": 400,
+            "code": "invalid_timer"
+          },
+          {
+            "value": 121,
+            "status": 400,
+            "code": "invalid_timer"
+          }
+        ]
+      },
+      {
+        "id": "r4-concurrent-edit-cas",
+        "description": "Two real manager pages share a base revision; first update succeeds, second receives 409 without losing text, explicit reload shows server values and a new revision before the user saves again",
+        "passed": true
+      },
+      {
+        "id": "r4-dirty-form-survives-delayed-refresh",
+        "description": "An actual products GET is held while the visible old form accepts URL/checkbox input; releasing the response preserves the user input instead of redrawing it away",
+        "passed": true
+      },
+      {
+        "id": "r4-publication-cas-and-permissions",
+        "description": "Stale publication receives 409 without losing public checkbox choices, URL or price; explicit latest-value review enables a new revision save; ordinary publication and foreign edits remain denied",
+        "passed": true,
+        "selected_fields": [
+          "ingredients",
+          "notes",
+          "source_url"
+        ]
+      },
+      {
+        "id": "r4-real-ui-countdown-auto-stop",
+        "description": "Actual one-minute timer ticks in seconds and the frontend receives server auto_stop history and a stopped state",
+        "passed": true,
+        "initial": "01:00\n距软件模拟定时结束",
+        "later": "00:59\n距软件模拟定时结束",
+        "elapsed_seconds": 60.541,
+        "history": [
+          {
+            "action": "handoff",
+            "at": "2026-10-03T16:19:28+08:00",
+            "note": "软件模拟接收设计；确认后可运行，不涉及真实耗材或设备。"
+          },
+          {
+            "action": "confirm",
+            "at": "2026-10-03T16:19:28+08:00",
+            "note": "已确认本次软件模拟。"
+          },
+          {
+            "action": "set_timer",
+            "at": "2026-10-03T16:19:28+08:00"
+          },
+          {
+            "action": "start",
+            "at": "2026-10-03T16:19:28+08:00"
+          },
+          {
+            "action": "auto_stop",
+            "at": "2026-10-03T16:20:28+08:00",
+            "note": "软件模拟定时已到，后台自动关闭；不涉及真实设备。"
+          }
+        ]
+      },
+      {
+        "id": "r4-browser-errors",
+        "description": "No browser errors across server confirmation, real timers and concurrent manager conflicts",
+        "passed": true
+      },
+      {
+        "id": "r5-module-tests",
+        "description": "Actual module tests: test_intent, test_simulation, test_conflict, test_session_race, test_iterations",
+        "passed": true
+      },
+      {
+        "id": "r4-real-background-auto-stop",
+        "description": "Actual closed-browser one-minute timer stops in the background before any owner status request",
+        "passed": true
+      },
+      {
+        "id": "r5-complete-original-regression",
+        "description": "Full original HTTP/privacy/upload/publication/matching/48-layout/knowledge regression adapted to explicit save and server confirmation",
+        "passed": true
+      },
+      {
+        "id": "r5-source-stable",
+        "description": "Runtime source unchanged during acceptance",
+        "passed": true
+      },
+      {
+        "id": "r5-library-search-family-and-domain",
+        "description": "Actual name/reported-label/family filtering finds correct references; a chosen modern reference is visible and requires role selection, while traditional material pages never enter the modern composition",
+        "passed": true
+      },
+      {
+        "id": "r5-negation-unknown-compact",
+        "description": "Several negation families reduce the stated facet without reversing it; material dislike stays unknown, explicit exclusion only adds, and unmapped feedback is compact",
+        "passed": true
+      },
+      {
+        "id": "r5-lock-save-signature-both-directions",
+        "description": "Lock-only changes create real 201 saves in both directions for new same-name signatures; existing signatures deduplicate without another request, and all four versions reopen with their own actual lock state",
+        "passed": true
+      },
+      {
+        "id": "r5-cross-tab-user-binding",
+        "description": "Actual shared-cookie account switch returns identity conflict before another owner's data, clears old tab private state/draft and never renders the new account's data",
+        "passed": true
+      }
+    ],
+    "acceptance_sha256": "556606a0edc04a5cc859fcfe61ee6306166f68753dd5b731a705a51c8bc7b56d",
+    "combination": "同一38份运行源，32基础检查＋4第五轮新增补测；原失败尝试保留为失败，按核实的测试前提错误纠正后补测。",
+    "module_tests_passed": 57,
+    "full_regression": {
+      "http_groups": 9,
+      "digital_composition_checks": 29,
+      "knowledge_counterexamples": 8,
+      "browser_flows": 12,
+      "layout_checks": 48
+    },
+    "background_timer": {
+      "passed": true,
+      "browser_closed": true,
+      "elapsed_seconds": 71.8,
+      "internal_auto_stop_observed_before_http_status": true
+    },
+    "known_test_corrections": [
+      "传统资料页的现代搜索框按设计禁用，测试应先切到现代参照域。",
+      "解除锁定时省略locked_main_id是合法契约，不要求响应补为null；实际重开分别保留自身锁状态。"
+    ],
+    "historical_tooling_scope": "R1开始/完成、R2开始只有工具指纹；R2完成及后续轮次有工具快照，不补造旧工具证据。"
+  },
+  "public_copy_validation": {
+    "status": "passed",
+    "command": "在 app/ 下执行 python test_iterations.py --round 5；已有Playwright/Chrome可由环境变量配置。",
+    "method": "公开副本适配测试环境导入后，单次完整运行36项全部通过；仅使用临时Store、账号与端口。",
+    "checks_passed": 36,
+    "module_tests_passed": 57,
+    "full_original_regression_passed": true,
+    "runtime_source_byte_identical": 38,
+    "public_tooling_sha256": {
+      "app/iteration_cycle.py": "911b4ed3e2474d884ef63c8ab5047733bf8721ebff0c5388ea95b0a0521bcd8b",
+      "app/qa_browser.cjs": "006b2a0c8353d7b5476873b420d6d9c92c674ab8b7c7e5ca9e8887eb75214bf2",
+      "app/qa_iterations.cjs": "883bdd5bdeeeed53233b77673fc4d434c345cefa81164a4d501d9a046cb733e1",
+      "app/qa_v2.cjs": "5aafdac63a3d1362db66a68c2c535812bfa33014c9126d855bd5beb18009f2d8",
+      "app/test_app.py": "de3a819c5c19c8a6988a112675365f2487fad8b70d99b1a983ede4075970e08c",
+      "app/test_conflict.py": "a4239f334f6bd8790e2ceffc732b2b2578773c6751daf83f95c86527e34af52a",
+      "app/test_intent.py": "126e29f0fccdf2480728071c811a640663c7a897508f938d0a02721a89ec6ad3",
+      "app/test_iterations.py": "bea9ee00f7327dc7b5b587ee608deb94123e92a12426a8c2b6a405f8e7f79951",
+      "app/test_session_race.py": "9a59c04ddf9585e9d139d6d89be51b0659141bdbd705bcb44896331dee707b1d",
+      "app/test_simulation.py": "3c3a34b545bd4ca71155672a3e18cd788294bc3f1925fae0cfb724ce8ddab2a7",
+      "app/verify_v2.py": "b57d1ae9f3d44f968ca9019163a886478d2f406ce7ef5acaaef4f51e35597517",
+      "知识库/核验知识库.py": "c20d538996bf1dafae67cabbb71d20da67985f1114b4a80a57046f98e887d118",
+      "知识库/验证数字调香.py": "bd9b2e3e6ecfeb63a9acba1c81443c94ac04607df10e296f965a6461a3eac07b"
+    },
+    "original_acceptance_sha256": "e11e5e9f901aa5db317d7aa9c85d9c580c8b49612093cc924eb988aeee787b93",
+    "background_timer": {
+      "passed": true,
+      "browser_closed": true,
+      "elapsed_seconds": 63.47,
+      "internal_auto_stop_observed_before_http_status": true
+    },
+    "private_raw_evidence": "本次原始过程已核验并留在本地，不随公开摘要发布。"
+  },
+  "screenshots": [
+    {
+      "path": "五轮截图/手机案头-390.png",
+      "sha256": "3c971adfee6f7a97e896e4c0772c0425d3fe01243207629b5dbb79d6f70acf7b",
+      "scope": "隔离临时测试资料与同版运行源码截图，不是真实用户/商家资料"
+    },
+    {
+      "path": "五轮截图/图鉴选材.png",
+      "sha256": "7d3ea1ed1ac8fd9adaf817b9bb6b2566d1cf912f4f388236c0ecd61df370d8b1",
+      "scope": "隔离临时测试资料与同版运行源码截图，不是真实用户/商家资料"
+    },
+    {
+      "path": "五轮截图/未知原话.png",
+      "sha256": "109d4c5bce03774209572d7cc39160af2271ed9f0394a55a1744439bf830c52f",
+      "scope": "隔离临时测试资料与同版运行源码截图，不是真实用户/商家资料"
+    },
+    {
+      "path": "五轮截图/作品锁恢复.png",
+      "sha256": "b7e0d4e53273e74932f85c9edf4434185b4ec136e0b067c67e657a4143f4ccf5",
+      "scope": "隔离临时测试资料与同版运行源码截图，不是真实用户/商家资料"
+    },
+    {
+      "path": "五轮截图/跨页账号保护.png",
+      "sha256": "e748a6dcc90d354b7f38c823ffb90601a00e460452a3392b9d399a5b55eaa795",
+      "scope": "隔离临时测试资料与同版运行源码截图，不是真实用户/商家资料"
+    },
+    {
+      "path": "五轮截图/模拟倒计时.png",
+      "sha256": "6d1ff94bf89585495c6984b44479861be6912ac09bdbe041160f008b3108eb1f",
+      "scope": "隔离临时测试资料与同版运行源码截图，不是真实用户/商家资料"
+    },
+    {
+      "path": "五轮截图/首页.png",
+      "sha256": "1b2c8fe6973a04be9fa60810ed75aa956bb6eace63f8d0273c4d13db3864028c",
+      "scope": "隔离临时测试资料与同版运行源码截图，不是真实用户/商家资料"
+    },
+    {
+      "path": "五轮截图/香笺.png",
+      "sha256": "c0bc11e3ffe70715dcf1ceaea6147de3d3f27d11aff6a321ebe9d7da825f3aaf",
+      "scope": "隔离临时测试资料与同版运行源码截图，不是真实用户/商家资料"
+    }
+  ],
+  "fresh_clone_state": "未包含本机verification/iterations/历史收据。iteration_cycle.py status会开启新的ready检查点；历史五轮结果见本摘要而非新clone的state。",
+  "boundaries": [
+    "尚无真实混合气味/制香师/制造验证",
+    "软件计时依赖本机服务，无真实设备连接",
+    "商家成交、生产部署、审美与业务人工验收未完成",
+    "飞书文档没有在本轮同步"
+  ]
+}

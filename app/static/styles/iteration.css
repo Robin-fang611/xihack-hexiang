@@ -1,0 +1,47 @@
+/* Iteration 1: keep the composition and its next action close together. */
+.studio-adjustments { margin-top: 24px; padding-top: 8px; border-top: 1px solid var(--line); }
+.studio-adjustments > summary { display: flex; flex-direction: column; gap: 5px; position: relative; min-height: 52px; padding: 10px 22px 10px 0; cursor: pointer; font-size: 14px; list-style: none; }
+.studio-adjustments > summary::-webkit-details-marker { display: none; }
+.studio-adjustments > summary::after { content: '+'; position: absolute; right: 2px; top: 12px; color: var(--red); font-size: 22px; }
+.studio-adjustments[open] > summary::after { content: '−'; }
+.studio-adjustments > summary small { font-size: 12px; line-height: 1.8; color: var(--muted); overflow-wrap: anywhere; }
+.studio-constraints { font-size: 12px; line-height: 1.8; color: var(--muted); margin: 10px 0 14px; }
+.studio-constraints.has-exclusions { padding: 10px 12px; background: #f2e6db; border-left: 3px solid var(--red); color: #875244; }
+.composition-actions { margin-top: 15px; padding-top: 15px; }
+.material-placement { margin: 14px 0 7px; font-size: 12px; color: var(--muted); }
+.material-card.selected .material-placement { color: var(--red); }
+.material-role-actions { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 6px; }
+.material-role-button { min-width: 44px; min-height: 44px; padding: 7px 4px; border: 1px solid #c8baa0; border-radius: 1px; background: #fcf9f0; color: #766c58; font-size: 12px; }
+.material-role-button:hover, .material-role-button.assigned { border-color: #9b7e57; color: var(--ink); background: #e8dfcb; }
+.material-role-button:focus-visible, .studio-adjustments > summary:focus-visible { outline: 3px solid #9b7e57; outline-offset: 3px; }
+.material-card .material-footer .text-button { min-height: 44px; padding: 8px 0 8px 10px; }
+.candidate-explanation { font-size: 13px; line-height: 1.9; color: var(--muted); margin: 13px 0 18px; }
+.candidate-matched { margin-top: 18px; }
+.candidate-matched > .subtle { display: block; font-size: 11px; margin-bottom: 5px; }
+.candidate-card h3 { padding-right: 27px; overflow-wrap: anywhere; font-size: 23px; }
+.candidate-card .button, .composition-actions .button { min-height: 44px; }
+
+@media (max-width: 760px) {
+  .composition-panel { grid-row: 1; }
+  .palette-panel { grid-row: 2; }
+  .design-note { grid-row: 3; }
+  .role-slot, .role-slot[data-role=main] { min-height: 226px; }
+  .slot-placeholder { font-size: 11px; }
+  .role-slot .remove-slot { bottom: -10px; right: calc(50% - 22px); min-width: 44px; min-height: 44px; }
+  .heading-actions .button, .scene-choice, .palette-arrow, .preset-drawer summary, .chip-button { min-height: 44px; }
+  .preset-drawer summary { padding-top: 10px; }
+  .studio-adjustments .exclude-list label { min-height: 44px; display: flex; align-items: center; gap: 8px; }
+  .studio-adjustments .exclude-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 4px 8px; }
+  .composition-heading h2 { font-size: 22px; }
+  .check-line { min-height: 44px; margin: 6px 0 12px; align-items: center; }
+  .composition-panel .scene-field { margin: 12px 0 16px; }
+  .composition-panel .field:not(.scene-field) { margin: 18px 0; }
+  .composition-actions { flex-wrap: nowrap; }
+  .composition-actions .button { padding: 11px 7px; }
+  .studio-constraints { font-size: 11px; }
+  .studio-adjustments { margin-top: 20px; }
+  .studio-adjustments > summary { font-size: 13px; }
+  .studio-adjustments > summary small { font-size: 11px; }
+  .material-placement { margin-top: 12px; }
+  .candidate-card h3 { font-size: 22px; }
+}

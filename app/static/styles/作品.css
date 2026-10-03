@@ -1,0 +1,9 @@
+.draft-status { margin: 15px 0 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.draft-status.draft-warning { color: var(--red); }
+.card-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+.card-actions .button { min-height: 44px; }
+#card-save-status { font-size: 12px; line-height: 1.8; margin: 16px 0; }
+#save-card.saved { background: #e5e8da; border-color: #9ca886; color: #57694c; }
+@media (max-width: 760px) {
+  .card-actions .button { font-size: 12px; padding: 10px 7px; }
+}

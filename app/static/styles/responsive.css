@@ -1,0 +1,209 @@
+/* Breakpoints adapt the workbench before any content can push the viewport. */
+@media (min-width: 1500px) {
+  .site-header { padding-left: max(3.6vw, calc((100vw - 1360px)/2)); padding-right: max(3.6vw, calc((100vw - 1360px)/2)); }
+}
+@media (max-width: 1240px) {
+  .site-header { gap: 25px; }
+  .main-nav { gap: 5px; }
+  .nav-button { font-size: 13px; }
+  .account-name { max-width: 110px; }
+  .studio-layout { grid-template-columns: 245px minmax(0,1fr); }
+  .design-note { grid-column: 1 / -1; position: static; }
+  .design-note #design-summary { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0 25px; }
+  .design-note h2 { margin-bottom: 13px; }
+  .hero-copy h1 { font-size: clamp(35px,4.2vw,53px); }
+  .hero-inscription { right: -4px; }
+}
+@media (max-width: 1020px) {
+  .site-header { flex-wrap: wrap; gap: 15px; padding: 17px 3.6vw 10px; }
+  .main-nav { order: 3; flex-basis: 100%; overflow-x: auto; flex-wrap: nowrap; gap: 18px; padding-bottom: 1px; }
+  .nav-button { padding: 9px 2px; font-size: 14px; }
+  .account-area { margin-left: auto; }
+  .hero-copy h1 { font-size: 37px; }
+  .hero-art { margin-left: -35px; width: calc(100% + 35px); }
+  .hero-inscription { font-size: 15px; top: 18%; }
+  .home-hero { min-height: 410px; }
+  .home-preset .preset-copy { padding: 20px 18px; }
+  .home-preset .preset-art { height: 132px; }
+  .home-preset h3, .home-preset h2 { font-size: 25px; }
+  .home-preset .preset-intent { font-size: 14px; }
+  .home-preset .preset-footer { gap: 6px; flex-wrap: wrap; }
+  .home-presets { gap: 15px; }
+  .library-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .studio-layout { gap: 17px; grid-template-columns: 218px minmax(0,1fr); }
+  .composition-panel { padding: 25px 20px; }
+  .role-slot, .role-slot[data-role=main] { padding: 17px 7px 12px; }
+  .slot-vessel { width: 79px; height: 53px; }
+  .slot-material strong { font-size: 14px; }
+  .scene-choice { font-size: 11px; gap: 4px; }
+}
+@media (max-width: 760px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 23px; }
+  main { width: 92vw; padding: 28px 0 45px; }
+  .site-header { padding: 16px 4vw 8px; gap: 12px; }
+  .brand { gap: 10px; }
+  .brand-seal { width: 34px; height: 38px; font-size: 24px; }
+  .brand-name { font-size: 23px; }
+  .brand-subtitle { margin-top: 3px; font-size: 9px; }
+  .main-nav { gap: 23px; }
+  .account-area .button { font-size: 12px; padding: 7px 9px; min-height: 37px; }
+  .account-name { max-width: 97px; font-size: 11px; }
+  .role-label { display: none; }
+  .page-heading { margin-bottom: 23px; gap: 17px; flex-wrap: wrap; }
+  .section-intro { font-size: 14px; }
+  .heading-actions { padding-top: 0; gap: 9px; }
+  .heading-actions .button { font-size: 13px; }
+  .home-hero { display: flex; flex-direction: column; min-height: 0; margin: 0 0 0; align-items: stretch; }
+  .hero-copy { padding: 18px 0 0; }
+  .hero-copy h1 { font-size: clamp(32px,7.8vw,46px); line-height: 1.5; margin-bottom: 16px; }
+  .hero-eyebrow { margin-bottom: 21px; font-size: 10px; }
+  .hero-description { font-size: 14px; margin-bottom: 23px; }
+  .desktop-break { display: none; }
+  .hero-actions { gap: 23px; }
+  .hero-actions .button { min-width: 142px; padding: 12px 19px; font-size: 14px; }
+  .hero-actions .text-button { font-size: 13px; }
+  .hero-footnote { margin-top: 20px; font-size: 11px; }
+  .hero-art { width: 100%; margin: -6px 0 -2px; }
+  .hero-illustration { width: 100%; }
+  .hero-smoke { width: 100%; height: 100%; }
+  .hero-inscription { top: 20%; right: 6px; font-size: 14px; }
+  .hero-inscription span { margin-right: 9px; font-size: 8px; }
+  .home-designs { padding-top: 27px; padding-bottom: 27px; }
+  .section-heading { flex-direction: column; align-items: flex-start; gap: 9px; margin-bottom: 21px; }
+  .section-heading h2 { font-size: 25px; }
+  .section-heading > p { font-size: 12px; margin: 0; }
+  .home-presets { grid-template-columns: 1fr; gap: 18px; }
+  .home-preset { display: grid; grid-template-columns: 112px minmax(0,1fr); }
+  .home-preset .preset-art { height: 100%; min-height: 215px; border-bottom: 0; border-right: 1px solid #ded1ba; background-size: auto 200px; background-position: 50% center; }
+  .home-preset .preset-art img { object-fit: cover; }
+  .home-preset .preset-copy { padding: 18px 18px 15px; }
+  .home-preset h3, .home-preset h2 { font-size: 25px; margin-top: 7px; }
+  .home-preset .preset-number { font-size: 10px; }
+  .home-preset .preset-intent { font-size: 14px; line-height: 1.7; }
+  .home-preset p { font-size: 12px; }
+  .home-preset .preset-scene { font-size: 10px; }
+  .home-preset .preset-footer { padding-top: 9px; margin-top: 12px; }
+  .home-preset .preset-footer .text-button { font-size: 12px; }
+  .home-preset .preset-footer > span { font-size: 10px; }
+  .home-catalog { padding-top: 22px; }
+  .home-bottom { grid-template-columns: 1fr; gap: 0; margin-top: 25px; }
+  .small-panel { padding: 26px 3px; }
+  .small-panel h2 { font-size: 23px; }
+  .small-panel p { font-size: 13px; }
+  .studio-progress { padding: 12px 0; margin-bottom: 21px; }
+  .progress-step { font-size: 10px; gap: 6px; padding-right: 6px; }
+  .progress-step + .progress-step { padding-left: 16px; }
+  .progress-step + .progress-step::before { width: 10px; left: 0; }
+  .progress-step > span:first-child { font-size: 15px; }
+  .studio-layout { grid-template-columns: minmax(0,1fr); gap: 20px; }
+  .palette-panel { padding: 20px 18px 16px; }
+  .palette-note { font-size: 11px; margin-bottom: 13px; }
+  .material-palette { display: grid; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(220px,calc(100% - 36px)); gap: 12px; max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x mandatory; padding-bottom: 10px; }
+  .material-card { scroll-snap-align: start; scroll-snap-stop: always; min-width: 0; padding: 15px; }
+  .material-card h3 { font-size: 18px; }
+  .material-card .tag { font-size: 12px; }
+  .palette-navigation { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 5px; }
+  .palette-navigation .subtle { font-size: 10px; }
+  .palette-navigation > div { display: flex; gap: 6px; flex-shrink: 0; }
+  .palette-arrow { width: 40px; height: 37px; border: 1px solid var(--line); border-radius: 1px; color: var(--ink); background: var(--white); font-size: 20px; line-height: 1; }
+  .preset-drawer { margin-top: 13px; padding-top: 12px; }
+  .preset-drawer summary { font-size: 12px; }
+  .composition-panel { padding: 23px 16px; }
+  .composition-heading h2 { font-size: 23px; }
+  .design-status { font-size: 10px; padding: 3px 5px; }
+  .role-slots { gap: 6px; margin-top: 20px; }
+  .role-slot, .role-slot[data-role=main] { min-height: 259px; padding: 18px 5px 12px; }
+  .slot-label > span { font-size: 19px; letter-spacing: .06em; }
+  .slot-label small { font-size: 9px; line-height: 1.6; }
+  .slot-number { font-size: 10px; top: 6px; left: 5px; }
+  .slot-vessel { width: 68px; height: 45px; margin-bottom: 14px; }
+  .slot-vessel i { width: 17px; height: 16px; }
+  .slot-material strong { font-size: 12px; line-height: 1.8; }
+  .slot-material small { font-size: 9px; }
+  .slot-placeholder { font-size: 10px; padding: 1px 2px; }
+  .slot-content { min-height: 89px; }
+  .check-line { font-size: 11px; }
+  .field > label, legend { font-size: 13px; }
+  input:not([type=checkbox]):not([type=radio]), select, textarea { font-size: 16px; }
+  .scene-choice { font-size: 11px; gap: 5px; min-height: 43px; }
+  .scene-choice > span { font-size: 15px; }
+  .chip-button { font-size: 12px; min-height: 35px; }
+  .composition-actions { gap: 8px; }
+  .composition-actions .button { font-size: 12px; padding: 10px 8px; }
+  .design-note { padding: 23px 20px; }
+  .design-note #design-summary { grid-template-columns: 1fr 1fr; gap: 0 18px; }
+  .design-note h2 { font-size: 21px; }
+  .summary-row { font-size: 12px; margin: 11px 0; }
+  .candidate-grid, .comparison-grid { grid-template-columns: 1fr; }
+  .candidates-section { margin-top: 26px; padding-top: 24px; }
+  .candidates-section .panel-heading { align-items: flex-start; }
+  .candidates-section .panel-heading > .subtle { font-size: 10px; }
+  .candidate-card { padding: 25px 22px; }
+  .candidate-role { gap: 17px; font-size: 13px; }
+  .candidate-actions .button { flex: 1; font-size: 12px; }
+  .candidate-card::after { right: 22px; }
+  .product-grid, .library-grid, .collection-layout, .integration-layout { grid-template-columns: 1fr; }
+  .product-art { aspect-ratio: 2.1; }
+  .product-body { padding: 23px; }
+  .empty-state { padding: 28px 20px; }
+  .empty-state p { font-size: 13px; }
+  .panel { padding: 22px; }
+  .palette-panel { padding: 20px 18px 16px; }
+  .composition-panel { padding: 23px 16px; }
+  .design-note { padding: 23px 20px; }
+  .collection-layout { gap: 27px; }
+  .analysis-grid, .publish-field-row { grid-template-columns: 1fr; }
+  .record-card { padding: 22px; }
+  .record-head { gap: 12px; }
+  .record-head h3 { font-size: 21px; }
+  .record-actions .button { font-size: 12px; }
+  .library-preface { padding: 21px 26px; min-height: 124px; gap: 18px; }
+  .book-spine { font-size: 21px; padding: 6px 10px; }
+  .library-preface p { font-size: 20px; }
+  .library-tabs { gap: 6px; }
+  .tab-button { padding: 10px 9px; font-size: 13px; }
+  .library-card { padding: 25px 23px 23px 34px; }
+  .library-card h2 { font-size: 26px; }
+  .modal { width: 94vw; max-height: 89vh; padding: 33px 21px 24px; }
+  .modal h2 { font-size: 25px; }
+  .auth-tabs { gap: 7px; }
+  .scent-card { padding: 32px 24px; margin-top: 20px; }
+  .scent-card .card-title { font-size: 32px; }
+  .scent-card .card-scene { font-size: 18px; }
+  .card-role-line { gap: 13px; }
+  .card-role-line strong { font-size: 18px; }
+  .card-role-line.support strong { font-size: 17px; }
+  .card-role-line.accent strong { font-size: 16px; }
+  .card-actions .button { flex: 1; font-size: 12px; }
+  .site-footer { padding: 25px 4vw; flex-direction: column; align-items: flex-start; gap: 10px; font-size: 11px; }
+  .footer-brand { font-size: 18px; }
+  .toast { bottom: 15px; width: max-content; max-width: 90vw; text-align: center; font-size: 12px; padding: 12px 18px; }
+}
+@media (max-width: 360px) {
+  .hero-copy h1 { font-size: 28px; }
+  .hero-actions { gap: 13px; }
+  .hero-actions .button { min-width: 125px; padding: 11px 15px; }
+  .home-preset { grid-template-columns: 93px minmax(0,1fr); }
+  .home-preset .preset-copy { padding: 16px 13px; }
+  .role-slot, .role-slot[data-role=main] { min-height: 264px; }
+  .slot-vessel { width: 58px; height: 39px; }
+  .slot-label > span { font-size: 18px; }
+  .scene-choices { gap: 5px; }
+  .scene-choice { font-size: 10px; gap: 4px; }
+  .scene-choice > span { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+@media (max-width: 760px) {
+  .progress-step { flex-direction: column; align-items: flex-start; gap: 3px; padding-right: 0; }
+  .progress-step + .progress-step { padding-left: 17px; }
+  .progress-step > span:last-child { white-space: nowrap; }
+  .design-note h2 { font-size: 21px; }
+}
+@media (max-width: 360px) {
+  .progress-step { font-size: 9px; }
+  .progress-step + .progress-step { padding-left: 12px; }
+}

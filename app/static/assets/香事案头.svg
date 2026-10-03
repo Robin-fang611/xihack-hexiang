@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="540" viewBox="0 0 760 540" fill="none">
+<defs>
+  <linearGradient id="bronze" x1="330" y1="300" x2="449" y2="421" gradientUnits="userSpaceOnUse"><stop stop-color="#929680"/><stop offset=".4" stop-color="#646d5c"/><stop offset=".72" stop-color="#808670"/><stop offset="1" stop-color="#454f45"/></linearGradient>
+  <linearGradient id="rim" x1="293" y1="325" x2="503" y2="325" gradientUnits="userSpaceOnUse"><stop stop-color="#919780"/><stop offset=".48" stop-color="#c6c3a8"/><stop offset="1" stop-color="#626d5a"/></linearGradient>
+  <linearGradient id="wood" x1="154" y1="425" x2="648" y2="455" gradientUnits="userSpaceOnUse"><stop stop-color="#b7a282"/><stop offset=".55" stop-color="#d4c3a8"/><stop offset="1" stop-color="#bdaa8e"/></linearGradient>
+  <linearGradient id="vase" x1="611" y1="243" x2="668" y2="372" gradientUnits="userSpaceOnUse"><stop stop-color="#d1c8b2"/><stop offset=".65" stop-color="#afa88f"/><stop offset="1" stop-color="#8c947d"/></linearGradient>
+  <radialGradient id="paper" cx="0" cy="0" r="1" gradientTransform="translate(421 269) rotate(90) scale(230 288)" gradientUnits="userSpaceOnUse"><stop stop-color="#ebe7da"/><stop offset="1" stop-color="#f3efe5" stop-opacity="0"/></radialGradient>
+  <pattern id="grain" width="11" height="9" patternUnits="userSpaceOnUse"><path d="M0 2h2M7 6h1" stroke="#6a644f" stroke-opacity=".035" stroke-width=".5"/></pattern>
+</defs>
+<ellipse cx="419" cy="283" rx="292" ry="217" fill="url(#paper)"/>
+<!-- The branch is a drawing, not a botanical specimen. -->
+<g stroke="#6e715c" stroke-linecap="round">
+  <path d="M640 267C634 229 622 200 604 160C588 125 566 100 548 64" stroke-width="2.5"/>
+  <path d="M616 192C620 165 635 146 654 132M597 145C574 143 557 133 538 124M570 102C575 83 589 71 601 60M629 220C651 204 669 197 690 186" stroke-width="1.7"/>
+  <path d="M562 86L542 82M613 179L626 162M579 117L559 110M642 210L655 201" stroke-width="1.2"/>
+</g>
+<g fill="#737d64" fill-opacity=".8">
+  <path d="M540 121C526 108 513 113 514 116C517 128 529 135 541 131Z"/><path d="M555 108C543 96 534 98 532 99C534 114 546 119 556 116Z"/>
+  <path d="M562 89C560 74 546 66 542 69C540 78 546 89 556 95Z"/><path d="M548 68C550 54 541 42 537 43C531 52 535 64 542 74Z"/>
+  <path d="M582 82C577 67 582 54 587 54C594 60 595 73 588 85Z"/><path d="M600 62C596 50 603 40 608 43C613 53 611 62 604 68Z"/>
+  <path d="M626 164C622 151 628 139 633 139C640 146 638 158 631 169Z"/><path d="M651 135C650 121 660 111 665 115C666 126 660 137 654 141Z"/>
+  <path d="M655 203C654 190 664 180 669 183C671 194 665 203 659 209Z"/><path d="M686 189C684 176 693 167 698 170C702 181 694 190 690 195Z"/>
+  <path d="M624 199C610 194 599 199 600 203C608 213 617 215 627 208Z"/>
+</g>
+<g fill="#9d6958" fill-opacity=".6"><circle cx="542" cy="128" r="3.4"/><circle cx="556" cy="114" r="2.6"/><circle cx="585" cy="81" r="2.7"/></g>
+<!-- Folded books and a sheet of notes on the table. -->
+<path d="M93 423L207 397L299 417L188 447Z" fill="#d3c6ab" stroke="#a49a7f" stroke-width="1.2"/>
+<path d="M93 423V438L188 462L299 433V417" fill="#e5ddc9" stroke="#a49a7f" stroke-width="1.2"/>
+<path d="M98 432L188 455L294 427M103 436L188 459L292 432" stroke="#c5baa0"/>
+<path d="M104 404L207 379L290 399L184 427Z" fill="#87917c" stroke="#69735f" stroke-width="1.2"/>
+<path d="M104 404V416L184 438L290 410V399" fill="#d8ceb7" stroke="#69735f" stroke-width="1.2"/>
+<path d="M112 412L183 432L284 406" stroke="#b7b198"/>
+<path d="M137 400L166 393L208 404L177 411Z" fill="#e6dec9" stroke="#abb29b"/>
+<path d="M150 399L165 404M157 397L172 402M164 395L179 400" stroke="#69715e" stroke-width=".8"/>
+<g stroke="#d2cfbc" stroke-width="1.2"><path d="M110 404L119 407M111 408L120 411M112 412L121 415"/></g>
+<path d="M530 438L650 412L692 432L571 459Z" fill="#efe7d6" stroke="#d1c3aa"/>
+<g stroke="#9c947a" stroke-width=".8" opacity=".65"><path d="M553 434L577 429M563 438L587 433M573 442L597 437M585 430L609 425M596 434L620 429M607 438L631 433"/></g>
+<!-- Stoneware vessel. -->
+<ellipse cx="644" cy="391" rx="42" ry="7" fill="#5b604d" fill-opacity=".1"/>
+<path d="M626 257C633 269 623 297 615 320C605 349 618 380 643 383C670 382 681 349 671 322C661 297 653 276 659 257Z" fill="url(#vase)" stroke="#999f89" stroke-width="1.1"/>
+<ellipse cx="642" cy="257" rx="18" ry="5" fill="#7e8974"/>
+<ellipse cx="642" cy="257" rx="12" ry="3" fill="#525f4f"/>
+<path d="M627 279C636 282 649 282 658 279M617 333C634 337 654 337 671 333" stroke="#d8cfb6" stroke-opacity=".55"/>
+<path d="M624 324C619 344 624 365 631 370" stroke="#e1d6be" stroke-opacity=".5" stroke-width="3"/>
+<!-- Low wooden stand. -->
+<ellipse cx="413" cy="469" rx="186" ry="13" fill="#545143" fill-opacity=".07"/>
+<path d="M208 436L404 393L599 433L407 477Z" fill="url(#wood)" stroke="#b29e7c" stroke-width="1.1"/>
+<path d="M208 436V446L407 488L599 443V433L407 477Z" fill="#ad9470" stroke="#9e8566" stroke-width="1.1"/>
+<path d="M226 440L407 478L582 439M246 431L410 465L558 433M269 425L409 453L528 428" stroke="#927a59" stroke-opacity=".3"/>
+<path d="M231 450V465L249 468L251 455M554 454V468L572 463V449" fill="#a78d67"/>
+<!-- A bronze three-legged censer, interpreted for the illustration. -->
+<ellipse cx="406" cy="432" rx="111" ry="14" fill="#454b3f" fill-opacity=".12"/>
+<path d="M341 385L330 430C329 439 340 443 345 435L365 391M454 386L476 432C480 441 490 436 487 428L474 379M397 397L400 449C400 456 410 456 411 449L415 397" fill="url(#bronze)" stroke="#596451" stroke-width="1.1"/>
+<path d="M329 323C324 353 335 387 363 400C390 411 426 411 454 400C482 387 493 355 486 323Z" fill="url(#bronze)" stroke="#56614f" stroke-width="1.3"/>
+<path d="M331 338C354 352 463 352 486 338M340 375C363 391 455 390 477 373M355 397C382 407 432 407 460 396" stroke="#bac0a4" stroke-opacity=".5"/>
+<path d="M329 325C308 319 303 331 308 345C312 356 324 359 333 353M486 325C506 319 513 331 508 345C504 355 492 359 484 353" fill="none" stroke="#68735d" stroke-width="9"/>
+<path d="M329 325C308 319 303 331 308 345M486 325C506 319 513 331 508 345" stroke="#b1b89b" stroke-width="2"/>
+<ellipse cx="407" cy="323" rx="83" ry="20" fill="url(#rim)" stroke="#64705b" stroke-width="1.3"/>
+<ellipse cx="407" cy="322" rx="69" ry="14" fill="#414f3e" stroke="#bdbea4"/>
+<ellipse cx="407" cy="323" rx="58" ry="10" fill="#aeaf95"/>
+<path d="M374 324C389 315 424 315 440 324C430 331 384 331 374 324Z" stroke="#7e836d" stroke-width="2"/>
+<path d="M397 322C400 319 410 319 414 322" stroke="#aa6b4b" stroke-width="2" stroke-linecap="round"/>
+<g fill="none" stroke="#b0b597" stroke-width="1" stroke-opacity=".5"><path d="M364 359L374 352L384 359L374 366ZM389 362L399 355L409 362L399 369ZM414 362L424 355L434 362L424 369ZM439 359L449 352L459 359L449 366Z"/></g>
+<path d="M350 345C345 359 348 376 360 384" stroke="#bfc0a5" stroke-width="2" stroke-opacity=".5" stroke-linecap="round"/>
+<!-- Incense tools resting beside the stand. -->
+<path d="M473 452L563 420" stroke="#876949" stroke-width="4" stroke-linecap="round"/>
+<path d="M479 458L564 427" stroke="#a6885d" stroke-width="2" stroke-linecap="round"/>
+<path d="M561 419L574 415L576 419L565 424" fill="#a58d67"/>
+<circle cx="606" cy="449" r="10" fill="#a55340" fill-opacity=".82"/><path d="M602 444H610V453H602ZM606 444V453M602 449H610" stroke="#e8d5bd" stroke-width="1"/>
+<path d="M139 475C288 499 560 504 690 472" stroke="#b8ab92" stroke-opacity=".28" stroke-width=".8"/>
+<rect width="760" height="540" fill="url(#grain)"/>
+</svg>

@@ -1,0 +1,20 @@
+.simulation-countdown { margin: 18px 0 7px; display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; padding: 16px 18px; background: #ede8d8; border-left: 3px solid #a58a63; font-size: 12px; color: var(--muted); line-height: 1.8; }
+.simulation-countdown strong { font: 31px/1.5 var(--serif); color: var(--ink); letter-spacing: .06em; }
+.simulation-sync-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin: 9px 0 20px; }
+.simulation-sync-row .fine-note { margin: 0; flex: 1; min-width: 150px; }
+#refresh-simulation { min-width: 66px; min-height: 44px; font-size: 12px; }
+.record-conflict { border: 1px solid #ba8c70; border-left: 3px solid var(--red); padding: 14px; background: #f3e6d9; margin: 18px 0; font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
+.record-conflict-text { margin: 0 0 10px; color: #875244; }
+.publish-unsaved { font-size: 12px; line-height: 1.8; color: #8b6d4c; margin: 8px 0 12px; }
+.publish-form[data-conflicted="true"] .publish-unsaved { display: none; }
+.record-conflict .button { min-height: 44px; font-size: 12px; }
+.conflict-latest h4 { font-size: 15px; margin: 18px 0 9px; }
+.conflict-latest dl { display: grid; grid-template-columns: 98px minmax(0,1fr); gap: 8px 12px; padding-top: 10px; border-top: 1px solid #d5bba0; }
+.conflict-latest dt { color: #937055; font-size: 12px; }
+.conflict-latest dd { margin: 0; white-space: pre-wrap; font-size: 12px; }
+@media (max-width: 760px) {
+  .simulation-countdown { padding: 13px; }
+  .simulation-countdown strong { font-size: 29px; }
+  .conflict-latest dl { grid-template-columns: 1fr; gap: 4px; }
+  .conflict-latest dd { margin-bottom: 8px; }
+}

@@ -13,6 +13,7 @@ import secrets
 import sqlite3
 import subprocess
 import sys
+import tempfile
 import threading
 import time
 import uuid
@@ -25,6 +26,8 @@ from pathlib import Path
 from urllib.parse import urlparse, unquote
 from xml.etree import ElementTree
 from zoneinfo import ZoneInfo
+
+from simulation import Simulator, SimulationError
 
 ROOT = Path(__file__).resolve().parent
 MAX_FILE = 8 * 1024 * 1024
@@ -111,14 +114,61 @@ class Store:
             row = db.execute('SELECT * FROM products WHERE id=?', (product_id,)).fetchone()
         if not row:
             return None
-        return {**json.loads(row['data']), 'id': row['id'], 'owner_id': row['owner_id'],
+        data = json.loads(row['data'])
+        return {**data, 'revision': data.get('revision', 0), 'id': row['id'], 'owner_id': row['owner_id'],
                 'created_at': row['created_at'], 'updated_at': row['updated_at']}
 
-    def save_product(self, product):
+    def save_product(self, product, *, expected_revision=None, public_image_source=None):
+        """保留现有表结构，以数据内版本与原行 CAS 拒绝覆盖；冲突前不生成公开图。"""
         data = {k: v for k, v in product.items() if k not in ('id', 'owner_id', 'created_at', 'updated_at')}
-        with self.db() as db:
-            db.execute('INSERT OR REPLACE INTO products VALUES(?,?,?,?,?)',
-                       (product['id'], product['owner_id'], dumps(data), product['created_at'], now()))
+        generated_image = None
+        image_created = False
+        temporary_image = None
+        try:
+            with self.db() as db:
+                db.execute('BEGIN IMMEDIATE')
+                row = db.execute('SELECT * FROM products WHERE id=?', (product['id'],)).fetchone()
+                if row:
+                    if row['owner_id'] != product['owner_id']:
+                        raise Problem(404, '未找到可访问的香品。', 'product_not_found')
+                    current_revision = json.loads(row['data']).get('revision', 0)
+                    expected = product.get('revision', 0) if expected_revision is None else expected_revision
+                    if type(expected) is not int or expected < 0:
+                        raise Problem(400, '资料版本须为非负整数。', 'invalid_revision')
+                    if current_revision != expected:
+                        raise Problem(409, '这份资料已在另一处更新。已填内容保留，请刷新核对后再保存。', 'product_conflict')
+                    data['revision'] = current_revision + 1
+                else:
+                    if expected_revision is not None:
+                        raise Problem(404, '未找到可访问的香品。', 'product_not_found')
+                    data['revision'] = 1
+                if public_image_source is not None:
+                    # 独立版本文件避免覆盖旧公开图；失败只清理本次自建的副本。
+                    public_name = f"{product['id']}-r{data['revision']}-{uuid.uuid4().hex}.jpg"
+                    generated_image = self.public / public_name
+                    descriptor, temporary = tempfile.mkstemp(prefix='.publishing-', dir=self.public)
+                    temporary_image = Path(temporary)
+                    with os.fdopen(descriptor, 'wb') as output:
+                        output.write(public_image_source.read_bytes())
+                    data['public_image_path'] = public_name
+                if row:
+                    changed = db.execute('UPDATE products SET data=?,updated_at=? WHERE id=? AND owner_id=? AND data=?',
+                                         (dumps(data), now(), product['id'], product['owner_id'], row['data']))
+                    if changed.rowcount != 1:
+                        raise Problem(409, '这份资料已在另一处更新，请刷新核对后再保存。', 'product_conflict')
+                else:
+                    db.execute('INSERT INTO products VALUES(?,?,?,?,?)',
+                               (product['id'], product['owner_id'], dumps(data), product['created_at'], now()))
+                if temporary_image is not None:
+                    os.replace(temporary_image, generated_image)
+                    temporary_image = None
+                    image_created = True
+        except Exception:
+            if temporary_image is not None:
+                temporary_image.unlink(missing_ok=True)
+            if image_created:
+                generated_image.unlink(missing_ok=True)
+            raise
 
     def all_products(self, owner=None):
         with self.db() as db:
@@ -239,11 +289,19 @@ def read_upload(store, file):
 
 class AppServer(ThreadingHTTPServer):
     daemon_threads = True
-    def __init__(self, address, store):
+    def __init__(self, address, store, *, simulator=None):
         super().__init__(address, Handler)
         self.store = store
-        self.simulations = {}
-        self.sim_lock = threading.Lock()
+        self.simulator = simulator or Simulator()
+        self.simulations = self.simulator.entries
+        self.sim_lock = self.simulator.lock
+        # 固定顺序：scope_lock → 短数据库操作 → simulator.lock。
+        # 后台Timer只持有simulator.lock，不反向读取会话数据库。
+        self.scope_lock = threading.RLock()
+
+    def server_close(self):
+        self.simulator.close()
+        super().server_close()
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -317,12 +375,22 @@ class Handler(BaseHTTPRequestHandler):
         raw = secrets.token_urlsafe(32)
         digest = hashlib.sha256(raw.encode()).hexdigest()
         csrf = secrets.token_urlsafe(24)
-        with self.server.store.db() as db:
-            db.execute('DELETE FROM sessions WHERE token=?', (old,))
-            db.execute('INSERT INTO sessions VALUES(?,?,?,?)', (digest, user_id, csrf, time.time() + 86400 * 7))
+        with self.server.scope_lock:
+            with self.server.store.db() as db:
+                db.execute('DELETE FROM sessions WHERE token=?', (old,))
+                db.execute('INSERT INTO sessions VALUES(?,?,?,?)', (digest, user_id, csrf, time.time() + 86400 * 7))
+            self.server.simulator.revoke(old)
         self._session = {'token': digest, 'user_id': user_id, 'csrf': csrf}
         self.new_cookie = f'{COOKIE}={raw}; Path=/; HttpOnly; SameSite=Strict; Max-Age=604800'
         return {'user': self.user(), 'csrf_token': csrf}
+
+    def require_live_simulation_scope(self, scope):
+        """在scope_lock内复查请求缓存的token，拒绝核验期间已撤销或过期的会话。"""
+        with self.server.store.db() as db:
+            live = db.execute('SELECT 1 FROM sessions WHERE token=? AND expires>?', (scope, time.time())).fetchone()
+        if not live:
+            self.server.simulator.revoke(scope, note='旧会话已过期或撤销，软件模拟已停止。')
+            raise Problem(409, '本次会话已过期或更改，请刷新后继续软件模拟。', 'session_changed')
 
     def own_product(self, product_id, manager=False):
         user = self.user()
@@ -396,11 +464,18 @@ class Handler(BaseHTTPRequestHandler):
             name = 'index.html' if path == '/' else path.lstrip('/')
             if name.startswith('static/'):
                 name = name[len('static/'):]
-            if name not in ('index.html', 'app.js', 'style.css'):
+            relative = Path(name)
+            allowed_directories = {'modules': {'.js'}, 'styles': {'.css'},
+                                   'assets': {'.svg', '.png', '.webp', '.jpg'}}
+            allowed = name in ('index.html', 'app.js', 'style.css') or (
+                len(relative.parts) > 1
+                and relative.parts[0] in allowed_directories
+                and relative.suffix in allowed_directories[relative.parts[0]])
+            static_root = (ROOT / 'static').resolve()
+            static = (static_root / relative).resolve()
+            if (not allowed or '..' in relative.parts
+                    or not static.is_relative_to(static_root) or not static.is_file()):
                 raise Problem(404, '页面不存在。')
-            static = ROOT / 'static' / name
-            if not static.exists():
-                raise Problem(503, '界面正在准备，请稍后刷新。')
             self.send_bytes(200, static.read_bytes(), mimetypes.guess_type(name)[0] or 'text/plain')
         except Problem as exc:
             self.json({'error': exc.message, 'code': exc.code}, exc.status)
@@ -413,6 +488,13 @@ class Handler(BaseHTTPRequestHandler):
     def api(self, method, path):
         import services
         store = self.server.store
+        if re.match(r'^/api/(products|designs|simulation)(?:/|$)', path):
+            expected_user = self.headers.get('X-Expected-User')
+            if expected_user is not None:
+                current_user = self.user(False)
+                actual_user = current_user['id'] if current_user else 'guest'
+                if not hmac.compare_digest(str(expected_user), str(actual_user)):
+                    raise Problem(409, '浏览器账号已在另一页更改，当前页的私人内容已暂停，请刷新后继续。', 'session_changed')
         if method == 'GET' and path == '/api/session':
             self.json({'user': self.user(False), 'csrf_token': self.session()['csrf']})
             return
@@ -475,8 +557,11 @@ class Handler(BaseHTTPRequestHandler):
         if method in ('POST', 'PATCH'):
             self.csrf()
         if method == 'POST' and path == '/api/logout':
-            with store.db() as db:
-                db.execute('DELETE FROM sessions WHERE token=?', (self.session()['token'],))
+            scope = self.session()['token']
+            with self.server.scope_lock:
+                with store.db() as db:
+                    db.execute('DELETE FROM sessions WHERE token=?', (scope,))
+                self.server.simulator.revoke(scope)
             self.new_cookie = f'{COOKIE}=; Path=/; HttpOnly; SameSite=Strict; Max-Age=0'
             self.json({'ok': True})
             return
@@ -500,6 +585,12 @@ class Handler(BaseHTTPRequestHandler):
         if match and method in ('POST', 'PATCH'):
             product_id, action = match.groups()
             product = self.own_product(product_id, manager=bool(action))
+            expected = payload.get('expected_revision', product['revision'])
+            if type(expected) is not int or expected < 0:
+                raise Problem(400, '资料版本须为非负整数。', 'invalid_revision')
+            if expected != product['revision']:
+                raise Problem(409, '这份资料已在另一处更新。已填内容保留，请刷新核对后再保存。', 'product_conflict')
+            public_image_source = None
             if method == 'PATCH' and not action:
                 product.update(text_fields(payload, product))
                 product['analysis'] = services.analyze_product(product, product.get('extracted_text', ''))
@@ -511,20 +602,21 @@ class Handler(BaseHTTPRequestHandler):
                 product['price'] = str(payload.get('price', product.get('price', '')))[:100]
                 product['public_fields'] = selected
                 if 'image' in selected and product.get('normalized_image_path'):
-                    normalized = store.uploads / product['normalized_image_path']
-                    public_name = product_id + '.jpg'
-                    (store.public / public_name).write_bytes(normalized.read_bytes())
-                    product['public_image_path'] = public_name
+                    public_image_source = store.uploads / product['normalized_image_path']
                 product['published'] = True
             elif method == 'POST' and action == 'unpublish':
                 product['published'] = False
             else:
                 raise Problem(405, '不支持该操作。')
-            store.save_product(product)
+            store.save_product(product, expected_revision=expected, public_image_source=public_image_source)
             self.json({'product': self.product_view(store.product(product_id))})
             return
         if method == 'POST' and path == '/api/compose':
             self.json(services.compose_design(payload))
+            return
+        if method == 'POST' and path == '/api/interpret':
+            result = services.interpret_preferences(payload)
+            self.json(result, 400 if result.get('status') == 'invalid_request' else 200)
             return
         if method == 'POST' and path == '/api/evaluate':
             self.json(services.evaluate_board(payload))
@@ -536,10 +628,23 @@ class Handler(BaseHTTPRequestHandler):
                 self.json(evaluated, 400)
                 return
             design = evaluated['design']
-            design_id = uuid.uuid4().hex
+            existing = None
             with store.db() as db:
-                db.execute('INSERT INTO designs VALUES(?,?,?,?)', (design_id, user['id'], dumps(design), now()))
-            self.json({'design': {**design, 'id': design_id}}, 201)
+                db.execute('BEGIN IMMEDIATE')
+                for row in db.execute('SELECT id,data,created_at FROM designs WHERE owner_id=?', (user['id'],)):
+                    try:
+                        saved_design = json.loads(row['data'])
+                    except json.JSONDecodeError:
+                        raise Problem(409, '已有香笺暂时无法读取，当前没有新增保存。', 'stored_design_invalid')
+                    if saved_design == design:
+                        existing = row
+                        break
+                design_id = existing['id'] if existing else uuid.uuid4().hex
+                created_at = existing['created_at'] if existing else now()
+                if not existing:
+                    db.execute('INSERT INTO designs VALUES(?,?,?,?)', (design_id, user['id'], dumps(design), created_at))
+            self.json({'design': {**design, 'id': design_id, 'created_at': created_at},
+                       'saved_existing': existing is not None}, 200 if existing else 201)
             return
         if method == 'POST' and path == '/api/match':
             self.json(services.match_products(payload.get('design', payload), self.public_products()))
@@ -553,47 +658,30 @@ class Handler(BaseHTTPRequestHandler):
         import services
         action = payload.get('action')
         scope = self.session()['token']
-        with self.server.sim_lock:
-            if action == 'handoff':
-                evaluated = services.evaluate_board(payload.get('design', {}))
-                if evaluated.get('status') != 'ok':
-                    self.json({'status': 'rejected', 'reason': evaluated.get('reason', '方案需要先确认。')})
-                    return
-                design = evaluated['design']
-                components = design.get('components', [])
-                rules = services.bootstrap_data()
-                profiles = {p['id']: p for p in rules['profiles']}
-                main = next((p for p in components if p['role'] == 'main'), None)
-                family = profiles[main['profile_id']]['primary_family'] if main else ''
-                space = payload.get('space_id', 'reading')
-                accepted = {'reading': {'woody'}, 'lobby': {'woody', 'balsamic'}}
-                if space not in accepted or family not in accepted[space]:
-                    self.json({'status': 'rejected', 'reason': '这个模拟空间暂不支持所选主调，可换空间或调整设计。'})
-                    return
-                simulation = {'id': uuid.uuid4().hex, 'space_id': space, 'running': False,
-                              'timer_minutes': 10, 'remaining_minutes': 10,
-                              'history': [{'action': 'handoff', 'at': now(), 'note': '软件模拟接收设计；不涉及真实耗材或设备。'}]}
-                self.server.simulations[simulation['id']] = {'scope': scope, 'state': simulation}
-                self.json({'status': 'accepted', 'reason': '模拟空间已接收，确认后可操作软件开关。', 'simulation': simulation})
+        if action == 'handoff':
+            evaluated = services.evaluate_board(payload.get('design', {}))
+            if evaluated.get('status') != 'ok':
+                self.json({'status': 'rejected', 'reason': evaluated.get('reason', '方案需要先确认。')})
                 return
-            entry = self.server.simulations.get(payload.get('simulation_id'))
-            if not entry or entry['scope'] != scope:
-                raise Problem(404, '未找到本会话的模拟。')
-            state = entry['state']
-            if action == 'start':
-                state['running'] = True
-            elif action == 'stop':
-                state['running'] = False
-            elif action == 'set_timer':
-                minutes = int(payload.get('timer_minutes', 10))
-                if not 1 <= minutes <= 120:
-                    raise Problem(400, '模拟时长支持1至120分钟。')
-                state['timer_minutes'] = minutes
-                state['remaining_minutes'] = minutes
-            else:
-                raise Problem(400, '不支持的模拟动作。')
-            state['history'].append({'action': action, 'at': now()})
-            self.json({'status': 'accepted', 'simulation': state})
+            design = evaluated['design']
+            space = payload.get('space_id', 'reading')
+            accepted = {'reading': {'woody'}, 'lobby': {'woody', 'balsamic'}}
+            if not isinstance(space, str) or space not in accepted or design['main_family'] not in accepted[space]:
+                self.json({'status': 'rejected', 'reason': '这个模拟空间暂不支持所选主调，可换空间或调整设计。'})
+                return
+            with self.server.scope_lock:
+                self.require_live_simulation_scope(scope)
+                simulation = self.server.simulator.create(scope, space)
+            self.json({'status': 'accepted', 'reason': '模拟空间已接收，确认后可操作软件开关。', 'simulation': simulation})
+            return
+        try:
+            with self.server.scope_lock:
+                self.require_live_simulation_scope(scope)
+                simulation = self.server.simulator.operate(scope, action, payload.get('simulation_id'),
+                                                            timer_minutes=payload.get('timer_minutes'))
+        except SimulationError as exc:
+            raise Problem(exc.status, exc.message, exc.code) from exc
+        self.json({'status': 'accepted', 'simulation': simulation})
 
 
 def main():

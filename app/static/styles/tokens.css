@@ -1,0 +1,22 @@
+/* Paper, ink and cinnabar. Material colors are identifiers, never scent scores. */
+:root {
+  --paper: #f3efe5;
+  --white: #fcfaf4;
+  --ink: #2e332c;
+  --muted: #747163;
+  --line: #d9d0bd;
+  --red: #a44d3b;
+  --red-pale: #f2e5db;
+  --sage: #e7e9dc;
+  --green: #5e6d51;
+  --bronze: #8a8067;
+  --shadow: 0 18px 55px rgba(68, 56, 37, .09);
+  --serif: "Songti SC", "STSong", "Noto Serif CJK SC", "SimSun", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--paper);
+  color-scheme: light;
+}

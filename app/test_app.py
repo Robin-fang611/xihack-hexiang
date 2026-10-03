@@ -2,10 +2,12 @@
 import base64
 import io
 import json
+import os
 import shutil
 import tempfile
 import threading
 import unittest
+from unittest.mock import patch
 import urllib.error
 import urllib.request
 import http.cookiejar
@@ -60,10 +62,6 @@ class AppTest(unittest.TestCase):
     def setUpClass(cls):
         cls.tmp = tempfile.TemporaryDirectory(prefix='xihack-app-qa-')
         cls.store = server.Store(Path(cls.tmp.name))
-        native = server.ROOT / '.local' / 'ocr'
-        if native.exists():
-            shutil.copyfile(native, cls.store.ocr)
-            cls.store.ocr.chmod(0o700)
         cls.http = server.AppServer(('127.0.0.1', 0), cls.store)
         cls.thread = threading.Thread(target=cls.http.serve_forever, daemon=True)
         cls.thread.start()
@@ -176,6 +174,7 @@ class AppTest(unittest.TestCase):
         self.assertEqual(accepted['status'], 'accepted')
         sid = accepted['simulation']['id']
         self.assertEqual(self.b.call('POST', '/api/simulation', {'action': 'start', 'simulation_id': sid})[0], 404)
+        self.assertEqual(self.a.call('POST', '/api/simulation', {'action': 'confirm', 'simulation_id': sid})[0], 200)
         running = self.a.call('POST', '/api/simulation', {'action': 'start', 'simulation_id': sid})[1]
         self.assertTrue(running['simulation']['running'])
         timed = self.a.call('POST', '/api/simulation', {'action': 'set_timer', 'simulation_id': sid, 'timer_minutes': 12})[1]
@@ -191,6 +190,31 @@ class AppTest(unittest.TestCase):
         self.assertEqual(disposable.call('POST', '/api/logout', {})[0], 200)
         self.assertEqual(disposable.call('GET', '/api/products')[0], 401)
 
+    def test_09_static_module_boundaries(self):
+        with tempfile.TemporaryDirectory(prefix='xihack-static-qa-') as folder:
+            root = Path(folder)
+            static = root / 'static'
+            fixtures = {'index.html': '<html>qa</html>', 'modules/core.js': 'export const qa = true;',
+                        'styles/tokens.css': ':root{--qa:1}', 'assets/incense.svg': '<svg></svg>'}
+            for name, content in fixtures.items():
+                target = static / name
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_text(content)
+            (root / 'private.txt').write_text('QA_PRIVATE_STATIC_BOUNDARY')
+            (static / 'assets' / 'escape.svg').symlink_to(root / 'private.txt')
+            (static / 'modules' / 'private.txt').write_text('QA_DISALLOWED_EXTENSION')
+            with patch.object(server, 'ROOT', root):
+                for name, content in fixtures.items():
+                    status, body = self.a.call('GET', '/' if name == 'index.html' else '/static/' + name)
+                    self.assertEqual(status, 200, name)
+                    self.assertEqual(body.decode(), content)
+                for path in ['/static/modules/../index.html',
+                             '/static/modules/%2e%2e/%2e%2e/private.txt',
+                             '/static/assets/escape.svg', '/static/modules/private.txt',
+                             '/static/.local/private.txt', '/static/modules/',
+                             '/static/modules/missing.js', '/server.py']:
+                    self.assertEqual(self.a.call('GET', path)[0], 404, path)
+
 
 if __name__ == '__main__':
     suite = unittest.defaultTestLoader.loadTestsFromTestCase(AppTest)
@@ -198,7 +222,7 @@ if __name__ == '__main__':
     evidence = {'tests': result.testsRun, 'passed': result.wasSuccessful(),
                 'scope': '隔离临时数据库的真实HTTP会话、权限、资料提取、公开投影、设计保存和模拟接口；非商家业务验收',
                 'failures': [str(error) for _, error in result.failures + result.errors]}
-    output = server.ROOT / 'verification'
-    output.mkdir(exist_ok=True)
+    output = Path(os.environ.get('XIHA_QA_OUTPUT', str(server.ROOT / 'verification')))
+    output.mkdir(parents=True, exist_ok=True)
     (output / '接口验收.json').write_text(json.dumps(evidence, ensure_ascii=False, indent=2) + '\n')
     raise SystemExit(0 if result.wasSuccessful() else 1)

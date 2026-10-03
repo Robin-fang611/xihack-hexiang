@@ -1,0 +1,130 @@
+.button{display:inline-flex;justify-content:center;align-items:center;gap:9px;padding:10px 17px;border:1px solid var(--line);background:var(--white);border-radius:4px;font-size:16px;line-height:1.45;min-height:44px;text-decoration:none;white-space:nowrap;color:var(--ink)}
+.button.primary{background:var(--red);border-color:var(--red);color:var(--white)}
+.button.primary:hover{background:#8f302b}
+.button.secondary{background:var(--sage);border-color:#d0d7c7;color:var(--green)}
+.button.quiet{background:transparent}
+.button:hover:not(:disabled){border-color:var(--ink)}
+.text-button{border:0;background:none;padding:4px 0;font-size:15px;color:var(--red);text-align:left;min-height:35px}
+.full-width{width:100%}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:25px}
+.panel-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}
+.panel-heading h2{margin-bottom:0}
+.status-pill{font-size:14px;border:1px solid var(--line);border-radius:3px;background:var(--sage);padding:3px 9px;white-space:nowrap;color:var(--green)}
+.status-pill.private{background:var(--red-pale);color:var(--red)}
+.status-pill.pending{background:var(--paper);color:var(--muted)}
+.tag{display:inline-block;font-size:14px;background:var(--sage);color:#4e5d4b;padding:3px 8px;border-radius:3px;margin:2px 4px 2px 0}
+.notice{border-left:3px solid #8a937d;background:var(--sage);padding:12px 14px;margin:14px 0;font-size:15px;color:var(--ink);white-space:pre-line}
+.notice.danger{background:var(--red-pale);border-color:var(--red)}
+.notice.success{border-color:var(--green)}
+.empty-state{border:1px dashed #bbc3b0;background:rgba(255,254,251,.6);border-radius:6px;padding:40px;text-align:center;grid-column:1/-1;color:var(--muted)}
+.empty-state h2,.empty-state h3{color:var(--ink)}
+.empty-state p{max-width:600px;margin-left:auto;margin-right:auto}
+.empty-state .button{margin-top:6px}
+.empty-symbol{width:42px;height:48px;display:grid;place-items:center;margin:0 auto 18px;color:var(--red);border:1px solid #c79583;font-family:"Songti SC",serif;font-size:25px}
+.loading{padding:28px;color:var(--muted);text-align:center;grid-column:1/-1}
+.loading::before{content:"";display:inline-block;width:15px;height:15px;border:2px solid var(--line);border-top-color:var(--red);border-radius:50%;margin-right:10px;vertical-align:-2px;animation:turn 1s linear infinite}
+@keyframes turn{to{transform:rotate(360deg)}
+}
+
+.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.product-card{border:1px solid var(--line);background:var(--white);border-radius:6px;overflow:hidden}
+.product-art{aspect-ratio:16/9;background:linear-gradient(150deg,#e5e9dd,#f5efe4);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.product-art img{height:100%;width:100%;object-fit:cover}
+.product-art .paper-vessel{height:90px;width:54px;border:1px solid #7b8172;border-top:4px solid #7b8172;border-radius:4px 4px 15px 15px;opacity:.45;transform:rotate(-7deg)}
+.product-art .art-caption{position:absolute;bottom:12px;right:14px;font-size:14px;color:var(--muted)}
+.product-body{padding:23px}
+.product-body .product-meta{font-size:14px;color:var(--muted);margin-bottom:8px}
+.product-body p{font-size:16px;color:var(--muted)}
+.product-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.source-note{font-size:14px;color:var(--muted);padding-top:10px;border-top:1px solid var(--line);margin-top:16px}
+.home-bottom{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.small-panel{display:flex;gap:22px;padding:26px;background:var(--white);border:1px solid var(--line);border-radius:6px}
+.small-panel h2{font-size:22px}
+.small-panel p{color:var(--muted)}
+.panel-index{font-family:"Songti SC",serif;color:var(--red);font-size:30px;padding-top:3px}
+
+.integration-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1100px}
+.simulation-state{display:flex;align-items:center;gap:13px;min-height:100px;border:1px solid var(--line);background:var(--paper);padding:25px;font-size:18px;border-radius:4px;margin:24px 0}
+.device-dot{display:inline-block;width:12px;height:12px;background:#b5bbac;border-radius:50%;box-shadow:0 0 0 6px #e5e8df}
+.device-dot.on{background:var(--green);box-shadow:0 0 0 6px #dce7dc}
+.simulation-actions{display:flex;gap:10px}
+.handoff-status{margin-top:20px;padding:18px;background:var(--sage);border-left:3px solid var(--green)}
+.handoff-status.rejected{background:var(--red-pale);border-color:var(--red)}
+.handoff-status h3{font-size:20px}
+.call-details{margin-top:30px;font-size:15px}
+.call-details summary{color:var(--muted);cursor:pointer}
+.call-details pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:400px;overflow:auto;background:#eeefe8;border:1px solid var(--line);padding:20px;font-size:14px}
+.site-footer{border-top:1px solid var(--line);padding:22px 4vw;display:flex;gap:20px;justify-content:space-between;font-size:14px;color:var(--muted)}
+
+.modal{width:min(760px,94vw);max-height:88vh;border:1px solid var(--line);border-radius:6px;background:var(--white);color:var(--ink);padding:35px;box-shadow:var(--shadow);overflow:auto}
+.modal::backdrop{background:rgba(28,34,24,.4)}
+.auth-modal{width:min(480px,94vw)}
+.detail-modal{width:min(800px,94vw)}
+.card-modal{width:min(650px,94vw)}
+.close-dialog{position:absolute;right:15px;top:10px;width:36px;height:36px;line-height:1;font-size:29px;border:0;background:none;color:var(--muted)}
+.scent-card{position:relative;border:1px solid #c4c8b7;background:var(--paper);padding:42px 36px;margin:24px 0;min-height:460px}
+.scent-card .card-kicker{font-size:14px;color:var(--muted);letter-spacing:.25em}
+.scent-card .card-title{font-size:36px;color:var(--red);margin:18px 0;font-family:"Songti SC",serif;overflow-wrap:anywhere}
+.scent-card .card-scene{font-family:"Songti SC",serif;font-size:19px;line-height:1.8;margin-bottom:24px;overflow-wrap:anywhere}
+.card-composition{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;margin-bottom:22px}
+.card-role-line{margin:10px 0;display:flex;gap:18px}
+.card-role-line span{width:36px;font-size:14px;color:var(--muted);flex-shrink:0}
+.card-role-line strong{font-family:"Songti SC",serif;font-size:21px;font-weight:500}
+.card-role-line.support strong{font-size:19px}
+.card-role-line.accent strong{font-size:17px}
+.card-original{font-size:15px;color:var(--muted);overflow-wrap:anywhere}
+.card-provenance{font-size:14px;color:var(--muted);line-height:1.8;margin-top:18px;overflow-wrap:anywhere}
+.card-stamp{margin-top:28px;display:flex;justify-content:flex-end;align-items:center;gap:12px;color:var(--red);font-size:14px}
+.card-stamp .seal{font-family:"Songti SC",serif;display:grid;place-items:center;border:1.5px solid var(--red);width:38px;height:40px;font-size:25px;transform:rotate(-4deg);border-radius:2px}
+.card-actions{display:flex;gap:12px;flex-wrap:wrap}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--white);padding:13px 22px;border-radius:4px;box-shadow:var(--shadow);font-size:15px;max-width:90vw;z-index:40}
+.muted-list{color:var(--muted);font-size:15px;padding-left:20px}
+.inline-actions{display:flex;gap:12px;flex-wrap:wrap}
+.inline-code{font-family:ui-monospace,monospace;font-size:14px;background:var(--paper);padding:2px 5px;overflow-wrap:anywhere}
+.saved-design-section{margin-top:35px}
+.matched-product-section{border-top:1px solid var(--line);margin-top:28px;padding-top:22px}
+.matched-product-section h3{margin-bottom:0}
+.matched-product{padding:18px 0;border-bottom:1px solid var(--line)}
+.matched-product p{font-size:15px;margin:12px 0}
+.matched-product:last-child{border-bottom:0}
+
+
+.button { border-radius: 2px; font-size: 14px; letter-spacing: .025em; min-height: 43px; padding: 10px 17px; }
+.button.primary { border-color: var(--red); }
+.button.primary:hover { border-color: #803e31; background: #803e31; }
+.button.secondary { background: #e7e7d8; border-color: #c7c9b3; }
+.button.quiet:hover:not(:disabled) { background: rgba(255,255,255,.4); }
+.text-button { font-size: 14px; }
+.panel { border-radius: 2px; border-color: var(--line); padding: 26px; }
+.panel-heading h2 { font-size: 23px; }
+.status-pill { border-radius: 1px; font-size: 12px; padding: 3px 8px; }
+.tag { border-radius: 1px; font-size: 12px; padding: 2px 7px; margin: 2px 4px 2px 0; }
+.notice { font-size: 14px; }
+.empty-state { border: 1px solid var(--line); background: #f6f2e8; padding: 35px; border-radius: 2px; }
+.empty-symbol { width: 36px; height: 40px; margin-bottom: 13px; font-size: 22px; }
+.empty-state h3 { font-size: 21px; margin-bottom: 9px; }
+.empty-state p { font-size: 14px; margin-bottom: 13px; }
+.product-card { border-radius: 2px; }
+.product-art { background: #e8e2d3 url('/static/assets/夜间草案.svg') center/cover; }
+.product-art .paper-vessel { visibility: hidden; }
+.product-art .art-caption { font-size: 11px; background: rgba(243,239,229,.78); padding: 2px 6px; }
+.product-body { padding: 25px; }
+.product-body h2 { font-size: 26px; }
+.product-body .product-meta, .product-body p { font-size: 14px; }
+.source-note { font-size: 12px; line-height: 1.9; }
+.modal { background: #fbf8ef; border: 1px solid #a89877; border-radius: 2px; padding: 36px; max-height: min(88vh, 900px); }
+.modal::backdrop { background: rgba(36,41,33,.5); }
+.close-dialog { color: #877858; width: 40px; height: 40px; top: 8px; right: 9px; }
+.modal h2 { font-size: 28px; }
+.modal h3 { font-size: 22px; }
+.auth-tabs { margin-bottom: 22px; }
+.scent-card { border-color: #bca987; background: #f1ead9; border-radius: 0; box-shadow: inset 0 0 0 7px #f7f1e4, inset 0 0 0 8px #d9cbb1; padding: 42px 36px; }
+.scent-card .card-kicker { font-size: 11px; letter-spacing: .26em; }
+.scent-card .card-title { font-size: 40px; font-weight: 500; color: var(--red); }
+.scent-card .card-scene { color: #6d6656; }
+.scent-card .card-stamp .seal { border-radius: 1px; }
+.card-original { border-left: 1px solid #beaa87; padding-left: 15px; font-family: var(--serif); }
+.toast { border-radius: 2px; font-size: 14px; }
+.simulation-state { border-radius: 2px; background: #efe9dc; }
+.integration-layout { gap: 26px; }
+.call-details pre { background: #eae6d9; }

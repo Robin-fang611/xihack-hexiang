@@ -124,6 +124,28 @@ def compose_design(payload):
         return _failure('invalid_request', str(exc), candidates=[])
 
 
+def interpret_preferences(payload):
+    """原话仅形成待应用提案；保留现有选项、冲突与未映射文本，不自动生成或应用。"""
+    if not isinstance(payload, dict):
+        return _failure('invalid_request', '请求须为对象。')
+    notes = payload.get('user_notes', '')
+    if not isinstance(notes, str):
+        return _failure('invalid_request', '自己的话须为文字。')
+    if len(notes) > 12000:
+        return _failure('invalid_request', '自己的话请控制在12000字以内，原文未自动截断。')
+    rules = _rules()
+    try:
+        preferred, deemphasized = _preferences({
+            'preferred_facets': payload.get('manual_preferred', []),
+            'deemphasized_facets': payload.get('manual_deemphasized', []),
+        }, rules)
+        excluded = _exclusions(payload, {p['id']: p for p in rules['profiles']})
+    except (TypeError, ValueError) as exc:
+        return _failure('invalid_request', str(exc))
+    from intent import interpret
+    return interpret(notes.strip(), rules, preferred, deemphasized, excluded)
+
+
 def evaluate_board(payload):
     """核验自由构图，返回可保存设计；客户端的来源/许可/状态字段不可覆盖核验结果。"""
     if not isinstance(payload, dict):

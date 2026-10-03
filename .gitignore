@@ -11,3 +11,11 @@
 *.log
 .venv/
 node_modules/
+
+.review/
+draft_*/
+**/verification/iterations/
+**/verification/current/
+**/verification/v2/原入口与资料完整性.json
+**/verification/最终交付审计.json
+**/verification/重启与完整性.json
