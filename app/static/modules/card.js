@@ -60,7 +60,7 @@ export async function openCard(components = state.components, name = '') {
     if (!result.design || !['ok', 'untested_composite_design'].includes(result.status)) { message('#studio-message', describeFailure(result)); navigate('studio'); return; }
     state.cardOrigin = 'studio';
     state.cardDesign = { ...result.design, components: result.design.components || components, name: payload.name, scenario: payload.scenario, preferred_facets: [...state.preferred], deemphasized_facets: [...state.deemphasized], excluded_ids: [...state.excluded], user_words: payload.user_notes, locked: $('#lock-main').checked, evaluation_payload: payload };
-    $('#card-name').value = payload.name === '未名' ? '' : payload.name; messageSignature = null; message('#card-save-status', ''); renderCard(); $('#card-matches').innerHTML = '<p class="fine-note">仅匹配管理者公开的商品；相似方向不代表同一配方。</p>'; openDialog('#card-dialog');
+    $('#card-name').value = payload.name === '未名' ? '' : payload.name; messageSignature = null; message('#card-save-status', ''); renderCard(); $('#card-matches').innerHTML = '<p class="fine-note">仅匹配创作者公开的商品；相似方向不代表同一配方。</p>'; openDialog('#card-dialog');
   } catch (error) { if (revision !== state.designRevision || accountVersion !== state.accountVersion) return; message('#studio-message', error.message, 'danger'); navigate('studio'); }
 }
 export function cardSources(design) {

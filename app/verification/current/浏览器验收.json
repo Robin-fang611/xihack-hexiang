@@ -1,0 +1,372 @@
+{
+  "passed": true,
+  "base": "http://127.0.0.1:50197",
+  "generated_at": "2026-10-03T15:20:38.535Z",
+  "results": [
+    {
+      "id": "home-presets",
+      "description": "无商品首页仍有三份参考香型，一键入案与三个构图角色对应准确",
+      "passed": true
+    },
+    {
+      "id": "preset-exclusions",
+      "description": "首页与抽屉预设都保留明确排除并解释冲突，只有用户主动取消后才能加入材料",
+      "passed": true
+    },
+    {
+      "id": "private-consultation",
+      "description": "普通账号文字上传、分层咨询与私有归属成立，伪造角色和目录类型被拒绝",
+      "passed": true
+    },
+    {
+      "id": "composition",
+      "description": "场景快捷选择、偏好互斥、主调锁定、材料排除及未知花香反馈有效；场景与原话修改使旧候选失效",
+      "passed": true
+    },
+    {
+      "id": "png-export",
+      "description": "最终双候选形成香笺，最新场景、原话及排除项保存一致，PNG 头与尺寸有效",
+      "passed": true,
+      "png": {
+        "width": 1080,
+        "height": 1367,
+        "bytes": 1070460
+      },
+      "file": "香笺.png"
+    },
+    {
+      "id": "simulation",
+      "description": "软件模拟的接受、确认、开关、定时和有理由拒绝均可完成",
+      "passed": true
+    },
+    {
+      "id": "manager-publication",
+      "description": "双角色可分别咨询本人香品；管理者选择公开字段后首页展示，普通账号与跨所有者请求均被拒绝",
+      "passed": true
+    },
+    {
+      "id": "public-recommendation",
+      "description": "普通账号能阅读公开商品与购买入口，已保存香笺只匹配公开商品并保留排除条件未知提示",
+      "passed": true
+    },
+    {
+      "id": "responsive",
+      "description": "360／390／768／1440 像素下两种角色所有页面和香笺弹窗均无全页横向溢出",
+      "passed": true,
+      "layouts": [
+        {
+          "view": "home",
+          "width": 1440,
+          "document": 1440,
+          "body": 1440
+        },
+        {
+          "view": "studio",
+          "width": 1440,
+          "document": 1440,
+          "body": 1440
+        },
+        {
+          "view": "collection",
+          "width": 1440,
+          "document": 1440,
+          "body": 1440
+        },
+        {
+          "view": "library",
+          "width": 1440,
+          "document": 1440,
+          "body": 1440
+        },
+        {
+          "view": "integration",
+          "width": 1440,
+          "document": 1440,
+          "body": 1440
+        },
+        {
+          "view": "manager-home",
+          "width": 1440,
+          "document": 1440,
+          "body": 1440
+        },
+        {
+          "view": "manager-studio",
+          "width": 1440,
+          "document": 1440,
+          "body": 1440
+        },
+        {
+          "view": "manager-collection",
+          "width": 1440,
+          "document": 1440,
+          "body": 1440
+        },
+        {
+          "view": "manager-library",
+          "width": 1440,
+          "document": 1440,
+          "body": 1440
+        },
+        {
+          "view": "manager-integration",
+          "width": 1440,
+          "document": 1440,
+          "body": 1440
+        },
+        {
+          "view": "manager-manage",
+          "width": 1440,
+          "document": 1440,
+          "body": 1440
+        },
+        {
+          "view": "card-dialog",
+          "width": 1440,
+          "document": 1440,
+          "body": 1440
+        },
+        {
+          "view": "home",
+          "width": 768,
+          "document": 768,
+          "body": 768
+        },
+        {
+          "view": "studio",
+          "width": 768,
+          "document": 768,
+          "body": 768
+        },
+        {
+          "view": "collection",
+          "width": 768,
+          "document": 768,
+          "body": 768
+        },
+        {
+          "view": "library",
+          "width": 768,
+          "document": 768,
+          "body": 768
+        },
+        {
+          "view": "integration",
+          "width": 768,
+          "document": 768,
+          "body": 768
+        },
+        {
+          "view": "manager-home",
+          "width": 768,
+          "document": 768,
+          "body": 768
+        },
+        {
+          "view": "manager-studio",
+          "width": 768,
+          "document": 768,
+          "body": 768
+        },
+        {
+          "view": "manager-collection",
+          "width": 768,
+          "document": 768,
+          "body": 768
+        },
+        {
+          "view": "manager-library",
+          "width": 768,
+          "document": 768,
+          "body": 768
+        },
+        {
+          "view": "manager-integration",
+          "width": 768,
+          "document": 768,
+          "body": 768
+        },
+        {
+          "view": "manager-manage",
+          "width": 768,
+          "document": 768,
+          "body": 768
+        },
+        {
+          "view": "card-dialog",
+          "width": 768,
+          "document": 768,
+          "body": 768
+        },
+        {
+          "view": "home",
+          "width": 390,
+          "document": 390,
+          "body": 390
+        },
+        {
+          "view": "studio",
+          "width": 390,
+          "document": 390,
+          "body": 390
+        },
+        {
+          "view": "collection",
+          "width": 390,
+          "document": 390,
+          "body": 390
+        },
+        {
+          "view": "library",
+          "width": 390,
+          "document": 390,
+          "body": 390
+        },
+        {
+          "view": "integration",
+          "width": 390,
+          "document": 390,
+          "body": 390
+        },
+        {
+          "view": "manager-home",
+          "width": 390,
+          "document": 390,
+          "body": 390
+        },
+        {
+          "view": "manager-studio",
+          "width": 390,
+          "document": 390,
+          "body": 390
+        },
+        {
+          "view": "manager-collection",
+          "width": 390,
+          "document": 390,
+          "body": 390
+        },
+        {
+          "view": "manager-library",
+          "width": 390,
+          "document": 390,
+          "body": 390
+        },
+        {
+          "view": "manager-integration",
+          "width": 390,
+          "document": 390,
+          "body": 390
+        },
+        {
+          "view": "manager-manage",
+          "width": 390,
+          "document": 390,
+          "body": 390
+        },
+        {
+          "view": "card-dialog",
+          "width": 390,
+          "document": 390,
+          "body": 390
+        },
+        {
+          "view": "home",
+          "width": 360,
+          "document": 360,
+          "body": 360
+        },
+        {
+          "view": "studio",
+          "width": 360,
+          "document": 360,
+          "body": 360
+        },
+        {
+          "view": "collection",
+          "width": 360,
+          "document": 360,
+          "body": 360
+        },
+        {
+          "view": "library",
+          "width": 360,
+          "document": 360,
+          "body": 360
+        },
+        {
+          "view": "integration",
+          "width": 360,
+          "document": 360,
+          "body": 360
+        },
+        {
+          "view": "manager-home",
+          "width": 360,
+          "document": 360,
+          "body": 360
+        },
+        {
+          "view": "manager-studio",
+          "width": 360,
+          "document": 360,
+          "body": 360
+        },
+        {
+          "view": "manager-collection",
+          "width": 360,
+          "document": 360,
+          "body": 360
+        },
+        {
+          "view": "manager-library",
+          "width": 360,
+          "document": 360,
+          "body": 360
+        },
+        {
+          "view": "manager-integration",
+          "width": 360,
+          "document": 360,
+          "body": 360
+        },
+        {
+          "view": "manager-manage",
+          "width": 360,
+          "document": 360,
+          "body": 360
+        },
+        {
+          "view": "card-dialog",
+          "width": 360,
+          "document": 360,
+          "body": 360
+        }
+      ]
+    },
+    {
+      "id": "withdrawal",
+      "description": "管理者撤下后首页与公共接口同步移除商品，私有档案继续保留",
+      "passed": true
+    },
+    {
+      "id": "stale-private-responses",
+      "description": "退出并切换账号后，延迟到达的旧产品与旧设计响应不会回填私人资料",
+      "passed": true,
+      "held_endpoints": [
+        "/api/products",
+        "/api/designs"
+      ],
+      "synchronization": "route.fetch before logout; route.fulfill after new login; requestfinished and render frames"
+    },
+    {
+      "id": "telemetry",
+      "description": "浏览器无 pageerror、requestfailed 或静态资源 404",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "request_failures": [],
+  "static_404s": [],
+  "scope": "真实本地 Chrome 与隔离账号、纯英文测试资料；不访问正式数据，不验证实际气味、商家成交或真实设备。"
+}

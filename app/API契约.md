@@ -1,16 +1,14 @@
 # 本地软件接口契约
 
-同源本地网页，JSON 请求和响应。角色为 `manager/user`，由服务端决定；会话用 HttpOnly、SameSite=Strict Cookie，`GET /api/session` 返回 `csrf_token`，修改类请求带 `X-CSRF-Token`。登录、注册与其他请求均校验本机来源。以下描述五轮迭代后的当前实现；原开发环境各轮已正式验收计轮，38 份运行源码下 36 项组合行为检查通过。公开验证摘录见 `verification/五轮公开验收.json`；本副本不包含原始完成收据目录。各阶段证据及验证范围见 [README](README.md)。
-
-本次公开副本还完成了一次独立完整复验：36 项组合行为、57 项模块检查及原有完整回归全部通过；38 份运行源码与原最终版逐字节一致。公开环境的一分钟计时在独立 Chrome 关闭约 63.47 秒后已后台自动停止，先核内部状态再请求 HTTP；可配置的验证工具指纹与结果见公开摘要的 public_copy_validation。
+同源本地网页，JSON 请求和响应。角色为 `manager/user`，由服务端决定；普通注册创建香友账号，注册时可选择 `account_kind:"creator"` 入驻为创作者（OPC，服务端登记为 manager 同类发布权限），已有账号不能事后升级，`role` 参数仍一律拒绝。会话用 HttpOnly、SameSite=Strict Cookie，`GET /api/session` 返回 `csrf_token`，修改类请求带 `X-CSRF-Token`。登录、注册与其他请求均校验本机来源。以下描述双端口迭代后的当前实现；五轮迭代各轮已正式验收计轮，双端口变更经 8 项 HTTP 验收、9 项浏览器验收、目视验收与既有全量回归。各阶段证据及验证范围见 [README](<app/README.md>)。
 
 内置网页对 `/api/products`、`/api/designs`、`/api/simulation` 及其子路径发送 `X-Expected-User`，值为页面当前用户 ID，匿名页为 `guest`。服务端收到该头时与 Cookie 对应身份比较，失配返回 HTTP 409、`code=session_changed`，在读取或写入业务对象前拒绝请求。该头是身份一致性保护，不代替会话、CSRF、角色或对象归属检查；为兼容已有调用者，未携带该头时仍执行原权限检查。
 
 ## 会话与公共内容
 
-- GET /api/bootstrap → services.bootstrap_data() 的profiles、facets、vocabulary、presets、knowledge、sources、roles、data_version、scope、analysis_method，加products（首页公开商品）、capabilities、app_name、simulation_spaces。
+- GET /api/bootstrap → services.bootstrap_data() 的profiles、facets、vocabulary、presets、knowledge、sources、roles、data_version、scope、analysis_method，加products（首页公开商品）、works（已发布创作者作品公开投影）、capabilities、app_name、simulation_spaces。
 - GET /api/session → {user:{id,username,display_name,role}|null,csrf_token}。
-- POST /api/register → {username,password,display_name}，只创建普通用户，返回会话。
+- POST /api/register → {username,password,display_name?,account_kind?}。缺省或 `account_kind:"user"` 创建香友账号；`account_kind:"creator"` 创建创作者（OPC，role=manager）；非法 account_kind 为 400，携带 `role` 参数仍为 403。返回会话。
 - POST /api/login → {username,password}，返回会话；首次初始化无管理者账号时自动生成本机管理者账号，凭据保存于本机账号文件并私有保管，接口不返回凭据。
 - POST /api/logout → {ok:true}；撤销本 Cookie 对应会话及其后台模拟。登录替换旧会话时也撤销旧模拟。
 - 接口失败用 HTTP 状态与 {error,code}。会话身份、对象归属、CSRF 和产品版本错误拒绝相应业务写入；有结构化核验状态的调香接口按下面约定返回。
@@ -43,6 +41,9 @@
 - GET /api/designs → {designs:[本人保存设计]}。
 - POST /api/designs → /api/evaluate 同样输入，后端再次核验，仅保存本人设计。新记录返回 HTTP 201、{design,saved_existing:false}；直接重复调用 API 时，同账号相同规范化核验设计返回 HTTP 200、原 design.id 与 created_at、saved_existing:true。不同账号不共享保存记录。主调锁定和上述接续字段参与设计内容比较；内置前端对已知已保存签名先去重，不再次发送保存请求。
 - POST /api/match → {design} → {status,matches:[{product,...匹配理由与未知}]}，只匹配首页公开商品。
+- POST /api/designs/{id}/publish → 仅作品所有者；{public_note?}（公开创作说明，≤500字）。发布状态存设计 JSON（published、public_note、published_at），返回{design}。非本人或不存在为 404 design_not_found，public_note 非字符串为 400。
+- POST /api/designs/{id}/unpublish → 仅作品所有者，撤下首页作品，返回{design}。
+- 首页公开作品对象（bootstrap.works）：{id,kind:"creator_work",name,scenario,intent?,public_note?,components:[白名单设计事实],preferred_facets,deemphasized_facets,excluded_ids,families,display_facets,main_family,sources,composition_kind,status,stamp,creator_name,starting_preset_id?,published_at,saved_at,limitations}。绝不包含 user_notes（用户原话）、raw_preferences、raw_exclusions、description 或任何私有附件；组件白名单为 profile_id/name/role/role_label/form/primary_family/reported_facets/display_facets/source_id/source_url/source_locator/profile_status/sample_status/mixing_evidence。形状与 presets 兼容，内置前端复用"以此起稿"机制。
 
 PNG 没有下载或保存后端接口。内置网页在点击下载时取当前已核验香笺及名称快照，使用浏览器 Canvas 绘制 PNG，保留原话、偏好、排除、来源与未验证状态；下载不发送 POST /api/designs。保存和下载独立，保存失败也保留香笺与下载能力。查看已存作品不改当前草稿，明确“回到案头继续”后才采用其输入，当前排除项与作品排除项合并。
 
@@ -70,7 +71,8 @@ PNG 没有下载或保存后端接口。内置网页在点击下载时取当前�
 | `modules/library.js` | 传统/现代域、现代参照筛选、来源详情与选材回案头 | core、studio、navigation |
 | `modules/card.js` | 已核验设计、命名、现成香匹配与PNG导出 | core、studio、products、navigation |
 | `modules/integration.js` | 设计交接与软件模拟 | core、studio |
-| `modules/navigation.js` | 页面切换与按需刷新 | core、account、products、integration、studio |
+| `modules/navigation.js` | 页面切换、双端口世界（香事/创作者）切换与按需刷新 | core、account、products、integration、studio、creator |
+| `modules/creator.js` | 创作者工作台统计、我的作品列表与发布表单 | core；监听 records:updated |
 | `modules/intent.js` | 本机原话提案、引用、未知、冲突确认与应用 | core、studio |
 | `modules/draft.js` | 本标签页草稿校验、留存、恢复和账号清理 | core、studio |
 

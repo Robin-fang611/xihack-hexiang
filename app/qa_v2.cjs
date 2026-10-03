@@ -65,7 +65,21 @@ async function showControl(locator) {
 }
 async function go(page, name) {
   activePage = page;
-  await page.locator(`.main-nav [data-page="${name}"]`).click();
+  const creatorPages = ['manage', 'workbench', 'works'];
+  if (creatorPages.includes(name)) {
+    await page.locator('.brand-name').click();
+    await page.locator('#page-hall').waitFor({ state: 'visible' });
+    await page.locator('.hall-door.door-creator').getByRole('button', { name: '进入创作者端' }).click();
+    if (name !== 'workbench') await page.locator(`#creator-nav [data-page="${name}"]`).click();
+  } else {
+    const experienceButton = page.locator(`#experience-nav [data-page="${name}"]`);
+    if (!(await experienceButton.isVisible().catch(() => false))) {
+      const bridge = page.locator('#creator-nav [data-page="home"]');
+      if (await bridge.isVisible().catch(() => false)) await bridge.click();
+      else await page.locator('.brand-name').click();
+    }
+    await experienceButton.click();
+  }
   await page.locator('#page-' + name).waitFor({ state: 'visible' });
   await nextRender(page);
 }
@@ -97,7 +111,7 @@ async function authenticate(page, credentials, register = false) {
   assert.equal(result.data.user?.role, register ? 'user' : 'manager', 'Incorrect authenticated role');
   await page.locator('#auth-dialog').waitFor({ state: 'hidden' });
   await page.waitForFunction(() => !document.querySelector('#auth-submit').disabled);
-  assert.match(await page.locator('#account-area').innerText(), register ? /普通/ : /管理者/, 'Role is missing from the account area');
+  assert.match(await page.locator('#account-area').innerText(), register ? /香友/ : /创作者/, 'Role is missing from the account area');
 }
 async function upload(page, prefix, fixture) {
   await page.locator('#' + prefix + '-name').fill(fixture.name);
@@ -247,14 +261,15 @@ async function main() {
   const nextCredentials = { username: 'qa_v2_next_' + suffix, password: 'QaV2SecondOnly-' + suffix };
   secrets.push(managerCredentials.username, managerCredentials.password, userCredentials.username, userCredentials.password, nextCredentials.username, nextCredentials.password);
   fs.mkdirSync(output, { recursive: true });
-  browser = await chromium.launch({ executablePath: process.env.CHROME_EXECUTABLE || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
+  browser = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
   const userContext = await browser.newContext({ viewport: { width: 1440, height: 1000 }, acceptDownloads: true, reducedMotion: 'reduce' });
   const userPage = await userContext.newPage();
   activePage = userPage;
   monitor(userPage, 'ordinary');
   userPage.setDefaultTimeout(12000);
   await userPage.goto(base, { waitUntil: 'domcontentloaded' });
-  await userPage.locator('#home-presets [data-action="use-preset"]').first().waitFor({ state: 'visible' });
+  await userPage.locator('#page-hall .hall-door.door-experience').waitFor({ state: 'visible' });
+  await go(userPage, 'home');
   const bootResult = await getJSON(userPage, '/api/bootstrap');
   assert.equal(bootResult.status, 200, 'Bootstrap failed');
   const boot = bootResult.data;
@@ -444,7 +459,7 @@ async function main() {
   monitor(managerPage, 'manager');
   managerPage.setDefaultTimeout(12000);
   await managerPage.goto(base, { waitUntil: 'domcontentloaded' });
-  await managerPage.locator('#home-presets [data-action="use-preset"]').first().waitFor({ state: 'visible' });
+  await managerPage.locator('#page-hall .hall-door.door-experience').waitFor({ state: 'visible' });
   await authenticate(managerPage, managerCredentials);
   await go(managerPage, 'collection');
   const managerPrivate = await upload(managerPage, 'private', { name: 'QA V2 Manager Private ' + suffix, brand: 'QA Test Fixture', description: 'Private manager consultation fixture. Woody label notes.', notes: 'woody', ingredients: 'QA_V2_MANAGER_PRIVATE_' + suffix, personal_notes: 'QA_V2_MANAGER_OBSERVATION_' + suffix });

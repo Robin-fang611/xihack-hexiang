@@ -1,0 +1,33 @@
+/* 端口大厅：双门进站。竖排门额、印章与纸色沿用设计令牌。 */
+.hall-wrap { max-width: 1120px; margin: 0 auto; padding: 30px 0 12px; }
+.hall-head { text-align: center; margin-bottom: 46px; }
+.hall-head .eyebrow { display: inline-flex; align-items: center; gap: 12px; }
+.hall-head .eyebrow > span { display: block; width: 29px; height: 1px; background: var(--red); }
+.hall-head h1 { font-size: clamp(30px, 3.2vw, 46px); margin-bottom: 16px; }
+.hall-intro { max-width: 660px; margin: 0 auto; color: var(--muted); font-size: 15px; line-height: 2; }
+.hall-doors { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: stretch; }
+.hall-door { position: relative; display: flex; flex-direction: column; gap: 15px; background: var(--white); border: 1px solid var(--line); box-shadow: var(--shadow); padding: 36px 118px 32px 34px; min-height: 440px; }
+.hall-door::before { content: ''; position: absolute; inset: 9px; border: 1px solid rgba(138, 128, 103, .3); pointer-events: none; }
+.hall-door:hover { transform: translateY(-4px); transition: transform .28s ease; }
+.door-experience { border-top: 3px solid var(--red); }
+.door-creator { border-top: 3px solid var(--green); background: #f7f3e9; }
+.door-tag { font-size: 12px; letter-spacing: .18em; color: var(--bronze); margin: 0; }
+.door-creator .door-tag { color: var(--green); }
+.door-vertical { writing-mode: vertical-rl; position: absolute; top: 34px; right: 40px; margin: 0; font-size: 32px; letter-spacing: .32em; color: var(--ink); }
+.door-desc { color: var(--muted); font-size: 15px; line-height: 2; margin: 0; max-width: 420px; }
+.door-steps { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 4px 0 0; }
+.door-steps li { font-size: 12px; color: var(--muted); border: 1px solid var(--line); background: var(--paper); padding: 3px 10px; border-radius: 2px; }
+.hall-door .button { margin-top: auto; align-self: flex-start; min-width: 176px; }
+.door-seal { position: absolute; right: 42px; bottom: 92px; color: var(--red); border: 1.5px solid var(--red); font: 22px/1.4 var(--serif); padding: 4px 7px; transform: rotate(-3deg); border-radius: 2px; }
+.door-creator .door-seal { color: var(--green); border-color: var(--green); }
+.hall-note { text-align: center; color: var(--muted); font-size: 13px; margin: 30px 0 0; }
+@media (max-width: 900px) {
+  .hall-doors { grid-template-columns: 1fr; gap: 20px; }
+  .hall-door { min-height: 0; padding: 28px 100px 26px 26px; }
+  .hall-head { margin-bottom: 30px; }
+}
+@media (max-width: 480px) {
+  .hall-door { padding: 24px 84px 22px 20px; }
+  .door-vertical { font-size: 25px; right: 30px; top: 28px; }
+  .door-seal { right: 32px; bottom: 84px; }
+}

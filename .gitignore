@@ -1,21 +1,6 @@
-# 本机账号、私人上传、数据库与会话永不公开
-**/.local/
-**/__pycache__/
-*.py[cod]
+# 本地仓库忽略：运行数据、演示数据、临时草稿与系统文件
+app/.local/
+app/.demo/
+__pycache__/
 .DS_Store
-.env
-.env.*
-*.sqlite
-*.sqlite3
-*.db
-*.log
-.venv/
-node_modules/
-
-.review/
-draft_*/
-**/verification/iterations/
-**/verification/current/
-**/verification/v2/原入口与资料完整性.json
-**/verification/最终交付审计.json
-**/verification/重启与完整性.json
+draft_*_folder/

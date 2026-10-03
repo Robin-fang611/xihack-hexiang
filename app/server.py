@@ -428,6 +428,50 @@ class Handler(BaseHTTPRequestHandler):
             output.append(public)
         return output
 
+    # 作品公开投影只含设计事实（构图、场景、方向、署名）；用户原话、原始偏好文字与附件永不公开。
+    WORK_COMPONENT_KEYS = ('profile_id', 'name', 'role', 'role_label', 'form', 'primary_family',
+                           'reported_facets', 'display_facets', 'source_id', 'source_url',
+                           'source_locator', 'profile_status', 'sample_status', 'mixing_evidence')
+    WORK_PUBLIC_LIMITS = {'name': 200, 'scenario': 400, 'intent': 2000, 'public_note': 500}
+
+    def public_works(self):
+        with self.server.store.db() as db:
+            rows = db.execute(
+                'SELECT d.id, d.data, d.created_at, u.display_name, u.username '
+                'FROM designs d JOIN users u ON u.id = d.owner_id ORDER BY d.created_at DESC').fetchall()
+        output = []
+        for row in rows:
+            try:
+                data = json.loads(row['data'])
+            except json.JSONDecodeError:
+                continue
+            if not data.get('published'):
+                continue
+            work = {
+                'id': row['id'], 'kind': 'creator_work', 'stamp': '意',
+                'status': data.get('status', 'untested_composite_design'),
+                'composition_kind': data.get('composition_kind', ''),
+                'main_family': data.get('main_family', ''),
+                'starting_preset_id': data.get('starting_preset_id', ''),
+                'published_at': data.get('published_at', ''), 'saved_at': row['created_at'],
+                'creator_name': (row['display_name'] or row['username'] or '创作者')[:40],
+                'components': [{key: part[key] for key in self.WORK_COMPONENT_KEYS if key in part}
+                               for part in data.get('components', []) if isinstance(part, dict)],
+                'preferred_facets': [f for f in data.get('preferred_facets', []) if isinstance(f, str)],
+                'deemphasized_facets': [f for f in data.get('deemphasized_facets', []) if isinstance(f, str)],
+                'excluded_ids': [f for f in data.get('excluded_ids', []) if isinstance(f, str)],
+                'families': [f for f in data.get('families', []) if isinstance(f, str)],
+                'display_facets': [f for f in data.get('display_facets', []) if isinstance(f, str)],
+                'sources': data.get('sources', []),
+                'limitations': ['创作者的数字设计，未经制作与实闻', '组合气味、制作比例与工艺不在公开范围'],
+            }
+            for field, limit in self.WORK_PUBLIC_LIMITS.items():
+                work[field] = str(data.get(field, '') or '').strip()[:limit]
+            if not work['name']:
+                work['name'] = '未命名作品'
+            output.append(work)
+        return output
+
     def body(self):
         length = int(self.headers.get('Content-Length', 0))
         if length <= 0:
@@ -500,6 +544,7 @@ class Handler(BaseHTTPRequestHandler):
             return
         if method == 'GET' and path == '/api/bootstrap':
             self.json({**services.bootstrap_data(), 'products': self.public_products(),
+                       'works': self.public_works(),
                        'app_name': '香笺', 'capabilities': {'ocr': store.ocr.exists(), 'documents': True},
                        'simulation_spaces': [{'id': 'reading', 'name': '阅读角', 'accepted_families': ['woody']},
                                              {'id': 'lobby', 'name': '民宿客厅', 'accepted_families': ['woody', 'balsamic']}]})
@@ -544,10 +589,16 @@ class Handler(BaseHTTPRequestHandler):
                 if path == '/api/register':
                     if payload.get('role', 'user') != 'user':
                         raise Problem(403, '普通注册不能取得管理者权限。', 'manager_registration_forbidden')
+                    account_kind = payload.get('account_kind', 'user')
+                    if account_kind not in ('user', 'creator'):
+                        raise Problem(400, '账号类型不正确。', 'invalid_account_kind')
+                    # 创作者（OPC）在注册时自愿选择入驻；服务端仍登记为同一类发布权限，
+                    # 已有账号不能事后升级，角色分配方式以此落地。
+                    role = 'manager' if account_kind == 'creator' else 'user'
                     if row:
                         raise Problem(409, '这个账号已存在，请登录。', 'username_exists')
                     user_id = uuid.uuid4().hex
-                    db.execute('INSERT INTO users VALUES(?,?,?,?,?,?)', (user_id, username, str(payload.get('display_name') or username)[:40], 'user', password_hash(password), now()))
+                    db.execute('INSERT INTO users VALUES(?,?,?,?,?,?)', (user_id, username, str(payload.get('display_name') or username)[:40], role, password_hash(password), now()))
                 else:
                     if not row or not password_matches(password, row['password']):
                         raise Problem(401, '账号或密码不正确。', 'login_failed')
@@ -645,6 +696,31 @@ class Handler(BaseHTTPRequestHandler):
                     db.execute('INSERT INTO designs VALUES(?,?,?,?)', (design_id, user['id'], dumps(design), created_at))
             self.json({'design': {**design, 'id': design_id, 'created_at': created_at},
                        'saved_existing': existing is not None}, 200 if existing else 201)
+            return
+        design_action = re.fullmatch(r'/api/designs/([a-f0-9]{32})/(publish|unpublish)', path)
+        if design_action and method == 'POST':
+            design_id, action = design_action.groups()
+            user = self.user()
+            with store.db() as db:
+                db.execute('BEGIN IMMEDIATE')
+                row = db.execute('SELECT * FROM designs WHERE id=?', (design_id,)).fetchone()
+                if not row or row['owner_id'] != user['id']:
+                    raise Problem(404, '未找到可发布的作品。', 'design_not_found')
+                try:
+                    data = json.loads(row['data'])
+                except json.JSONDecodeError:
+                    raise Problem(409, '这份作品暂时无法读取，请重新保存后再发布。', 'stored_design_invalid')
+                if action == 'publish':
+                    note = payload.get('public_note', data.get('public_note', ''))
+                    if not isinstance(note, str):
+                        raise Problem(400, '创作说明须为文字。', 'invalid_public_note')
+                    data['public_note'] = note.strip()[:500]
+                    data['published'] = True
+                    data['published_at'] = now()
+                else:
+                    data['published'] = False
+                db.execute('UPDATE designs SET data=? WHERE id=? AND owner_id=?', (dumps(data), design_id, user['id']))
+            self.json({'design': {**data, 'id': design_id, 'created_at': row['created_at']}})
             return
         if method == 'POST' and path == '/api/match':
             self.json(services.match_products(payload.get('design', payload), self.public_products()))

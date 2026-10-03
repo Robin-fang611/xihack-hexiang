@@ -5,7 +5,7 @@ export const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, char 
 export const list = value => Array.isArray(value) ? value : value == null || value === '' ? [] : [value];
 export const roles = { main: '主调', support: '支撑', accent: '点缀' };
 export const forms = { essential_oil: '精油', resinoid_extract: '树脂提取物', raw_resin: '原树脂', oleo_gum_resin: '油胶树脂', wood: '木材', dried_flower_bud: '干燥花蕾', burning_fumes: '燃烧烟气', unidentified_material: '身份待核对', incense: '线香 / 燃香', scent_bead: '香珠 / 香牌', sachet: '香包', perfume: '香水', diffuser: '扩香液', candle: '香薰蜡烛', other: '其他', unknown: '形态待补充' };
-export const state = { boot: null, user: null, csrf: '', page: 'home', library: 'materials', authMode: 'login', profiles: [], facets: {}, sources: [], products: [], records: [], savedDesigns: [], selectedMaterial: null, components: [], preferred: [], deemphasized: [], excluded: [], history: [], candidates: [], cardDesign: null, simulation: null, simulationConfirmed: false, logs: [], loading: false, accountVersion: 0, recordsRequest: 0, designRevision: 0, draftName: '', cardOrigin: '' };
+export const state = { boot: null, user: null, csrf: '', page: 'hall', world: 'experience', library: 'materials', authMode: 'login', profiles: [], facets: {}, sources: [], products: [], works: [], records: [], savedDesigns: [], selectedMaterial: null, components: [], preferred: [], deemphasized: [], excluded: [], history: [], candidates: [], cardDesign: null, simulation: null, simulationConfirmed: false, logs: [], loading: false, accountVersion: 0, recordsRequest: 0, designRevision: 0, draftName: '', cardOrigin: '' };
 
 export function safeURL(value, allowRelative = true) {
   if (!value || typeof value !== 'string') return '';

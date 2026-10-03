@@ -1,778 +1,844 @@
 {
-  "schema_version": 2,
-  "date": "2026-10-03",
-  "repository": "https://github.com/Robin-fang611/xihack-hexiang",
-  "scope": "最新产品源码、公共规格/计划/知识/报告原文、测试工具与脱敏验收摘录；不公开私人运行数据、系统会话、完整本机过程。",
-  "published_file_count_including_manifest": 89,
-  "manifest_excludes_own_digest": true,
-  "original_project_files": [
-    {
-      "path": "AI审美提案-三炉香与一张笺.md",
-      "source_sha256": "705032a4feec176f35993fe0e24f7cb1805c8ce323eaa892edba698173a652d9",
-      "published_sha256": "705032a4feec176f35993fe0e24f7cb1805c8ce323eaa892edba698173a652d9",
-      "source_bytes": 14673,
-      "published_bytes": 14673,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/.gitignore",
-      "source_sha256": "5fe496a917a6009e370a0368f1f3bf898b3972513ffa0ba7bb8d4ff69c67fdf5",
-      "published_sha256": "5fe496a917a6009e370a0368f1f3bf898b3972513ffa0ba7bb8d4ff69c67fdf5",
-      "source_bytes": 21,
-      "published_bytes": 21,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/API契约.md",
-      "source_sha256": "c08c7aeacd5e038d709ae4bf3ffbdf4e0c18867e750050c3b3c8529e0e3cc37b",
-      "published_sha256": "5d37af8b57d0014f318a9f14594bc5898468b633e81a68176dd063be95a730d5",
-      "source_bytes": 13902,
-      "published_bytes": 14372,
-      "byte_identical": false,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/README.md",
-      "source_sha256": "8464c49167c8c243acd6e296e863ec324683526a249924fa739220fd8823a69b",
-      "published_sha256": "f43e5c72ddd5a7b5930864000a028315c194ef3a74ec342fac2f14f05cb65b44",
-      "source_bytes": 11769,
-      "published_bytes": 7394,
-      "byte_identical": false,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/intent.py",
-      "source_sha256": "ae4977560d02bf26c8c60d4e86179e40d46b7acfb550f6dd576145cdad5b8577",
-      "published_sha256": "ae4977560d02bf26c8c60d4e86179e40d46b7acfb550f6dd576145cdad5b8577",
-      "source_bytes": 10946,
-      "published_bytes": 10946,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/iteration_cycle.py",
-      "source_sha256": "911b4ed3e2474d884ef63c8ab5047733bf8721ebff0c5388ea95b0a0521bcd8b",
-      "published_sha256": "911b4ed3e2474d884ef63c8ab5047733bf8721ebff0c5388ea95b0a0521bcd8b",
-      "source_bytes": 19550,
-      "published_bytes": 19550,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/ocr.swift",
-      "source_sha256": "16672a6267d2d162850d13e0b2d3a467b4848b05c1d1ecdae715b8b18c20aeda",
-      "published_sha256": "16672a6267d2d162850d13e0b2d3a467b4848b05c1d1ecdae715b8b18c20aeda",
-      "source_bytes": 975,
-      "published_bytes": 975,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/presets.json",
-      "source_sha256": "3256e6cc3770afebaa612e82e8002298566d4601be30333837bd07acf154731e",
-      "published_sha256": "3256e6cc3770afebaa612e82e8002298566d4601be30333837bd07acf154731e",
-      "source_bytes": 6294,
-      "published_bytes": 6294,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/qa_browser.cjs",
-      "source_sha256": "c215682752591de69740846f7028dc70b981cbd869f7f2b751ace08406bedc09",
-      "published_sha256": "006b2a0c8353d7b5476873b420d6d9c92c674ab8b7c7e5ca9e8887eb75214bf2",
-      "source_bytes": 9316,
-      "published_bytes": 9362,
-      "byte_identical": false,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/qa_iterations.cjs",
-      "source_sha256": "46a2ec80244a43a33f70f93b707d006c642f95134bc6d16d1b94c19e99cac109",
-      "published_sha256": "883bdd5bdeeeed53233b77673fc4d434c345cefa81164a4d501d9a046cb733e1",
-      "source_bytes": 84409,
-      "published_bytes": 84416,
-      "byte_identical": false,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/qa_v2.cjs",
-      "source_sha256": "8cfa215825ce5341304ab67d8cf6bddf3fcb6cbd0452fa777635c4be660273eb",
-      "published_sha256": "5aafdac63a3d1362db66a68c2c535812bfa33014c9126d855bd5beb18009f2d8",
-      "source_bytes": 41919,
-      "published_bytes": 41893,
-      "byte_identical": false,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/server.py",
-      "source_sha256": "0b57a36bf4a4389ee951b9ce3b911e846572466cfe0cbb79bf6b20727fc53729",
-      "published_sha256": "0b57a36bf4a4389ee951b9ce3b911e846572466cfe0cbb79bf6b20727fc53729",
-      "source_bytes": 36662,
-      "published_bytes": 36662,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/services.py",
-      "source_sha256": "d059661b01010cc2b7d5f51193456ae4b936e1577094582cf96586e67f781e73",
-      "published_sha256": "d059661b01010cc2b7d5f51193456ae4b936e1577094582cf96586e67f781e73",
-      "source_bytes": 22869,
-      "published_bytes": 22869,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/simulation.py",
-      "source_sha256": "0e72f80ec49df68b2c33025d7413ef6b1756b475c60f6e496cb553cf0d029549",
-      "published_sha256": "0e72f80ec49df68b2c33025d7413ef6b1756b475c60f6e496cb553cf0d029549",
-      "source_bytes": 6867,
-      "published_bytes": 6867,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/app.js",
-      "source_sha256": "82e482108d36e259c5de74a8d5915d394d02fd7c879d4814561d307061e9abc9",
-      "published_sha256": "82e482108d36e259c5de74a8d5915d394d02fd7c879d4814561d307061e9abc9",
-      "source_bytes": 22313,
-      "published_bytes": 22313,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/assets/夜间草案.svg",
-      "source_sha256": "b034a43ea966a681b6b272ab2028bcbd1ab97c68e78d8a050bf4c4865baa253c",
-      "published_sha256": "b034a43ea966a681b6b272ab2028bcbd1ab97c68e78d8a050bf4c4865baa253c",
-      "source_bytes": 1186,
-      "published_bytes": 1186,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/assets/待客草案.svg",
-      "source_sha256": "9751df4a205811b0526c076a2e566092f29e9d0bb465e45e731302316fb0a7ca",
-      "published_sha256": "9751df4a205811b0526c076a2e566092f29e9d0bb465e45e731302316fb0a7ca",
-      "source_bytes": 1523,
-      "published_bytes": 1523,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/assets/晨间草案.svg",
-      "source_sha256": "c983ae0e30566af2418651d1094ce673895583903ec4130bbffb30981feb725e",
-      "published_sha256": "c983ae0e30566af2418651d1094ce673895583903ec4130bbffb30981feb725e",
-      "source_bytes": 1368,
-      "published_bytes": 1368,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/assets/香事案头.svg",
-      "source_sha256": "80e28fb7a0a87bd8855061babd2a665b389d98783cd257623fbc2493ee1e74db",
-      "published_sha256": "80e28fb7a0a87bd8855061babd2a665b389d98783cd257623fbc2493ee1e74db",
-      "source_bytes": 7446,
-      "published_bytes": 7446,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/index.html",
-      "source_sha256": "ffa63690cdf2d97ca8848f070bfea0e64f7f574d5cddabda2518c3d66fadb59c",
-      "published_sha256": "ffa63690cdf2d97ca8848f070bfea0e64f7f574d5cddabda2518c3d66fadb59c",
-      "source_bytes": 22442,
-      "published_bytes": 22442,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/modules/account.js",
-      "source_sha256": "128f91896c7de0804b8e1134e2433627221edbddd5415834860d2146f05f17a2",
-      "published_sha256": "128f91896c7de0804b8e1134e2433627221edbddd5415834860d2146f05f17a2",
-      "source_bytes": 2761,
-      "published_bytes": 2761,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/modules/card.js",
-      "source_sha256": "2766d6da5d219640b879c979e8137b0d284fc9036fa3ab7494d54a31ec939703",
-      "published_sha256": "2766d6da5d219640b879c979e8137b0d284fc9036fa3ab7494d54a31ec939703",
-      "source_bytes": 18578,
-      "published_bytes": 18578,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/modules/core.js",
-      "source_sha256": "067e96b1ec75b5245712d50dec7c5e93ab61e0d0fed2a7417844b36ad3b8af93",
-      "published_sha256": "067e96b1ec75b5245712d50dec7c5e93ab61e0d0fed2a7417844b36ad3b8af93",
-      "source_bytes": 6017,
-      "published_bytes": 6017,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/modules/draft.js",
-      "source_sha256": "4f46175e0be585f8984639abc75a04976fb1d355fb1a22031c732421eaed25b8",
-      "published_sha256": "4f46175e0be585f8984639abc75a04976fb1d355fb1a22031c732421eaed25b8",
-      "source_bytes": 7700,
-      "published_bytes": 7700,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/modules/home.js",
-      "source_sha256": "893c7517b9e885ec9a3cd0ec57c5a8cad17cc0eb028f49a6d6e3ab55c7f1af0e",
-      "published_sha256": "893c7517b9e885ec9a3cd0ec57c5a8cad17cc0eb028f49a6d6e3ab55c7f1af0e",
-      "source_bytes": 3410,
-      "published_bytes": 3410,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/modules/integration.js",
-      "source_sha256": "3c51d71850e0f534cc2a6670c234a461e34888daeae8335a7ed2ac9c56c51a28",
-      "published_sha256": "3c51d71850e0f534cc2a6670c234a461e34888daeae8335a7ed2ac9c56c51a28",
-      "source_bytes": 14743,
-      "published_bytes": 14743,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/modules/intent.js",
-      "source_sha256": "ac63be0eb8f29cc0d86c28514e22421a0c771838e07e3bf3a162c1acf4c9c5c9",
-      "published_sha256": "ac63be0eb8f29cc0d86c28514e22421a0c771838e07e3bf3a162c1acf4c9c5c9",
-      "source_bytes": 9951,
-      "published_bytes": 9951,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/modules/library.js",
-      "source_sha256": "63183fdb6bc889020a8f8cca31fee5e9b5c1678c0ec4a636a0103edf8ff3a4d9",
-      "published_sha256": "63183fdb6bc889020a8f8cca31fee5e9b5c1678c0ec4a636a0103edf8ff3a4d9",
-      "source_bytes": 11530,
-      "published_bytes": 11530,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/modules/navigation.js",
-      "source_sha256": "ee24ee1ff315cb979ca582bd83c7ef24d79f7055f96310207d98b3459abdd284",
-      "published_sha256": "ee24ee1ff315cb979ca582bd83c7ef24d79f7055f96310207d98b3459abdd284",
-      "source_bytes": 1300,
-      "published_bytes": 1300,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/modules/products.js",
-      "source_sha256": "1e0bcf50e249dd240ce2ac6aad195a213a8103a9e95c7bd8fcedc5c28af76b28",
-      "published_sha256": "1e0bcf50e249dd240ce2ac6aad195a213a8103a9e95c7bd8fcedc5c28af76b28",
-      "source_bytes": 22680,
-      "published_bytes": 22680,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/modules/studio.js",
-      "source_sha256": "9210974fd7b9cd5cfbc3c4d6e8e03ee94b93d98d7439f1233aecc74f7251ab98",
-      "published_sha256": "9210974fd7b9cd5cfbc3c4d6e8e03ee94b93d98d7439f1233aecc74f7251ab98",
-      "source_bytes": 18001,
-      "published_bytes": 18001,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/style.css",
-      "source_sha256": "df239f2413fa02fcbd04627af9bb69ae6a14a699b5de3e2b493c55de4ccb360c",
-      "published_sha256": "df239f2413fa02fcbd04627af9bb69ae6a14a699b5de3e2b493c55de4ccb360c",
-      "source_bytes": 564,
-      "published_bytes": 564,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/styles/base.css",
-      "source_sha256": "5d5cabef7af11fc255be8b846e1ce9ff236ae3215e29be24d2fd4b711f9cab5a",
-      "published_sha256": "5d5cabef7af11fc255be8b846e1ce9ff236ae3215e29be24d2fd4b711f9cab5a",
-      "source_bytes": 1940,
-      "published_bytes": 1940,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/styles/components.css",
-      "source_sha256": "bcacb102c9a244a376d9a9cd60662997a0377ba6f535b469a2dd1edf364516bb",
-      "published_sha256": "bcacb102c9a244a376d9a9cd60662997a0377ba6f535b469a2dd1edf364516bb",
-      "source_bytes": 10262,
-      "published_bytes": 10262,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/styles/intent.css",
-      "source_sha256": "cc432fe5e2669bb6d5c4ba9714892c524d185e727271c736a772a1231765bdeb",
-      "published_sha256": "cc432fe5e2669bb6d5c4ba9714892c524d185e727271c736a772a1231765bdeb",
-      "source_bytes": 2234,
-      "published_bytes": 2234,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/styles/iteration.css",
-      "source_sha256": "51d2a6cbbfb49424189d02361313a0f531f205b9dbeccd31a5107c9100310cf5",
-      "published_sha256": "51d2a6cbbfb49424189d02361313a0f531f205b9dbeccd31a5107c9100310cf5",
-      "source_bytes": 3603,
-      "published_bytes": 3603,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/styles/layout.css",
-      "source_sha256": "cb828b819ca71c7f38ae4bf0e5be0c45266ce396f10562edc2944c62fda1e736",
-      "published_sha256": "cb828b819ca71c7f38ae4bf0e5be0c45266ce396f10562edc2944c62fda1e736",
-      "source_bytes": 7677,
-      "published_bytes": 7677,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/styles/records-library.css",
-      "source_sha256": "e3b7344138558d3824966cc995d5b89ad1c1813c7d0d4d8a0ff71e19fb9b408d",
-      "published_sha256": "e3b7344138558d3824966cc995d5b89ad1c1813c7d0d4d8a0ff71e19fb9b408d",
-      "source_bytes": 6811,
-      "published_bytes": 6811,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/styles/responsive.css",
-      "source_sha256": "d3b5fc9324fcfa2e463367dff60f381df0a58177eed6d7f8cdaf1e3915ee048f",
-      "published_sha256": "d3b5fc9324fcfa2e463367dff60f381df0a58177eed6d7f8cdaf1e3915ee048f",
-      "source_bytes": 11330,
-      "published_bytes": 11330,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/styles/studio.css",
-      "source_sha256": "53416ec0989a85c0486c25c340f7cf31bddbcecb68566f4c4a5555e0cfbda247",
-      "published_sha256": "53416ec0989a85c0486c25c340f7cf31bddbcecb68566f4c4a5555e0cfbda247",
-      "source_bytes": 14990,
-      "published_bytes": 14990,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/styles/tokens.css",
-      "source_sha256": "772c44c00f9802785b1d35ab7519b5c000b5200be30048619e484558fb22d4b6",
-      "published_sha256": "772c44c00f9802785b1d35ab7519b5c000b5200be30048619e484558fb22d4b6",
-      "source_bytes": 641,
-      "published_bytes": 641,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/styles/作品.css",
-      "source_sha256": "000dc70026367dbf7b7080891fa327e997b645bea83f3ec0c487087d10bf6671",
-      "published_sha256": "000dc70026367dbf7b7080891fa327e997b645bea83f3ec0c487087d10bf6671",
-      "source_bytes": 527,
-      "published_bytes": 527,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/static/styles/接入.css",
-      "source_sha256": "95b380e070f7ced67b7b506ff30c5130b3fa7613a0196c9da53e88c9fe2f1f90",
-      "published_sha256": "95b380e070f7ced67b7b506ff30c5130b3fa7613a0196c9da53e88c9fe2f1f90",
-      "source_bytes": 1696,
-      "published_bytes": 1696,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/test_app.py",
-      "source_sha256": "de3a819c5c19c8a6988a112675365f2487fad8b70d99b1a983ede4075970e08c",
-      "published_sha256": "de3a819c5c19c8a6988a112675365f2487fad8b70d99b1a983ede4075970e08c",
-      "source_bytes": 13425,
-      "published_bytes": 13425,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/test_conflict.py",
-      "source_sha256": "a4239f334f6bd8790e2ceffc732b2b2578773c6751daf83f95c86527e34af52a",
-      "published_sha256": "a4239f334f6bd8790e2ceffc732b2b2578773c6751daf83f95c86527e34af52a",
-      "source_bytes": 10696,
-      "published_bytes": 10696,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/test_intent.py",
-      "source_sha256": "126e29f0fccdf2480728071c811a640663c7a897508f938d0a02721a89ec6ad3",
-      "published_sha256": "126e29f0fccdf2480728071c811a640663c7a897508f938d0a02721a89ec6ad3",
-      "source_bytes": 14546,
-      "published_bytes": 14546,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/test_iterations.py",
-      "source_sha256": "bea9ee00f7327dc7b5b587ee608deb94123e92a12426a8c2b6a405f8e7f79951",
-      "published_sha256": "bea9ee00f7327dc7b5b587ee608deb94123e92a12426a8c2b6a405f8e7f79951",
-      "source_bytes": 32097,
-      "published_bytes": 32097,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/test_session_race.py",
-      "source_sha256": "9a59c04ddf9585e9d139d6d89be51b0659141bdbd705bcb44896331dee707b1d",
-      "published_sha256": "9a59c04ddf9585e9d139d6d89be51b0659141bdbd705bcb44896331dee707b1d",
-      "source_bytes": 8189,
-      "published_bytes": 8189,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/test_simulation.py",
-      "source_sha256": "3c3a34b545bd4ca71155672a3e18cd788294bc3f1925fae0cfb724ce8ddab2a7",
-      "published_sha256": "3c3a34b545bd4ca71155672a3e18cd788294bc3f1925fae0cfb724ce8ddab2a7",
-      "source_bytes": 12104,
-      "published_bytes": 12104,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/verification/手机调香.png",
-      "source_sha256": "645c46412a9be8e31ec96b5b602f0f4a9138aa8296003bc6e82ecf8b1ce413e3",
-      "published_sha256": "645c46412a9be8e31ec96b5b602f0f4a9138aa8296003bc6e82ecf8b1ce413e3",
-      "source_bytes": 397938,
-      "published_bytes": 397938,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/verification/接口验收.json",
-      "source_sha256": "f45b2ef0f64f2fdc9150a53fa3b1f66c3f9af9343eba4c11dd1e49ec4efe3b8e",
-      "published_sha256": "f45b2ef0f64f2fdc9150a53fa3b1f66c3f9af9343eba4c11dd1e49ec4efe3b8e",
-      "source_bytes": 201,
-      "published_bytes": 201,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/verification/浏览器验收.json",
-      "source_sha256": "2e218b0d563aa16c16cc6865f93223f52a0ef4de8c235c8ebe5880a790c47c32",
-      "published_sha256": "2e218b0d563aa16c16cc6865f93223f52a0ef4de8c235c8ebe5880a790c47c32",
-      "source_bytes": 561,
-      "published_bytes": 561,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/verification/调香工作台.png",
-      "source_sha256": "5479b05c12467411f08a0f12cf43e4ba6950b54751ad48a55c494fdfd9737675",
-      "published_sha256": "5479b05c12467411f08a0f12cf43e4ba6950b54751ad48a55c494fdfd9737675",
-      "source_bytes": 476991,
-      "published_bytes": 476991,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/verification/香笺.png",
-      "source_sha256": "6c9d32ea7a238dc8257730909ddee0491306489fcd915509f0bf9fffd014a95f",
-      "published_sha256": "6c9d32ea7a238dc8257730909ddee0491306489fcd915509f0bf9fffd014a95f",
-      "source_bytes": 209461,
-      "published_bytes": 209461,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/verify_v2.py",
-      "source_sha256": "b57d1ae9f3d44f968ca9019163a886478d2f406ce7ef5acaaef4f51e35597517",
-      "published_sha256": "b57d1ae9f3d44f968ca9019163a886478d2f406ce7ef5acaaef4f51e35597517",
-      "source_bytes": 3351,
-      "published_bytes": 3351,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/启动软件.command",
-      "source_sha256": "461bf04c349f849db17932fc4e0c23e0a9d5f6a96ba90ef53557db474006834b",
-      "published_sha256": "ccc8885309f3daa53b937567cce6397fb345990ab81d33bce79726161de353bb",
-      "source_bytes": 229,
-      "published_bytes": 307,
-      "byte_identical": false,
-      "mode": "0o755"
-    },
-    {
-      "path": "产品开发计划.md",
-      "source_sha256": "838dc26a38313fa01eb58dd3fa7e9991e2903621570a135cdc4b04d9c8c846e9",
-      "published_sha256": "74225889333ce6d6a412f154386f0cd32afac6d21cf34577b67ea43e80013ca4",
-      "source_bytes": 18003,
-      "published_bytes": 14408,
-      "byte_identical": false,
-      "mode": "0o644"
-    },
-    {
-      "path": "合香定制原型交付规格.md",
-      "source_sha256": "7a42187a397434426b82eb9bc7097418f7ff0fbb6bb03e139b490bada35b255d",
-      "published_sha256": "798a8785b24ce47b07fcca2d7c911c714711e073c518b0534cb1eacc2dad9069",
-      "source_bytes": 33535,
-      "published_bytes": 32238,
-      "byte_identical": false,
-      "mode": "0o644"
-    },
-    {
-      "path": "合香疗愈设计建议-审美主张.md",
-      "source_sha256": "53411c7ca4e29ad2f95a149b4a99e125867d5d7ee1cb408e3b0bf628107de0b8",
-      "published_sha256": "53411c7ca4e29ad2f95a149b4a99e125867d5d7ee1cb408e3b0bf628107de0b8",
-      "source_bytes": 59990,
-      "published_bytes": 59990,
-      "byte_identical": true,
-      "mode": "0o600"
-    },
-    {
-      "path": "知识库/AI报告候选.json",
-      "source_sha256": "7193b74b53d5821e185c329b125e2347b8f0d20f1ad4bd83af0b9a42309fe40d",
-      "published_sha256": "c06f3f13fd45dd31af5209354f6234fff1e3ff7fe67959ce8921bdf1981d2c75",
-      "source_bytes": 15727,
-      "published_bytes": 15623,
-      "byte_identical": false,
-      "mode": "0o644"
-    },
-    {
-      "path": "知识库/合香知识库.md",
-      "source_sha256": "83f101093c35afbd9e3c4c9eed0abe67f6b64ade82ddc86683d3939c32a011ad",
-      "published_sha256": "db3d1038c4635d7d867416b1aa6e15bb1a3141a98c3b183e984b7a4685cdf3dc",
-      "source_bytes": 22664,
-      "published_bytes": 22491,
-      "byte_identical": false,
-      "mode": "0o644"
-    },
-    {
-      "path": "知识库/复合调香机制.md",
-      "source_sha256": "1fca7d20a6a79cb7288b9446d0041c1efbaa6510580f72c78cfa9dcbde80f5f8",
-      "published_sha256": "d633736d3353575107ee0d705335388abef22c3094cb676fc805285a665a7f96",
-      "source_bytes": 9862,
-      "published_bytes": 9813,
-      "byte_identical": false,
-      "mode": "0o644"
-    },
-    {
-      "path": "知识库/复合调香演示结果.json",
-      "source_sha256": "7eeceff7ddefd451dd355c9b95c0b45af08e22e5b6361974770f8985b9419730",
-      "published_sha256": "7eeceff7ddefd451dd355c9b95c0b45af08e22e5b6361974770f8985b9419730",
-      "source_bytes": 5973,
-      "published_bytes": 5973,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "知识库/复合调香规则.json",
-      "source_sha256": "ba181abe397226e76419684c89e4510f8565225064b9a51b838d8dc4f06ae7de",
-      "published_sha256": "ba181abe397226e76419684c89e4510f8565225064b9a51b838d8dc4f06ae7de",
-      "source_bytes": 18164,
-      "published_bytes": 18164,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "知识库/外部报告整理.md",
-      "source_sha256": "c71058d4b268f538e179e8b72efd191bedb32c8702dc48a094fafe30b229e864",
-      "published_sha256": "0393eee5dcc9248189e4f8b32911dc487dabf76a4fd382baa06b523501474426",
-      "source_bytes": 7351,
-      "published_bytes": 7191,
-      "byte_identical": false,
-      "mode": "0o644"
-    },
-    {
-      "path": "知识库/数字调香.py",
-      "source_sha256": "e1abaf5e1f78b158e09a3da2b738167e969aa8138ec7303eef197603aff69e40",
-      "published_sha256": "e1abaf5e1f78b158e09a3da2b738167e969aa8138ec7303eef197603aff69e40",
-      "source_bytes": 11615,
-      "published_bytes": 11615,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "知识库/数字调香核验结果.json",
-      "source_sha256": "187ee9aafd3b8b2f6eef2acabfe139eafba1ce2402adf99b9b09f8abc3d3ff8f",
-      "published_sha256": "187ee9aafd3b8b2f6eef2acabfe139eafba1ce2402adf99b9b09f8abc3d3ff8f",
-      "source_bytes": 2689,
-      "published_bytes": 2689,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "知识库/核验知识库.py",
-      "source_sha256": "c20d538996bf1dafae67cabbb71d20da67985f1114b4a80a57046f98e887d118",
-      "published_sha256": "c20d538996bf1dafae67cabbb71d20da67985f1114b4a80a57046f98e887d118",
-      "source_bytes": 6221,
-      "published_bytes": 6221,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "知识库/核验结果.json",
-      "source_sha256": "083a3749592df90dfa7a6d897e48fd845878e18bf0976981784b86a29a71f61c",
-      "published_sha256": "083a3749592df90dfa7a6d897e48fd845878e18bf0976981784b86a29a71f61c",
-      "source_bytes": 1082,
-      "published_bytes": 1082,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "知识库/知识条目.json",
-      "source_sha256": "a4dc5c4baca258132788a8a815ea04e25a3439d4cae331c053a491786878c7c9",
-      "published_sha256": "a4dc5c4baca258132788a8a815ea04e25a3439d4cae331c053a491786878c7c9",
-      "source_bytes": 43021,
-      "published_bytes": 43021,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "知识库/验证数字调香.py",
-      "source_sha256": "bd9b2e3e6ecfeb63a9acba1c81443c94ac04607df10e296f965a6461a3eac07b",
-      "published_sha256": "bd9b2e3e6ecfeb63a9acba1c81443c94ac04607df10e296f965a6461a3eac07b",
-      "source_bytes": 5357,
-      "published_bytes": 5357,
-      "byte_identical": true,
-      "mode": "0o644"
-    },
-    {
-      "path": "西客松XiHack2026-企业真实命题赛道参赛创作与提交指南（选手版）.docx",
-      "source_sha256": "5f0180fabd693f430af049de436c56b3f3d022ceeef19ea656a40a429bbeefb1",
-      "published_sha256": "5f0180fabd693f430af049de436c56b3f3d022ceeef19ea656a40a429bbeefb1",
-      "source_bytes": 49718,
-      "published_bytes": 49718,
-      "byte_identical": true,
-      "mode": "0o600"
-    },
-    {
-      "path": "账号权限与已有香品分析.md",
-      "source_sha256": "dfc040e48abfea147f5931d7545a745e64b65081738c3869ab05fe926f26cc9e",
-      "published_sha256": "dfc040e48abfea147f5931d7545a745e64b65081738c3869ab05fe926f26cc9e",
-      "source_bytes": 6732,
-      "published_bytes": 6732,
-      "byte_identical": true,
-      "mode": "0o644"
-    }
-  ],
-  "added_public_files": [
-    {
-      "path": ".gitignore",
-      "sha256": "70b61a73558be68ab0888750dfbedff375a0329ed2daffdc080f4861ad8adcab",
-      "bytes": 377,
-      "mode": "0o644"
-    },
-    {
-      "path": "README.md",
-      "sha256": "9ac1f74427b17fd345b03eb5c76b006b7a139f2f4888b0ef85e156b8618d4a4f",
-      "bytes": 6635,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/test-fixtures/label.jpg",
-      "sha256": "73827ce7978d7a7a1774291e3b0ea7370c3250feeb82b6abf70cc588f8bdd718",
-      "bytes": 37700,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/verification/五轮公开验收.json",
-      "sha256": "0a52c99206e722f0c5a3e0a529b0e49366d5b682c11464953af88cfac509b14b",
-      "bytes": 29288,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/verification/五轮截图/作品锁恢复.png",
-      "sha256": "b7e0d4e53273e74932f85c9edf4434185b4ec136e0b067c67e657a4143f4ccf5",
-      "bytes": 309607,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/verification/五轮截图/图鉴选材.png",
-      "sha256": "7d3ea1ed1ac8fd9adaf817b9bb6b2566d1cf912f4f388236c0ecd61df370d8b1",
-      "bytes": 200011,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/verification/五轮截图/手机案头-390.png",
-      "sha256": "3c971adfee6f7a97e896e4c0772c0425d3fe01243207629b5dbb79d6f70acf7b",
-      "bytes": 197477,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/verification/五轮截图/未知原话.png",
-      "sha256": "109d4c5bce03774209572d7cc39160af2271ed9f0394a55a1744439bf830c52f",
-      "bytes": 208541,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/verification/五轮截图/模拟倒计时.png",
-      "sha256": "6d1ff94bf89585495c6984b44479861be6912ac09bdbe041160f008b3108eb1f",
-      "bytes": 179648,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/verification/五轮截图/跨页账号保护.png",
-      "sha256": "e748a6dcc90d354b7f38c823ffb90601a00e460452a3392b9d399a5b55eaa795",
-      "bytes": 87883,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/verification/五轮截图/首页.png",
-      "sha256": "1b2c8fe6973a04be9fa60810ed75aa956bb6eace63f8d0273c4d13db3864028c",
-      "bytes": 354309,
-      "mode": "0o644"
-    },
-    {
-      "path": "app/verification/五轮截图/香笺.png",
-      "sha256": "c0bc11e3ffe70715dcf1ceaea6147de3d3f27d11aff6a321ebe9d7da825f3aaf",
-      "bytes": 1069084,
-      "mode": "0o644"
-    },
-    {
-      "path": "requirements.txt",
-      "sha256": "5333b970513579d8649015a92676065be1627fedfa48b28662d8d2563af740c0",
-      "bytes": 29,
-      "mode": "0o644"
-    },
-    {
-      "path": "前期讨论与决策记录.md",
-      "sha256": "035a38bfdd0fe638a4a8985852153dc1eaff91526299ebb0266e7ecb3842b8ae",
-      "bytes": 4224,
-      "mode": "0o644"
-    },
-    {
-      "path": "项目现状.md",
-      "sha256": "db31cb59d9b2cd96624b6832a13ee7350663341d1a19daaa8fa3d8cacc19a5a9",
-      "bytes": 7317,
-      "mode": "0o644"
-    }
-  ],
-  "excluded_categories": [
-    ".local/ 全部本机运行数据与原账号文件",
-    "私人数据库、附件、OCR可执行文件与会话值",
-    "真实数据/凭据的指纹、重启核验与本机交付审计",
-    "完整verification/iterations/行为过程和源码/工具快照",
-    "内部审查、聊天/接续记录、缓存与日志",
-    "原始HTTP/浏览器JSON中的临时session/CSRF值"
-  ],
-  "adaptations": [
-    "6份公开文档使用仓库相对链接，保留产品与验证事实，移除个人路径及内部交接细节",
-    "38份运行源码与最终R5验收逐字节一致",
-    "保留原公开启动脚本使用可配置Python/仓库虚拟环境，保留旧qa_browser历史维护适配",
-    "新版qa_v2/qa_iterations仅增加Playwright和Chrome环境配置，测试断言保持原版",
-    "公开五轮摘要列原完成收据指纹/当前38运行源；8张图片是隔离临时测试截图，原过程留本地",
-    "公开副本独立单次full round5的36项、57模块、完整回归与真实后台63.47秒全部通过"
-  ],
-  "two_model_reports_byte_identical": true,
-  "collaboration_document": "https://wcnzcbnb3bym.feishu.cn/docx/RmaDdMgvzoLHfHxuYtQcHBJKnJc",
-  "collaboration_document_synced_this_round": false
+ "schema_version": 2,
+ "date": "2026-10-04",
+ "repository": "https://github.com/Robin-fang611/xihack-hexiang",
+ "scope": "最新产品源码（含双端口：消费者端 + OPC 创作者端）、公共规格/计划/知识/报告原文、测试工具与脱敏验收摘录；不公开私人运行数据、系统会话、完整本机过程、内部评审记录。",
+ "published_file_count_including_manifest": 119,
+ "manifest_excludes_own_digest": true,
+ "original_project_files": [
+  {
+   "path": ".gitignore",
+   "source_sha256": "44c4e2031b88bccd5c6ef8bf2a71470f40787c22741ee5f3765697fd6208161a",
+   "published_sha256": "44c4e2031b88bccd5c6ef8bf2a71470f40787c22741ee5f3765697fd6208161a",
+   "bytes": 143,
+   "mode": "0o644"
+  },
+  {
+   "path": "AI审美提案-三炉香与一张笺.md",
+   "source_sha256": "705032a4feec176f35993fe0e24f7cb1805c8ce323eaa892edba698173a652d9",
+   "published_sha256": "705032a4feec176f35993fe0e24f7cb1805c8ce323eaa892edba698173a652d9",
+   "bytes": 14673,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/.gitignore",
+   "source_sha256": "5fe496a917a6009e370a0368f1f3bf898b3972513ffa0ba7bb8d4ff69c67fdf5",
+   "published_sha256": "5fe496a917a6009e370a0368f1f3bf898b3972513ffa0ba7bb8d4ff69c67fdf5",
+   "bytes": 21,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/API契约.md",
+   "source_sha256": "ed2d06d4e911c4cd1fb6396e301fedd4d3715bb60539b9c54b0dcb4adddbddc6",
+   "published_sha256": "aaf4e3bd17b19e5e12dc13e5286038a4e6166283f0ce24695f49bbb2981fb64a",
+   "bytes": 15626,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/README.md",
+   "source_sha256": "45d8d708ec7d5a5f0683b36fb721d8ecddd6bd03103f15e867b84bd6241b75d4",
+   "published_sha256": "a990100c5988fa12c2e3186639c020e214ca5069ec3d85339e5b0188e0215ef9",
+   "bytes": 14498,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/intent.py",
+   "source_sha256": "ae4977560d02bf26c8c60d4e86179e40d46b7acfb550f6dd576145cdad5b8577",
+   "published_sha256": "ae4977560d02bf26c8c60d4e86179e40d46b7acfb550f6dd576145cdad5b8577",
+   "bytes": 10946,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/iteration_cycle.py",
+   "source_sha256": "911b4ed3e2474d884ef63c8ab5047733bf8721ebff0c5388ea95b0a0521bcd8b",
+   "published_sha256": "911b4ed3e2474d884ef63c8ab5047733bf8721ebff0c5388ea95b0a0521bcd8b",
+   "bytes": 19550,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/ocr.swift",
+   "source_sha256": "16672a6267d2d162850d13e0b2d3a467b4848b05c1d1ecdae715b8b18c20aeda",
+   "published_sha256": "16672a6267d2d162850d13e0b2d3a467b4848b05c1d1ecdae715b8b18c20aeda",
+   "bytes": 975,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/presets.json",
+   "source_sha256": "3256e6cc3770afebaa612e82e8002298566d4601be30333837bd07acf154731e",
+   "published_sha256": "3256e6cc3770afebaa612e82e8002298566d4601be30333837bd07acf154731e",
+   "bytes": 6294,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/qa_browser.cjs",
+   "source_sha256": "7c86b41fc2de938aa8a6a27026e8e6bafbc0f9f0a7244dde1edfa9bc763ffdab",
+   "published_sha256": "c1c50958fff4a4a1081ba6560d306aea98d524623f7a18a5f9121c6478d39145",
+   "bytes": 9614,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/qa_iterations.cjs",
+   "source_sha256": "075b369690ac02f035d41ac4942f42f56c3703e811d32e82761ff999c8bc4c43",
+   "published_sha256": "1d307a6c77f1598e0aa651dd3ab8e9e395ba87bf6dabd3742ea1035f545c6854",
+   "bytes": 84014,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/qa_portal.cjs",
+   "source_sha256": "d6872d85f7ba606bb003e9c284bcdab5671e52339588ce58e8506027f9acaf0d",
+   "published_sha256": "ab523129bcc49cf9560f909f356add514b83b52cffc668aea5db950ec8b7d0b6",
+   "bytes": 12631,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/qa_v2.cjs",
+   "source_sha256": "25bc367c78795763feae272c4d940c92548c4221bde0d7e6dc7fb2a0ec8c78ee",
+   "published_sha256": "ac2fc5f091e4096e9e7dd73f7d92d6295bafd67d1727ee766f500a02bbe8a558",
+   "bytes": 42629,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/seed_demo.py",
+   "source_sha256": "272b98b980e17d55ad7af5639dce53ce2bf7ab8a048f7150985e62b0ca367022",
+   "published_sha256": "272b98b980e17d55ad7af5639dce53ce2bf7ab8a048f7150985e62b0ca367022",
+   "bytes": 7882,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/server.py",
+   "source_sha256": "1e6e31efc8a249b7078e424c703dac3ddeea255222c162b948341f1b26e783bd",
+   "published_sha256": "1e6e31efc8a249b7078e424c703dac3ddeea255222c162b948341f1b26e783bd",
+   "bytes": 41561,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/services.py",
+   "source_sha256": "d059661b01010cc2b7d5f51193456ae4b936e1577094582cf96586e67f781e73",
+   "published_sha256": "d059661b01010cc2b7d5f51193456ae4b936e1577094582cf96586e67f781e73",
+   "bytes": 22869,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/simulation.py",
+   "source_sha256": "0e72f80ec49df68b2c33025d7413ef6b1756b475c60f6e496cb553cf0d029549",
+   "published_sha256": "0e72f80ec49df68b2c33025d7413ef6b1756b475c60f6e496cb553cf0d029549",
+   "bytes": 6867,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/app.js",
+   "source_sha256": "87872a43168ee470659f8fe1f4a73ea7d22a9087fa5e03d318e7f615c7cdec0e",
+   "published_sha256": "87872a43168ee470659f8fe1f4a73ea7d22a9087fa5e03d318e7f615c7cdec0e",
+   "bytes": 24405,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/assets/夜间草案.svg",
+   "source_sha256": "b034a43ea966a681b6b272ab2028bcbd1ab97c68e78d8a050bf4c4865baa253c",
+   "published_sha256": "b034a43ea966a681b6b272ab2028bcbd1ab97c68e78d8a050bf4c4865baa253c",
+   "bytes": 1186,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/assets/待客草案.svg",
+   "source_sha256": "9751df4a205811b0526c076a2e566092f29e9d0bb465e45e731302316fb0a7ca",
+   "published_sha256": "9751df4a205811b0526c076a2e566092f29e9d0bb465e45e731302316fb0a7ca",
+   "bytes": 1523,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/assets/晨间草案.svg",
+   "source_sha256": "c983ae0e30566af2418651d1094ce673895583903ec4130bbffb30981feb725e",
+   "published_sha256": "c983ae0e30566af2418651d1094ce673895583903ec4130bbffb30981feb725e",
+   "bytes": 1368,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/assets/香事案头.svg",
+   "source_sha256": "80e28fb7a0a87bd8855061babd2a665b389d98783cd257623fbc2493ee1e74db",
+   "published_sha256": "80e28fb7a0a87bd8855061babd2a665b389d98783cd257623fbc2493ee1e74db",
+   "bytes": 7446,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/index.html",
+   "source_sha256": "aa1679b1be54ea84b9e60b79ce87ec8a1e4fd66dc91cc43272e26351ba520fe3",
+   "published_sha256": "aa1679b1be54ea84b9e60b79ce87ec8a1e4fd66dc91cc43272e26351ba520fe3",
+   "bytes": 30544,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/modules/account.js",
+   "source_sha256": "0ddb720cb7721e0fb8b03b114a288868852635aebaeef05d3ed70e8f6736343d",
+   "published_sha256": "0ddb720cb7721e0fb8b03b114a288868852635aebaeef05d3ed70e8f6736343d",
+   "bytes": 3043,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/modules/card.js",
+   "source_sha256": "da144934158b38d968aaf3440b066d75da43b52c09b84f6f0af205575e4e71d0",
+   "published_sha256": "da144934158b38d968aaf3440b066d75da43b52c09b84f6f0af205575e4e71d0",
+   "bytes": 18578,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/modules/core.js",
+   "source_sha256": "6ecc8b7a085a2684c367584484ac8763c927ed4148978b26f4dacb173af42e58",
+   "published_sha256": "6ecc8b7a085a2684c367584484ac8763c927ed4148978b26f4dacb173af42e58",
+   "bytes": 6049,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/modules/creator.js",
+   "source_sha256": "ca99754735aaa12c1e087808e1453dbb7e60bbf9d2363fdd019ec8bbdce2ec92",
+   "published_sha256": "ca99754735aaa12c1e087808e1453dbb7e60bbf9d2363fdd019ec8bbdce2ec92",
+   "bytes": 3132,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/modules/draft.js",
+   "source_sha256": "4f46175e0be585f8984639abc75a04976fb1d355fb1a22031c732421eaed25b8",
+   "published_sha256": "4f46175e0be585f8984639abc75a04976fb1d355fb1a22031c732421eaed25b8",
+   "bytes": 7700,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/modules/home.js",
+   "source_sha256": "84813d10fc5c10c1a08af165f282bef2eae31c182f525993603946c875b1258b",
+   "published_sha256": "84813d10fc5c10c1a08af165f282bef2eae31c182f525993603946c875b1258b",
+   "bytes": 4477,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/modules/integration.js",
+   "source_sha256": "3c51d71850e0f534cc2a6670c234a461e34888daeae8335a7ed2ac9c56c51a28",
+   "published_sha256": "3c51d71850e0f534cc2a6670c234a461e34888daeae8335a7ed2ac9c56c51a28",
+   "bytes": 14743,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/modules/intent.js",
+   "source_sha256": "ac63be0eb8f29cc0d86c28514e22421a0c771838e07e3bf3a162c1acf4c9c5c9",
+   "published_sha256": "ac63be0eb8f29cc0d86c28514e22421a0c771838e07e3bf3a162c1acf4c9c5c9",
+   "bytes": 9951,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/modules/library.js",
+   "source_sha256": "63183fdb6bc889020a8f8cca31fee5e9b5c1678c0ec4a636a0103edf8ff3a4d9",
+   "published_sha256": "63183fdb6bc889020a8f8cca31fee5e9b5c1678c0ec4a636a0103edf8ff3a4d9",
+   "bytes": 11530,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/modules/navigation.js",
+   "source_sha256": "61aa5e54458cb655c7bd82383f5e5dfc5b2b934d724cf514c95a4d8833a43589",
+   "published_sha256": "61aa5e54458cb655c7bd82383f5e5dfc5b2b934d724cf514c95a4d8833a43589",
+   "bytes": 1557,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/modules/products.js",
+   "source_sha256": "836bc36fa1a8f01768c8cb0ff27ffb6990dd7a7ed7d8519c94295b2ce1fd4c77",
+   "published_sha256": "836bc36fa1a8f01768c8cb0ff27ffb6990dd7a7ed7d8519c94295b2ce1fd4c77",
+   "bytes": 22929,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/modules/studio.js",
+   "source_sha256": "5d06a592b67b0cff0b0db2c0e87018db270463f7fa4c6ff89ec05c5703a714d4",
+   "published_sha256": "5d06a592b67b0cff0b0db2c0e87018db270463f7fa4c6ff89ec05c5703a714d4",
+   "bytes": 18570,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/style.css",
+   "source_sha256": "630d0e0dbc02e4f8e93fafded594cbf7eb7ab91ecd77cf44bbf55775eb139a04",
+   "published_sha256": "630d0e0dbc02e4f8e93fafded594cbf7eb7ab91ecd77cf44bbf55775eb139a04",
+   "bytes": 647,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/styles/base.css",
+   "source_sha256": "5d5cabef7af11fc255be8b846e1ce9ff236ae3215e29be24d2fd4b711f9cab5a",
+   "published_sha256": "5d5cabef7af11fc255be8b846e1ce9ff236ae3215e29be24d2fd4b711f9cab5a",
+   "bytes": 1940,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/styles/components.css",
+   "source_sha256": "bcacb102c9a244a376d9a9cd60662997a0377ba6f535b469a2dd1edf364516bb",
+   "published_sha256": "bcacb102c9a244a376d9a9cd60662997a0377ba6f535b469a2dd1edf364516bb",
+   "bytes": 10262,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/styles/creator.css",
+   "source_sha256": "832eff738af0c3c2a300a34cb197732306d8e2b9fef93347d2a234def40d1236",
+   "published_sha256": "832eff738af0c3c2a300a34cb197732306d8e2b9fef93347d2a234def40d1236",
+   "bytes": 2218,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/styles/hall.css",
+   "source_sha256": "ef6f6f91fdc1fa981790d3d88fccc8bf1522df6653c1a9f66f16f3894a55baf0",
+   "published_sha256": "ef6f6f91fdc1fa981790d3d88fccc8bf1522df6653c1a9f66f16f3894a55baf0",
+   "bytes": 2713,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/styles/intent.css",
+   "source_sha256": "cc432fe5e2669bb6d5c4ba9714892c524d185e727271c736a772a1231765bdeb",
+   "published_sha256": "cc432fe5e2669bb6d5c4ba9714892c524d185e727271c736a772a1231765bdeb",
+   "bytes": 2234,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/styles/iteration.css",
+   "source_sha256": "51d2a6cbbfb49424189d02361313a0f531f205b9dbeccd31a5107c9100310cf5",
+   "published_sha256": "51d2a6cbbfb49424189d02361313a0f531f205b9dbeccd31a5107c9100310cf5",
+   "bytes": 3603,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/styles/layout.css",
+   "source_sha256": "cb828b819ca71c7f38ae4bf0e5be0c45266ce396f10562edc2944c62fda1e736",
+   "published_sha256": "cb828b819ca71c7f38ae4bf0e5be0c45266ce396f10562edc2944c62fda1e736",
+   "bytes": 7677,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/styles/records-library.css",
+   "source_sha256": "e3b7344138558d3824966cc995d5b89ad1c1813c7d0d4d8a0ff71e19fb9b408d",
+   "published_sha256": "e3b7344138558d3824966cc995d5b89ad1c1813c7d0d4d8a0ff71e19fb9b408d",
+   "bytes": 6811,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/styles/responsive.css",
+   "source_sha256": "b28163be8919db36257510badc678996256e6ff2a526cd898f2a22e3331817bf",
+   "published_sha256": "b28163be8919db36257510badc678996256e6ff2a526cd898f2a22e3331817bf",
+   "bytes": 11454,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/styles/studio.css",
+   "source_sha256": "53416ec0989a85c0486c25c340f7cf31bddbcecb68566f4c4a5555e0cfbda247",
+   "published_sha256": "53416ec0989a85c0486c25c340f7cf31bddbcecb68566f4c4a5555e0cfbda247",
+   "bytes": 14990,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/styles/tokens.css",
+   "source_sha256": "772c44c00f9802785b1d35ab7519b5c000b5200be30048619e484558fb22d4b6",
+   "published_sha256": "772c44c00f9802785b1d35ab7519b5c000b5200be30048619e484558fb22d4b6",
+   "bytes": 641,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/styles/作品.css",
+   "source_sha256": "000dc70026367dbf7b7080891fa327e997b645bea83f3ec0c487087d10bf6671",
+   "published_sha256": "000dc70026367dbf7b7080891fa327e997b645bea83f3ec0c487087d10bf6671",
+   "bytes": 527,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/static/styles/接入.css",
+   "source_sha256": "95b380e070f7ced67b7b506ff30c5130b3fa7613a0196c9da53e88c9fe2f1f90",
+   "published_sha256": "95b380e070f7ced67b7b506ff30c5130b3fa7613a0196c9da53e88c9fe2f1f90",
+   "bytes": 1696,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/test_app.py",
+   "source_sha256": "de3a819c5c19c8a6988a112675365f2487fad8b70d99b1a983ede4075970e08c",
+   "published_sha256": "de3a819c5c19c8a6988a112675365f2487fad8b70d99b1a983ede4075970e08c",
+   "bytes": 13425,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/test_conflict.py",
+   "source_sha256": "a4239f334f6bd8790e2ceffc732b2b2578773c6751daf83f95c86527e34af52a",
+   "published_sha256": "a4239f334f6bd8790e2ceffc732b2b2578773c6751daf83f95c86527e34af52a",
+   "bytes": 10696,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/test_dual_portal.py",
+   "source_sha256": "fc8df0896162fe38a1bdbc4759b74efeddbaec205f1f81fa7b2d429633812048",
+   "published_sha256": "fc8df0896162fe38a1bdbc4759b74efeddbaec205f1f81fa7b2d429633812048",
+   "bytes": 10148,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/test_intent.py",
+   "source_sha256": "126e29f0fccdf2480728071c811a640663c7a897508f938d0a02721a89ec6ad3",
+   "published_sha256": "126e29f0fccdf2480728071c811a640663c7a897508f938d0a02721a89ec6ad3",
+   "bytes": 14546,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/test_iterations.py",
+   "source_sha256": "bea9ee00f7327dc7b5b587ee608deb94123e92a12426a8c2b6a405f8e7f79951",
+   "published_sha256": "bea9ee00f7327dc7b5b587ee608deb94123e92a12426a8c2b6a405f8e7f79951",
+   "bytes": 32097,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/test_session_race.py",
+   "source_sha256": "9a59c04ddf9585e9d139d6d89be51b0659141bdbd705bcb44896331dee707b1d",
+   "published_sha256": "9a59c04ddf9585e9d139d6d89be51b0659141bdbd705bcb44896331dee707b1d",
+   "bytes": 8189,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/test_simulation.py",
+   "source_sha256": "3c3a34b545bd4ca71155672a3e18cd788294bc3f1925fae0cfb724ce8ddab2a7",
+   "published_sha256": "3c3a34b545bd4ca71155672a3e18cd788294bc3f1925fae0cfb724ce8ddab2a7",
+   "bytes": 12104,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/current/失败现场.png",
+   "source_sha256": "9d8a3fa124dfe86286e59de5cb09c8ac3db94d6bd7217d01a8f6608310dd2f72",
+   "published_sha256": "9d8a3fa124dfe86286e59de5cb09c8ac3db94d6bd7217d01a8f6608310dd2f72",
+   "bytes": 365232,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/current/手机调香-360.png",
+   "source_sha256": "153c69e9bc80511eb14f878ee25b16bb401fab846ae275d5015229ebe0d4009d",
+   "published_sha256": "153c69e9bc80511eb14f878ee25b16bb401fab846ae275d5015229ebe0d4009d",
+   "bytes": 199329,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/current/手机调香-390.png",
+   "source_sha256": "367375b8634aac9410b381c9be91dc96dd9c8eca3f6444c2af6ba8cc9aa8e7c0",
+   "published_sha256": "367375b8634aac9410b381c9be91dc96dd9c8eca3f6444c2af6ba8cc9aa8e7c0",
+   "bytes": 209369,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/current/手机调香-768.png",
+   "source_sha256": "94a9eeab44cc2202faa36ecb341fb67c4ea42b7444aaa0657c0619ae9f7772d4",
+   "published_sha256": "94a9eeab44cc2202faa36ecb341fb67c4ea42b7444aaa0657c0619ae9f7772d4",
+   "bytes": 288621,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/current/接口验收.json",
+   "source_sha256": "81b8ba7c5f3062b97bdbcff7b72bf841d969b83231e901c2e848bb491fb76f73",
+   "published_sha256": "81b8ba7c5f3062b97bdbcff7b72bf841d969b83231e901c2e848bb491fb76f73",
+   "bytes": 201,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/current/整体验收.json",
+   "source_sha256": "e068ba1719810c3527467d8f9376fcc0e3db2023079075e5fffd5e94b43b838d",
+   "published_sha256": "e068ba1719810c3527467d8f9376fcc0e3db2023079075e5fffd5e94b43b838d",
+   "bytes": 6509,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/current/浏览器验收.json",
+   "source_sha256": "f7771a462ca3b62076e49db53b3d7a8717d260c2448a47c131c4ac175cec919f",
+   "published_sha256": "f7771a462ca3b62076e49db53b3d7a8717d260c2448a47c131c4ac175cec919f",
+   "bytes": 9113,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/current/知识边界验收.json",
+   "source_sha256": "083a3749592df90dfa7a6d897e48fd845878e18bf0976981784b86a29a71f61c",
+   "published_sha256": "083a3749592df90dfa7a6d897e48fd845878e18bf0976981784b86a29a71f61c",
+   "bytes": 1082,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/current/调香工作台.png",
+   "source_sha256": "a5c3136699e4b0297874ed7dadfbc80168f63dd4914a12bfc60526e562849396",
+   "published_sha256": "a5c3136699e4b0297874ed7dadfbc80168f63dd4914a12bfc60526e562849396",
+   "bytes": 521349,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/current/首页.png",
+   "source_sha256": "8e8ec1611bf17f2aacd73b8c736351058ef5774e6cf5ec1d64295808849fa662",
+   "published_sha256": "8e8ec1611bf17f2aacd73b8c736351058ef5774e6cf5ec1d64295808849fa662",
+   "bytes": 356636,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/current/香材图鉴.png",
+   "source_sha256": "725b5720c32bd5c75523d1c4db350bce450798688c37cb7bedca2757a88d9881",
+   "published_sha256": "725b5720c32bd5c75523d1c4db350bce450798688c37cb7bedca2757a88d9881",
+   "bytes": 248898,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/current/香笺.png",
+   "source_sha256": "a291265c130f2798655b489a674b0f67e8511ad4e8dbe8875a06095c83777493",
+   "published_sha256": "a291265c130f2798655b489a674b0f67e8511ad4e8dbe8875a06095c83777493",
+   "bytes": 1070460,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/current/香笺预览.png",
+   "source_sha256": "76d2f4aa44ab5e57e137587f3d9bd67fdf93883fb1e7b73ebd1496459d2a2adf",
+   "published_sha256": "76d2f4aa44ab5e57e137587f3d9bd67fdf93883fb1e7b73ebd1496459d2a2adf",
+   "bytes": 530413,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/dual-portal/入驻引导.png",
+   "source_sha256": "f3c9cb6c94c377e34c14a845b37cbed1038d5ffb757316fd96cb95a9e32ab096",
+   "published_sha256": "f3c9cb6c94c377e34c14a845b37cbed1038d5ffb757316fd96cb95a9e32ab096",
+   "bytes": 138679,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/dual-portal/入驻弹窗.png",
+   "source_sha256": "ea54c935498dab32f144317ace292a35d35f43e2c9c6eaa1201d0ca179bb1935",
+   "published_sha256": "ea54c935498dab32f144317ace292a35d35f43e2c9c6eaa1201d0ca179bb1935",
+   "bytes": 147220,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/dual-portal/双端口验收.json",
+   "source_sha256": "7d42d10bf09385c1f8248e22cc21623d7ac57ac5e814cfbf5d1024319c9e5ba3",
+   "published_sha256": "7d42d10bf09385c1f8248e22cc21623d7ac57ac5e814cfbf5d1024319c9e5ba3",
+   "bytes": 926,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/dual-portal/大厅.png",
+   "source_sha256": "285f173ae86d5632b5f4b00490f406575d751219ed651a0998a7d28a39255d01",
+   "published_sha256": "285f173ae86d5632b5f4b00490f406575d751219ed651a0998a7d28a39255d01",
+   "bytes": 173361,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/dual-portal/大厅手机.png",
+   "source_sha256": "ff7e1481c2a054fd05e740fceb7d8295c155cf889a643955242bc4b4297f1521",
+   "published_sha256": "ff7e1481c2a054fd05e740fceb7d8295c155cf889a643955242bc4b4297f1521",
+   "bytes": 142697,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/dual-portal/工作台.png",
+   "source_sha256": "975eab4662bf4bd17212ce0e53fb8a56809ca70abf357b514cf5891fb673a3d7",
+   "published_sha256": "975eab4662bf4bd17212ce0e53fb8a56809ca70abf357b514cf5891fb673a3d7",
+   "bytes": 146440,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/dual-portal/我的作品.png",
+   "source_sha256": "616298457768b691c159640a36980b02a367823a262e2194558703811fa00483",
+   "published_sha256": "616298457768b691c159640a36980b02a367823a262e2194558703811fa00483",
+   "bytes": 155509,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/dual-portal/首页手机.png",
+   "source_sha256": "5ee0bf45737ceb2fb4345f70b12f0ed5d3fa8bcf77fbf399a376130e1f8ab214",
+   "published_sha256": "5ee0bf45737ceb2fb4345f70b12f0ed5d3fa8bcf77fbf399a376130e1f8ab214",
+   "bytes": 301982,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/dual-portal/首页设计与商品.png",
+   "source_sha256": "b1b8e6f54987b314fb5ae4d58737ad66675657e1ab09338c6bfcaae7f1c57044",
+   "published_sha256": "b1b8e6f54987b314fb5ae4d58737ad66675657e1ab09338c6bfcaae7f1c57044",
+   "bytes": 464902,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/iterations/round-5/验收.json",
+   "source_sha256": "5d00dcb01210453ad38c61d722c78d662be7b3de696f73561f59f563549a5c55",
+   "published_sha256": "69a2cacf8f7d83d9702fd2ada44e4fbeb19825a89d4084b83746d4cf626a0626",
+   "bytes": 30733,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/手机调香.png",
+   "source_sha256": "645c46412a9be8e31ec96b5b602f0f4a9138aa8296003bc6e82ecf8b1ce413e3",
+   "published_sha256": "645c46412a9be8e31ec96b5b602f0f4a9138aa8296003bc6e82ecf8b1ce413e3",
+   "bytes": 397938,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/接口验收.json",
+   "source_sha256": "f45b2ef0f64f2fdc9150a53fa3b1f66c3f9af9343eba4c11dd1e49ec4efe3b8e",
+   "published_sha256": "f45b2ef0f64f2fdc9150a53fa3b1f66c3f9af9343eba4c11dd1e49ec4efe3b8e",
+   "bytes": 201,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/浏览器验收.json",
+   "source_sha256": "2e218b0d563aa16c16cc6865f93223f52a0ef4de8c235c8ebe5880a790c47c32",
+   "published_sha256": "2e218b0d563aa16c16cc6865f93223f52a0ef4de8c235c8ebe5880a790c47c32",
+   "bytes": 561,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/调香工作台.png",
+   "source_sha256": "5479b05c12467411f08a0f12cf43e4ba6950b54751ad48a55c494fdfd9737675",
+   "published_sha256": "5479b05c12467411f08a0f12cf43e4ba6950b54751ad48a55c494fdfd9737675",
+   "bytes": 476991,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/香笺.png",
+   "source_sha256": "6c9d32ea7a238dc8257730909ddee0491306489fcd915509f0bf9fffd014a95f",
+   "published_sha256": "6c9d32ea7a238dc8257730909ddee0491306489fcd915509f0bf9fffd014a95f",
+   "bytes": 209461,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verify_v2.py",
+   "source_sha256": "b57d1ae9f3d44f968ca9019163a886478d2f406ce7ef5acaaef4f51e35597517",
+   "published_sha256": "b57d1ae9f3d44f968ca9019163a886478d2f406ce7ef5acaaef4f51e35597517",
+   "bytes": 3351,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/启动演示.command",
+   "source_sha256": "7b4f66d31a6918c959a9201c204b4379747bf4cdc784461f0717150757e17fb8",
+   "published_sha256": "7b4f66d31a6918c959a9201c204b4379747bf4cdc784461f0717150757e17fb8",
+   "bytes": 243,
+   "mode": "0o755"
+  },
+  {
+   "path": "app/启动软件.command",
+   "source_sha256": "461bf04c349f849db17932fc4e0c23e0a9d5f6a96ba90ef53557db474006834b",
+   "published_sha256": "ccc8885309f3daa53b937567cce6397fb345990ab81d33bce79726161de353bb",
+   "bytes": 307,
+   "mode": "0o755"
+  },
+  {
+   "path": "产品开发计划.md",
+   "source_sha256": "a4aca641685f8dd1298948bd5960fdac65e03df6291dbf15bd21c6b696cffe58",
+   "published_sha256": "a4aca641685f8dd1298948bd5960fdac65e03df6291dbf15bd21c6b696cffe58",
+   "bytes": 22589,
+   "mode": "0o644"
+  },
+  {
+   "path": "合香定制原型交付规格.md",
+   "source_sha256": "7a42187a397434426b82eb9bc7097418f7ff0fbb6bb03e139b490bada35b255d",
+   "published_sha256": "798a8785b24ce47b07fcca2d7c911c714711e073c518b0534cb1eacc2dad9069",
+   "bytes": 32238,
+   "mode": "0o644"
+  },
+  {
+   "path": "合香疗愈设计建议-审美主张.md",
+   "source_sha256": "53411c7ca4e29ad2f95a149b4a99e125867d5d7ee1cb408e3b0bf628107de0b8",
+   "published_sha256": "53411c7ca4e29ad2f95a149b4a99e125867d5d7ee1cb408e3b0bf628107de0b8",
+   "bytes": 59990,
+   "mode": "0o644"
+  },
+  {
+   "path": "知识库/AI报告候选.json",
+   "source_sha256": "7193b74b53d5821e185c329b125e2347b8f0d20f1ad4bd83af0b9a42309fe40d",
+   "published_sha256": "c06f3f13fd45dd31af5209354f6234fff1e3ff7fe67959ce8921bdf1981d2c75",
+   "bytes": 15623,
+   "mode": "0o644"
+  },
+  {
+   "path": "知识库/合香知识库.md",
+   "source_sha256": "83f101093c35afbd9e3c4c9eed0abe67f6b64ade82ddc86683d3939c32a011ad",
+   "published_sha256": "db3d1038c4635d7d867416b1aa6e15bb1a3141a98c3b183e984b7a4685cdf3dc",
+   "bytes": 22491,
+   "mode": "0o644"
+  },
+  {
+   "path": "知识库/复合调香机制.md",
+   "source_sha256": "1fca7d20a6a79cb7288b9446d0041c1efbaa6510580f72c78cfa9dcbde80f5f8",
+   "published_sha256": "d633736d3353575107ee0d705335388abef22c3094cb676fc805285a665a7f96",
+   "bytes": 9813,
+   "mode": "0o644"
+  },
+  {
+   "path": "知识库/复合调香演示结果.json",
+   "source_sha256": "7eeceff7ddefd451dd355c9b95c0b45af08e22e5b6361974770f8985b9419730",
+   "published_sha256": "7eeceff7ddefd451dd355c9b95c0b45af08e22e5b6361974770f8985b9419730",
+   "bytes": 5973,
+   "mode": "0o644"
+  },
+  {
+   "path": "知识库/复合调香规则.json",
+   "source_sha256": "ba181abe397226e76419684c89e4510f8565225064b9a51b838d8dc4f06ae7de",
+   "published_sha256": "ba181abe397226e76419684c89e4510f8565225064b9a51b838d8dc4f06ae7de",
+   "bytes": 18164,
+   "mode": "0o644"
+  },
+  {
+   "path": "知识库/外部报告整理.md",
+   "source_sha256": "c71058d4b268f538e179e8b72efd191bedb32c8702dc48a094fafe30b229e864",
+   "published_sha256": "0393eee5dcc9248189e4f8b32911dc487dabf76a4fd382baa06b523501474426",
+   "bytes": 7191,
+   "mode": "0o644"
+  },
+  {
+   "path": "知识库/数字调香.py",
+   "source_sha256": "e1abaf5e1f78b158e09a3da2b738167e969aa8138ec7303eef197603aff69e40",
+   "published_sha256": "e1abaf5e1f78b158e09a3da2b738167e969aa8138ec7303eef197603aff69e40",
+   "bytes": 11615,
+   "mode": "0o644"
+  },
+  {
+   "path": "知识库/数字调香核验结果.json",
+   "source_sha256": "187ee9aafd3b8b2f6eef2acabfe139eafba1ce2402adf99b9b09f8abc3d3ff8f",
+   "published_sha256": "187ee9aafd3b8b2f6eef2acabfe139eafba1ce2402adf99b9b09f8abc3d3ff8f",
+   "bytes": 2689,
+   "mode": "0o644"
+  },
+  {
+   "path": "知识库/核验知识库.py",
+   "source_sha256": "c20d538996bf1dafae67cabbb71d20da67985f1114b4a80a57046f98e887d118",
+   "published_sha256": "c20d538996bf1dafae67cabbb71d20da67985f1114b4a80a57046f98e887d118",
+   "bytes": 6221,
+   "mode": "0o644"
+  },
+  {
+   "path": "知识库/核验结果.json",
+   "source_sha256": "083a3749592df90dfa7a6d897e48fd845878e18bf0976981784b86a29a71f61c",
+   "published_sha256": "083a3749592df90dfa7a6d897e48fd845878e18bf0976981784b86a29a71f61c",
+   "bytes": 1082,
+   "mode": "0o644"
+  },
+  {
+   "path": "知识库/知识条目.json",
+   "source_sha256": "a4dc5c4baca258132788a8a815ea04e25a3439d4cae331c053a491786878c7c9",
+   "published_sha256": "a4dc5c4baca258132788a8a815ea04e25a3439d4cae331c053a491786878c7c9",
+   "bytes": 43021,
+   "mode": "0o644"
+  },
+  {
+   "path": "知识库/验证数字调香.py",
+   "source_sha256": "bd9b2e3e6ecfeb63a9acba1c81443c94ac04607df10e296f965a6461a3eac07b",
+   "published_sha256": "bd9b2e3e6ecfeb63a9acba1c81443c94ac04607df10e296f965a6461a3eac07b",
+   "bytes": 5357,
+   "mode": "0o644"
+  },
+  {
+   "path": "西客松XiHack2026-企业真实命题赛道参赛创作与提交指南（选手版）.docx",
+   "source_sha256": "5f0180fabd693f430af049de436c56b3f3d022ceeef19ea656a40a429bbeefb1",
+   "published_sha256": "5f0180fabd693f430af049de436c56b3f3d022ceeef19ea656a40a429bbeefb1",
+   "bytes": 49718,
+   "mode": "0o644"
+  },
+  {
+   "path": "账号权限与已有香品分析.md",
+   "source_sha256": "eae2234019309102c492ad4856f5f4a584381fb33e471a712e012ecc075c5402",
+   "published_sha256": "eae2234019309102c492ad4856f5f4a584381fb33e471a712e012ecc075c5402",
+   "bytes": 7005,
+   "mode": "0o644"
+  }
+ ],
+ "added_public_files": [
+  {
+   "path": "README.md",
+   "sha256": "41f2d262d57c26f6a6d166e120e247c83a686771bef549507aecd7947b8b88da",
+   "bytes": 8515,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/test-fixtures/label.jpg",
+   "sha256": "73827ce7978d7a7a1774291e3b0ea7370c3250feeb82b6abf70cc588f8bdd718",
+   "bytes": 37700,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/五轮公开验收.json",
+   "sha256": "0a52c99206e722f0c5a3e0a529b0e49366d5b682c11464953af88cfac509b14b",
+   "bytes": 29288,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/五轮截图/作品锁恢复.png",
+   "sha256": "b7e0d4e53273e74932f85c9edf4434185b4ec136e0b067c67e657a4143f4ccf5",
+   "bytes": 309607,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/五轮截图/图鉴选材.png",
+   "sha256": "7d3ea1ed1ac8fd9adaf817b9bb6b2566d1cf912f4f388236c0ecd61df370d8b1",
+   "bytes": 200011,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/五轮截图/手机案头-390.png",
+   "sha256": "3c971adfee6f7a97e896e4c0772c0425d3fe01243207629b5dbb79d6f70acf7b",
+   "bytes": 197477,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/五轮截图/未知原话.png",
+   "sha256": "109d4c5bce03774209572d7cc39160af2271ed9f0394a55a1744439bf830c52f",
+   "bytes": 208541,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/五轮截图/模拟倒计时.png",
+   "sha256": "6d1ff94bf89585495c6984b44479861be6912ac09bdbe041160f008b3108eb1f",
+   "bytes": 179648,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/五轮截图/跨页账号保护.png",
+   "sha256": "e748a6dcc90d354b7f38c823ffb90601a00e460452a3392b9d399a5b55eaa795",
+   "bytes": 87883,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/五轮截图/首页.png",
+   "sha256": "1b2c8fe6973a04be9fa60810ed75aa956bb6eace63f8d0273c4d13db3864028c",
+   "bytes": 354309,
+   "mode": "0o644"
+  },
+  {
+   "path": "app/verification/五轮截图/香笺.png",
+   "sha256": "c0bc11e3ffe70715dcf1ceaea6147de3d3f27d11aff6a321ebe9d7da825f3aaf",
+   "bytes": 1069084,
+   "mode": "0o644"
+  },
+  {
+   "path": "requirements.txt",
+   "sha256": "5333b970513579d8649015a92676065be1627fedfa48b28662d8d2563af740c0",
+   "bytes": 29,
+   "mode": "0o644"
+  },
+  {
+   "path": "前期讨论与决策记录.md",
+   "sha256": "035a38bfdd0fe638a4a8985852153dc1eaff91526299ebb0266e7ecb3842b8ae",
+   "bytes": 4224,
+   "mode": "0o644"
+  },
+  {
+   "path": "项目现状.md",
+   "sha256": "db31cb59d9b2cd96624b6832a13ee7350663341d1a19daaa8fa3d8cacc19a5a9",
+   "bytes": 7317,
+   "mode": "0o644"
+  }
+ ],
+ "excluded_categories": [
+  ".local/ 全部本机运行数据与原账号文件",
+  "私人数据库、附件、OCR可执行文件与会话值",
+  "真实数据/凭据的指纹、重启核验与本机交付审计",
+  "完整verification/iterations/行为过程和源码/工具快照",
+  "内部审查、聊天/接续记录、缓存与日志",
+  "原始HTTP/浏览器JSON中的临时session/CSRF值"
+ ],
+ "adaptations": [
+  "6份公开文档使用仓库相对链接，保留产品与验证事实，移除个人路径及内部交接细节",
+  "38份运行源码与最终R5验收逐字节一致",
+  "保留原公开启动脚本使用可配置Python/仓库虚拟环境，保留旧qa_browser历史维护适配",
+  "新版qa_v2/qa_iterations仅增加Playwright和Chrome环境配置，测试断言保持原版",
+  "公开五轮摘要列原完成收据指纹/当前38运行源；8张图片是隔离临时测试截图，原过程留本地",
+  "公开副本独立单次full round5的36项、57模块、完整回归与真实后台63.47秒全部通过"
+ ],
+ "two_model_reports_byte_identical": true,
+ "collaboration_document": "https://wcnzcbnb3bym.feishu.cn/docx/RmaDdMgvzoLHfHxuYtQcHBJKnJc",
+ "collaboration_document_synced_this_round": false,
+ "rounds_note": "2026-10-04 同步：双端口迭代（端口大厅、创作者入驻、作品发布、商品公开投影白名单）及验收证据（verification/current、dual-portal、round-5 验收摘要）。发布时对本机绝对路径做脱敏改写（qa 脚本改用 PLAYWRIGHT_MODULE 环境变量、文档改相对链接、启动脚本改通用 python3/虚拟环境探测）。"
 }

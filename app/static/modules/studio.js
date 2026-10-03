@@ -84,7 +84,10 @@ export function renderPalette() {
   }
   updatePaletteControls();
   const presets = list(state.boot?.presets);
-  $('#preset-list').innerHTML = presets.length ? presets.map((item, index) => `<div class="preset-card"><strong>${escapeHTML(item.name || item.title || `设计草案 ${index + 1}`)}</strong><p>${escapeHTML(item.description || item.intent || item.scenario || '项目拟定的数字构图，尚未实闻。')}</p><span class="subtle">设计意图 · 非古方复原</span><br><button type="button" class="text-button" data-action="use-preset" data-index="${index}">以此起稿 →</button></div>`).join('') : '<p class="fine-note">暂无已整理的设计草案。可以直接挑选材料开始。</p>';
+  const presetCards = presets.map((item, index) => `<div class="preset-card"><strong>${escapeHTML(item.name || item.title || `设计草案 ${index + 1}`)}</strong><p>${escapeHTML(item.description || item.intent || item.scenario || '项目拟定的数字构图，尚未实闻。')}</p><span class="subtle">设计意图 · 非古方复原</span><br><button type="button" class="text-button" data-action="use-preset" data-index="${index}">以此起稿 →</button></div>`);
+  const workCards = list(state.works).map(item => `<div class="preset-card creator-work-card"><strong>${escapeHTML(item.name)}</strong><p>${escapeHTML(item.public_note || item.intent || item.scenario || '创作者发布的数字构图，尚未实闻。')}</p><span class="subtle">OPC 作品 · ${escapeHTML(item.creator_name || '创作者')}</span><br><button type="button" class="text-button" data-action="use-work" data-id="${escapeHTML(item.id)}">以此起稿 →</button></div>`);
+  const allCards = [...presetCards, ...workCards];
+  $('#preset-list').innerHTML = allCards.length ? allCards.join('') : '<p class="fine-note">暂无已整理的设计草案。可以直接挑选材料开始。</p>';
 }
 export function updatePaletteControls() {
   const palette = $('#profile-palette');

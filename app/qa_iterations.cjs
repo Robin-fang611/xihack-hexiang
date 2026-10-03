@@ -30,8 +30,16 @@ async function screenshot(page, name, description) {
 async function frames(page) {
   await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
 }
+async function goHome(page) {
+  await page.locator('#page-hall .hall-door.door-experience').waitFor({ state: 'visible' });
+  await page.locator('#experience-nav [data-page="home"]').click();
+  await page.locator('#page-home').waitFor({ state: 'visible' });
+  await page.locator('#home-presets [data-action="use-preset"]').first().waitFor({ state: 'visible' });
+}
 async function go(page, name) {
-  await page.locator(`.main-nav [data-page="${name}"]`).click();
+  const creatorPages = ['manage', 'workbench', 'works'];
+  const scope = creatorPages.includes(name) ? '#creator-nav' : '#experience-nav';
+  await page.locator(`${scope} [data-page="${name}"]`).click();
   await page.locator(`#page-${name}`).waitFor({ state: 'visible' });
   await frames(page);
 }
@@ -115,7 +123,7 @@ async function roundOne() {
     page.on('pageerror', error => errors.push({ stage, message: error.message }));
     page.setDefaultTimeout(12000);
     await page.goto(base, { waitUntil: 'domcontentloaded' });
-    await page.locator('#home-presets [data-action="use-preset"]').first().waitFor({ state: 'visible' });
+    await goHome(page);
     boot = await page.evaluate(async () => (await fetch('/api/bootstrap')).json());
     await usePreset(page, 0);
     const metrics = await page.evaluate(() => {
@@ -234,7 +242,7 @@ async function roundTwo() {
   page.on('pageerror', error => errors.push({ stage, message: error.message }));
   page.setDefaultTimeout(12000);
   await page.goto(base, { waitUntil: 'domcontentloaded' });
-  await page.locator('#home-presets [data-action="use-preset"]').first().waitFor({ state: 'visible' });
+  await goHome(page);
   await go(page, 'studio');
   const responses = [];
   const interpretAPI = async (text, manual = {}) => {
@@ -368,7 +376,7 @@ async function roundThree() {
   page.on('pageerror', error => errors.push({ stage, message: error.message }));
   page.setDefaultTimeout(12000);
   await page.goto(base, { waitUntil: 'domcontentloaded' });
-  await page.locator('#home-presets [data-action="use-preset"]').first().waitFor({ state: 'visible' });
+  await goHome(page);
   const suffix = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
   const accountA = { username: 'qa_r3_a_' + suffix, password: 'QaR3-Only-A-' + suffix };
   const accountB = { username: 'qa_r3_b_' + suffix, password: 'QaR3-Only-B-' + suffix };
@@ -606,7 +614,7 @@ async function roundThree() {
     currentPage = mobilePage;
     mobilePage.on('pageerror', error => errors.push({ stage, message: error.message }));
     await mobilePage.goto(base, { waitUntil: 'domcontentloaded' });
-    await mobilePage.locator('#home-presets [data-action="use-preset"]').first().waitFor({ state: 'visible' });
+    await goHome(mobilePage);
     await usePreset(mobilePage, 0);
     const top = await mobilePage.locator('#generate-design').evaluate(node => node.getBoundingClientRect().top + scrollY);
     assert.ok(top <= 1330, `${width}px new draft flow pushed generation to ${top}px`);
@@ -627,7 +635,7 @@ async function roundFour() {
   page.on('pageerror', error => errors.push({ stage, message: error.message }));
   page.setDefaultTimeout(12000);
   await page.goto(base, { waitUntil: 'domcontentloaded' });
-  await page.locator('#home-presets [data-action="use-preset"]').first().waitFor({ state: 'visible' });
+  await goHome(page);
   const suffix = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
   const credentials = { username: 'qa_r4_owner_' + suffix, password: 'QaR4-Owner-' + suffix };
   await authenticateUser(page, credentials);
@@ -655,7 +663,7 @@ async function roundFour() {
   const foreignContext = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
   const foreignPage = await foreignContext.newPage();
   await foreignPage.goto(base, { waitUntil: 'domcontentloaded' });
-  await foreignPage.locator('#home-presets [data-action="use-preset"]').first().waitFor({ state: 'visible' });
+  await goHome(foreignPage);
   await authenticateUser(foreignPage, { username: 'qa_r4_other_' + suffix, password: 'QaR4-Other-' + suffix });
   const forbidden = await apiJSON(foreignPage, '/api/simulation', { action: 'status', simulation_id: oldId });
   assert.equal(forbidden.status, 404);
@@ -693,15 +701,15 @@ async function roundFour() {
   // The Python runner later observes its server entry before any status query.
   stage = 'R4 independent browser closure background timer';
   assert.ok(process.env.XIHA_QA_LIVE_COOKIES, 'The Python test client must retain the original background session');
-  const closingBrowser = await chromium.launch({ executablePath: process.env.CHROME_EXECUTABLE || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
+  const closingBrowser = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
   try {
     const closingContext = await closingBrowser.newContext({ viewport: { width: 1440, height: 1000 } });
     await closingContext.addCookies(JSON.parse(process.env.XIHA_QA_LIVE_COOKIES));
     const closingPage = await closingContext.newPage();
     closingPage.on('pageerror', error => errors.push({ stage, message: error.message }));
     await closingPage.goto(base, { waitUntil: 'domcontentloaded' });
-    await closingPage.locator('#home-presets [data-action="use-preset"]').first().waitFor({ state: 'visible' });
-    assert.match(await closingPage.locator('#account-area').innerText(), /普通账号/, 'Injected original test session was not authenticated');
+    await goHome(closingPage);
+    assert.match(await closingPage.locator('#account-area').innerText(), /香友/, 'Injected original test session was not authenticated');
     const accepted = await apiJSON(closingPage, '/api/simulation', { action: 'handoff', space_id: 'reading', design: { components: [{ profile_id: 'F01', role: 'main' }] } });
     assert.equal(accepted.status, 200);
     const id = accepted.data.simulation.id;
@@ -730,7 +738,7 @@ async function roundFour() {
     managerPage.setDefaultTimeout(12000);
     managerPage.on('pageerror', error => errors.push({ stage, message: error.message }));
     await managerPage.goto(base, { waitUntil: 'domcontentloaded' });
-    await managerPage.locator('#home-presets [data-action="use-preset"]').first().waitFor({ state: 'visible' });
+    await managerPage.locator('#page-hall .hall-door.door-experience').waitFor({ state: 'visible' });
     await authenticateUser(managerPage, manager, false, 'manager');
     managerPages.push(managerPage);
   }
@@ -872,7 +880,7 @@ async function crossTabPrivacy(probe = false) {
   const pageA = await context.newPage();
   currentPage = pageA;
   await pageA.goto(base, { waitUntil: 'domcontentloaded' });
-  await pageA.locator('#home-presets [data-action="use-preset"]').first().waitFor({ state: 'visible' });
+  await goHome(pageA);
   const suffix = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
   const a = await authenticateUser(pageA, { username: 'qa_tabs_a_' + suffix, password: 'QaTabs-Only-A-' + suffix });
   const markerA = '仅属于旧页账号A的私人原话-' + suffix;
@@ -885,7 +893,7 @@ async function crossTabPrivacy(probe = false) {
 
   const pageB = await context.newPage();
   await pageB.goto(base, { waitUntil: 'domcontentloaded' });
-  await pageB.locator('#home-presets [data-action="use-preset"]').first().waitFor({ state: 'visible' });
+  await goHome(pageB);
   await responseFor(pageB, '/api/logout', () => pageB.locator('#account-area [data-action="logout"]').click());
   await pageB.locator('#account-area [data-action="login"]').waitFor({ state: 'visible' });
   const b = await authenticateUser(pageB, { username: 'qa_tabs_b_' + suffix, password: 'QaTabs-Only-B-' + suffix });
@@ -974,7 +982,7 @@ async function roundFiveNewBehaviors() {
   page.on('pageerror', error => errors.push({ stage, message: error.message }));
   page.setDefaultTimeout(12000);
   await page.goto(base, { waitUntil: 'domcontentloaded' });
-  await page.locator('#home-presets [data-action="use-preset"]').first().waitFor({ state: 'visible' });
+  await goHome(page);
   const boot = (await getAPI(page, '/api/bootstrap')).data;
   await go(page, 'library');
   await page.locator('[data-library="profiles"]').click();
@@ -1134,7 +1142,7 @@ async function main() {
   const dataset = fs.realpathSync(process.env.XIHA_QA_DATA_DIR);
   assert.ok(!dataset.split(path.sep).includes('.local'), 'Do not use an actual private data directory');
   fs.mkdirSync(output, { recursive: true });
-  browser = await chromium.launch({ executablePath: process.env.CHROME_EXECUTABLE || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
+  browser = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
   if (round === 1) await roundOne();
   if (round === 2) await roundTwo();
   if (round === 3) await roundThree();

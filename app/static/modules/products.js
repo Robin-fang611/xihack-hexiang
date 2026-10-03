@@ -43,10 +43,11 @@ export async function loadRecords() {
   const [result, designs] = await Promise.all([api('/api/products'), api('/api/designs')]);
   if (accountVersion !== state.accountVersion || ownerId !== state.user?.id || request !== state.recordsRequest) return;
   state.records = result.products || []; state.savedDesigns = designs.designs || []; renderRecords(); renderSavedDesigns();
+  document.dispatchEvent(new Event('records:updated'));
 }
 export function renderSavedDesigns() {
   const container = $('#saved-designs'); if (!container) return;
-  container.innerHTML = state.savedDesigns.length ? state.savedDesigns.map((item, index) => `<article class="record-card"><h3>${escapeHTML(item.name || item.design?.name || '未名')}</h3><p class="subtle">${escapeHTML(item.scenario || item.design?.scenario || '个人数字设计')} · 尚未实闻</p><button type="button" class="text-button" data-action="reopen-design" data-index="${index}">查看香笺 →</button></article>`).join('') : '<p class="fine-note">点“保存到我的香笺”，作品便会留在这里。</p>';
+  container.innerHTML = state.savedDesigns.length ? state.savedDesigns.map((item, index) => { const design = item.design || item; return `<article class="record-card"><div class="record-head"><h3>${escapeHTML(item.name || design.name || '未名')}</h3><span class="status-pill ${design.published ? '' : 'private'}">${design.published ? '已在首页' : '仅本人可见'}</span></div><p class="subtle">${escapeHTML(item.scenario || design.scenario || '个人数字设计')} · 尚未实闻</p><button type="button" class="text-button" data-action="reopen-design" data-index="${index}">查看香笺 →</button></article>`; }).join('') : '<p class="fine-note">点“保存到我的香笺”，作品便会留在这里。</p>';
 }
 export function recordMarkup(product, manage = false) {
   const publicOptions = [['description', '产品描述'], ['notes', '品牌香调'], ['ingredients', '成分声明'], ['source_url', '来源链接'], ['image', '公开产品图'], ['price', '价格说明']];

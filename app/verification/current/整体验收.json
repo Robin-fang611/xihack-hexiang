@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-10-03T15:20:38.924946+00:00",
+  "checks": [
+    {
+      "name": "真实 HTTP 与静态隔离",
+      "passed": true,
+      "seconds": 0.96,
+      "exit_code": 0
+    },
+    {
+      "name": "数字调香 29 项",
+      "passed": true,
+      "seconds": 0.04,
+      "exit_code": 0
+    },
+    {
+      "name": "知识边界与八个反例",
+      "passed": true,
+      "seconds": 0.04,
+      "exit_code": 0
+    },
+    {
+      "name": "浏览器、PNG、窄屏与隐私竞态",
+      "passed": true,
+      "seconds": 12.55,
+      "exit_code": 0
+    }
+  ],
+  "source_sha256": {
+    "app/intent.py": "ae4977560d02bf26c8c60d4e86179e40d46b7acfb550f6dd576145cdad5b8577",
+    "app/ocr.swift": "16672a6267d2d162850d13e0b2d3a467b4848b05c1d1ecdae715b8b18c20aeda",
+    "app/presets.json": "3256e6cc3770afebaa612e82e8002298566d4601be30333837bd07acf154731e",
+    "app/seed_demo.py": "272b98b980e17d55ad7af5639dce53ce2bf7ab8a048f7150985e62b0ca367022",
+    "app/server.py": "1e6e31efc8a249b7078e424c703dac3ddeea255222c162b948341f1b26e783bd",
+    "app/services.py": "d059661b01010cc2b7d5f51193456ae4b936e1577094582cf96586e67f781e73",
+    "app/simulation.py": "0e72f80ec49df68b2c33025d7413ef6b1756b475c60f6e496cb553cf0d029549",
+    "app/static/app.js": "87872a43168ee470659f8fe1f4a73ea7d22a9087fa5e03d318e7f615c7cdec0e",
+    "app/static/assets/夜间草案.svg": "b034a43ea966a681b6b272ab2028bcbd1ab97c68e78d8a050bf4c4865baa253c",
+    "app/static/assets/待客草案.svg": "9751df4a205811b0526c076a2e566092f29e9d0bb465e45e731302316fb0a7ca",
+    "app/static/assets/晨间草案.svg": "c983ae0e30566af2418651d1094ce673895583903ec4130bbffb30981feb725e",
+    "app/static/assets/香事案头.svg": "80e28fb7a0a87bd8855061babd2a665b389d98783cd257623fbc2493ee1e74db",
+    "app/static/index.html": "aa1679b1be54ea84b9e60b79ce87ec8a1e4fd66dc91cc43272e26351ba520fe3",
+    "app/static/modules/account.js": "0ddb720cb7721e0fb8b03b114a288868852635aebaeef05d3ed70e8f6736343d",
+    "app/static/modules/card.js": "da144934158b38d968aaf3440b066d75da43b52c09b84f6f0af205575e4e71d0",
+    "app/static/modules/core.js": "6ecc8b7a085a2684c367584484ac8763c927ed4148978b26f4dacb173af42e58",
+    "app/static/modules/creator.js": "ca99754735aaa12c1e087808e1453dbb7e60bbf9d2363fdd019ec8bbdce2ec92",
+    "app/static/modules/draft.js": "4f46175e0be585f8984639abc75a04976fb1d355fb1a22031c732421eaed25b8",
+    "app/static/modules/home.js": "84813d10fc5c10c1a08af165f282bef2eae31c182f525993603946c875b1258b",
+    "app/static/modules/integration.js": "3c51d71850e0f534cc2a6670c234a461e34888daeae8335a7ed2ac9c56c51a28",
+    "app/static/modules/intent.js": "ac63be0eb8f29cc0d86c28514e22421a0c771838e07e3bf3a162c1acf4c9c5c9",
+    "app/static/modules/library.js": "63183fdb6bc889020a8f8cca31fee5e9b5c1678c0ec4a636a0103edf8ff3a4d9",
+    "app/static/modules/navigation.js": "61aa5e54458cb655c7bd82383f5e5dfc5b2b934d724cf514c95a4d8833a43589",
+    "app/static/modules/products.js": "836bc36fa1a8f01768c8cb0ff27ffb6990dd7a7ed7d8519c94295b2ce1fd4c77",
+    "app/static/modules/studio.js": "5d06a592b67b0cff0b0db2c0e87018db270463f7fa4c6ff89ec05c5703a714d4",
+    "app/static/style.css": "630d0e0dbc02e4f8e93fafded594cbf7eb7ab91ecd77cf44bbf55775eb139a04",
+    "app/static/styles/base.css": "5d5cabef7af11fc255be8b846e1ce9ff236ae3215e29be24d2fd4b711f9cab5a",
+    "app/static/styles/components.css": "bcacb102c9a244a376d9a9cd60662997a0377ba6f535b469a2dd1edf364516bb",
+    "app/static/styles/creator.css": "832eff738af0c3c2a300a34cb197732306d8e2b9fef93347d2a234def40d1236",
+    "app/static/styles/hall.css": "ef6f6f91fdc1fa981790d3d88fccc8bf1522df6653c1a9f66f16f3894a55baf0",
+    "app/static/styles/intent.css": "cc432fe5e2669bb6d5c4ba9714892c524d185e727271c736a772a1231765bdeb",
+    "app/static/styles/iteration.css": "51d2a6cbbfb49424189d02361313a0f531f205b9dbeccd31a5107c9100310cf5",
+    "app/static/styles/layout.css": "cb828b819ca71c7f38ae4bf0e5be0c45266ce396f10562edc2944c62fda1e736",
+    "app/static/styles/records-library.css": "e3b7344138558d3824966cc995d5b89ad1c1813c7d0d4d8a0ff71e19fb9b408d",
+    "app/static/styles/responsive.css": "b28163be8919db36257510badc678996256e6ff2a526cd898f2a22e3331817bf",
+    "app/static/styles/studio.css": "53416ec0989a85c0486c25c340f7cf31bddbcecb68566f4c4a5555e0cfbda247",
+    "app/static/styles/tokens.css": "772c44c00f9802785b1d35ab7519b5c000b5200be30048619e484558fb22d4b6",
+    "app/static/styles/作品.css": "000dc70026367dbf7b7080891fa327e997b645bea83f3ec0c487087d10bf6671",
+    "app/static/styles/接入.css": "95b380e070f7ced67b7b506ff30c5130b3fa7613a0196c9da53e88c9fe2f1f90",
+    "知识库/复合调香规则.json": "ba181abe397226e76419684c89e4510f8565225064b9a51b838d8dc4f06ae7de",
+    "知识库/数字调香.py": "e1abaf5e1f78b158e09a3da2b738167e969aa8138ec7303eef197603aff69e40",
+    "知识库/知识条目.json": "a4dc5c4baca258132788a8a815ea04e25a3439d4cae331c053a491786878c7c9"
+  },
+  "tooling_sha256": {
+    "app/iteration_cycle.py": "911b4ed3e2474d884ef63c8ab5047733bf8721ebff0c5388ea95b0a0521bcd8b",
+    "app/qa_browser.cjs": "7c86b41fc2de938aa8a6a27026e8e6bafbc0f9f0a7244dde1edfa9bc763ffdab",
+    "app/qa_iterations.cjs": "075b369690ac02f035d41ac4942f42f56c3703e811d32e82761ff999c8bc4c43",
+    "app/qa_portal.cjs": "d6872d85f7ba606bb003e9c284bcdab5671e52339588ce58e8506027f9acaf0d",
+    "app/qa_v2.cjs": "25bc367c78795763feae272c4d940c92548c4221bde0d7e6dc7fb2a0ec8c78ee",
+    "app/test_app.py": "de3a819c5c19c8a6988a112675365f2487fad8b70d99b1a983ede4075970e08c",
+    "app/test_conflict.py": "a4239f334f6bd8790e2ceffc732b2b2578773c6751daf83f95c86527e34af52a",
+    "app/test_dual_portal.py": "fc8df0896162fe38a1bdbc4759b74efeddbaec205f1f81fa7b2d429633812048",
+    "app/test_intent.py": "126e29f0fccdf2480728071c811a640663c7a897508f938d0a02721a89ec6ad3",
+    "app/test_iterations.py": "bea9ee00f7327dc7b5b587ee608deb94123e92a12426a8c2b6a405f8e7f79951",
+    "app/test_session_race.py": "9a59c04ddf9585e9d139d6d89be51b0659141bdbd705bcb44896331dee707b1d",
+    "app/test_simulation.py": "3c3a34b545bd4ca71155672a3e18cd788294bc3f1925fae0cfb724ce8ddab2a7",
+    "app/verify_v2.py": "b57d1ae9f3d44f968ca9019163a886478d2f406ce7ef5acaaef4f51e35597517",
+    "知识库/核验知识库.py": "c20d538996bf1dafae67cabbb71d20da67985f1114b4a80a57046f98e887d118",
+    "知识库/验证数字调香.py": "bd9b2e3e6ecfeb63a9acba1c81443c94ac04607df10e296f965a6461a3eac07b"
+  },
+  "scope": "隔离本地软件回归；不证明实闻、制作、成交、实机、生产或人工业务验收"
+}

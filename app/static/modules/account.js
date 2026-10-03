@@ -4,14 +4,21 @@ import { renderStudio } from './studio.js';
 export function renderAccount() {
   const node = $('#account-area');
   if (!state.user) node.innerHTML = '<button type="button" class="button quiet" data-action="login">登录 / 注册</button>';
-  else node.innerHTML = `<div><span class="account-name">${escapeHTML(state.user.display_name || state.user.username)}</span><span class="role-label"> · ${state.user.role === 'manager' ? '管理者' : '普通账号'}</span></div><button type="button" class="button quiet" data-action="logout">退出</button>`;
+  else node.innerHTML = `<div><span class="account-name">${escapeHTML(state.user.display_name || state.user.username)}</span><span class="role-label"> · ${state.user.role === 'manager' ? '创作者 · OPC' : '香友账号'}</span></div><button type="button" class="button quiet" data-action="logout">退出</button>`;
   $$('.manager-only').forEach(node => { node.hidden = state.user?.role !== 'manager'; });
+}
+export function renderWorld() {
+  const creator = state.world === 'creator';
+  const experienceNav = $('#experience-nav');
+  const creatorNav = $('#creator-nav');
+  if (experienceNav) experienceNav.hidden = creator;
+  if (creatorNav) creatorNav.hidden = !creator;
 }
 export function renderAuthRequirements() {
   $$('[data-auth-required]').forEach(node => { node.hidden = Boolean(state.user); node.innerHTML = '<h2>先把这一案留给自己</h2><p>登录后可以上传香品、保存私人报告。资料不会进入首页推荐。</p><button type="button" class="button primary" data-action="login">登录 / 注册</button>'; });
   $$('[data-auth-content]').forEach(node => { node.hidden = !state.user; });
   $('#manager-content').hidden = state.user?.role !== 'manager';
-  message('#manager-access-message', state.user?.role === 'manager' ? '' : '商品管理仅对管理者账号开放。');
+  message('#manager-access-message', state.user?.role === 'manager' ? '' : '商品管理仅对创作者（OPC）账号开放。');
 }
 export function clearPrivateState() {
   state.accountVersion += 1; state.recordsRequest += 1; state.designRevision += 1;

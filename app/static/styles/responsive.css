@@ -194,6 +194,11 @@
   .scene-choice { font-size: 10px; gap: 4px; }
   .scene-choice > span { font-size: 13px; }
 }
+@media (max-width: 480px) {
+  .main-nav { gap: 10px; }
+  .nav-button { font-size: 13px; }
+  .hall-door { min-height: 0; }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }

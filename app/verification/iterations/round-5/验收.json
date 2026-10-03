@@ -1,0 +1,747 @@
+{
+  "round": 5,
+  "passed": true,
+  "generated_at": "2026-10-03T15:22:01.388Z",
+  "checks": [
+    {
+      "id": "r1-mobile-main-path",
+      "description": "360/390px primary composition precedes materials, user words stay visible, generation distance improves by at least 40%",
+      "passed": true,
+      "measurements": [
+        {
+          "width": 390,
+          "generate_top": 1318,
+          "composition_top": 471.34375,
+          "palette_top": 1591.671875,
+          "document_width": 390,
+          "words_inside_details": false,
+          "adjustments_open": false,
+          "baseline_top": 2218,
+          "reduction_percent": 40.58
+        },
+        {
+          "width": 360,
+          "generate_top": 1309,
+          "composition_top": 469.640625,
+          "palette_top": 1582.265625,
+          "document_width": 360,
+          "words_inside_details": false,
+          "adjustments_open": false,
+          "baseline_top": 2218,
+          "reduction_percent": 40.98
+        }
+      ]
+    },
+    {
+      "id": "r1-folded-exclusions",
+      "description": "Summary and always visible constraint text preserve excluded material across a conflicting preset",
+      "passed": true
+    },
+    {
+      "id": "r1-direct-and-keyboard",
+      "description": "Every material exposes 44px main/support/accent buttons; mouse and native Enter assign roles, undo restores composition",
+      "passed": true,
+      "controls": [
+        {
+          "id": "F01",
+          "role": "main",
+          "width": 58.65625,
+          "height": 44,
+          "tag": "BUTTON"
+        },
+        {
+          "id": "F01",
+          "role": "support",
+          "width": 58.671875,
+          "height": 44,
+          "tag": "BUTTON"
+        },
+        {
+          "id": "F01",
+          "role": "accent",
+          "width": 58.671875,
+          "height": 44,
+          "tag": "BUTTON"
+        },
+        {
+          "id": "F02",
+          "role": "main",
+          "width": 58.65625,
+          "height": 44,
+          "tag": "BUTTON"
+        },
+        {
+          "id": "F02",
+          "role": "support",
+          "width": 58.671875,
+          "height": 44,
+          "tag": "BUTTON"
+        },
+        {
+          "id": "F02",
+          "role": "accent",
+          "width": 58.671875,
+          "height": 44,
+          "tag": "BUTTON"
+        },
+        {
+          "id": "F03",
+          "role": "main",
+          "width": 58.65625,
+          "height": 44,
+          "tag": "BUTTON"
+        },
+        {
+          "id": "F03",
+          "role": "support",
+          "width": 58.671875,
+          "height": 44,
+          "tag": "BUTTON"
+        },
+        {
+          "id": "F03",
+          "role": "accent",
+          "width": 58.671875,
+          "height": 44,
+          "tag": "BUTTON"
+        },
+        {
+          "id": "F04",
+          "role": "main",
+          "width": 58.65625,
+          "height": 44,
+          "tag": "BUTTON"
+        },
+        {
+          "id": "F04",
+          "role": "support",
+          "width": 58.671875,
+          "height": 44,
+          "tag": "BUTTON"
+        },
+        {
+          "id": "F04",
+          "role": "accent",
+          "width": 58.671875,
+          "height": 44,
+          "tag": "BUTTON"
+        },
+        {
+          "id": "F05",
+          "role": "main",
+          "width": 58.65625,
+          "height": 44,
+          "tag": "BUTTON"
+        },
+        {
+          "id": "F05",
+          "role": "support",
+          "width": 58.671875,
+          "height": 44,
+          "tag": "BUTTON"
+        },
+        {
+          "id": "F05",
+          "role": "accent",
+          "width": 58.671875,
+          "height": 44,
+          "tag": "BUTTON"
+        }
+      ]
+    },
+    {
+      "id": "r1-candidate-explanations",
+      "description": "Two candidates expose different meaningful titles and explanations grounded in their own reported facets",
+      "passed": true,
+      "titles": [
+        "点缀取澳洲檀香精油",
+        "点缀取丁香花蕾精油"
+      ],
+      "explanations": [
+        "澳洲檀香精油的资料记录了香脂、奶油感、泥土感。这里比较点缀的选择，组合气味仍待实闻。",
+        "丁香花蕾精油的资料记录了温暖感、辛香、粉感。这里比较点缀的选择，组合气味仍待实闻。"
+      ]
+    },
+    {
+      "id": "r1-single-reference-export",
+      "description": "A one-material constrained result remains selectable and produces an actual valid PNG",
+      "passed": true,
+      "png": {
+        "width": 1080,
+        "height": 1200,
+        "bytes": 955687
+      }
+    },
+    {
+      "id": "r1-browser-errors",
+      "description": "No browser pageerror in either mobile viewport",
+      "passed": true
+    },
+    {
+      "id": "r2-text-changes-real-candidates",
+      "description": "Opposite explicit user statements become opposite conditions and different actual candidate compositions; explicit no-clove excludes F05",
+      "passed": true,
+      "first": {
+        "preferred_facets": [
+          "woody"
+        ],
+        "deemphasized_facets": [
+          "sweet"
+        ],
+        "excluded_ids": [
+          "F05"
+        ]
+      },
+      "opposite": {
+        "preferred_facets": [
+          "sweet"
+        ],
+        "deemphasized_facets": [
+          "woody"
+        ],
+        "excluded_ids": []
+      },
+      "signatures": [
+        [
+          "accent:F04|main:F01|support:F02",
+          "main:F01|support:F02"
+        ],
+        [
+          "main:F03",
+          "main:F03|support:F04"
+        ]
+      ]
+    },
+    {
+      "id": "r2-ambiguity-and-conflict-boundaries",
+      "description": "Manual choices and exclusions remain intact until resolution; contradictory words require confirmation and unknown questions/scenes/effects stay unmapped",
+      "passed": true
+    },
+    {
+      "id": "r2-preview-before-apply",
+      "description": "The proposal leaves current conditions unchanged until an actual apply click, then the browser uses its exclusion during generation",
+      "passed": true
+    },
+    {
+      "id": "r2-ui-current-and-text-resolution",
+      "description": "Actual current/text selection either keeps manual choices or adopts opposite text, preserves exclusions, and changes generated candidate signatures",
+      "passed": true,
+      "current": {
+        "preferred": [
+          "woody"
+        ],
+        "deemphasized": [
+          "sweet"
+        ],
+        "excluded": [
+          "F05"
+        ]
+      },
+      "text": {
+        "preferred": [
+          "sweet"
+        ],
+        "deemphasized": [
+          "woody"
+        ],
+        "excluded": [
+          "F05"
+        ]
+      },
+      "signatures": [
+        [
+          "accent:F04|main:F01|support:F02",
+          "main:F01|support:F02"
+        ],
+        [
+          "main:F03",
+          "main:F03|support:F04"
+        ]
+      ]
+    },
+    {
+      "id": "r2-stale-success-feedback-cleared",
+      "description": "After real successful generation, editing words clears both obsolete candidates and their old success feedback",
+      "passed": true
+    },
+    {
+      "id": "r2-proposal-invalidated-by-edits",
+      "description": "Editing words invalidates the old apply action; interpreting a question cannot rewrite actual selected conditions",
+      "passed": true
+    },
+    {
+      "id": "r2-browser-errors",
+      "description": "No browser script errors in explicit proposal and conflict flows",
+      "passed": true
+    },
+    {
+      "id": "r3-refresh-restores-only-input",
+      "description": "Actual refresh retains components, preferences, exclusions, scene, exact words, lock and name; no old candidates/card/simulation are restored",
+      "passed": true,
+      "snapshot": {
+        "components": [
+          {
+            "profile_id": "F04",
+            "role": "accent"
+          },
+          {
+            "profile_id": "F01",
+            "role": "main"
+          }
+        ],
+        "preferred": [
+          "woody",
+          "citrus"
+        ],
+        "deemphasized": [
+          "sweet"
+        ],
+        "excluded": [
+          "F05"
+        ],
+        "scene": "第三轮 · 私人阅读角",
+        "words": "  想保留木质，甜香少一点。\n不要丁香。保留这句自己的原话。  ",
+        "locked": false,
+        "name": "第三轮私笺-musjh93nv0e4"
+      }
+    },
+    {
+      "id": "r3-save-deduplicates-download-does-not-save",
+      "description": "Explicit save creates one owner record; same normalized design returns existing id, and two actual PNG downloads send zero save requests and leave count unchanged",
+      "passed": true,
+      "exported": [
+        {
+          "width": 1080,
+          "height": 1404,
+          "bytes": 1090814,
+          "rendered_name": "第三轮私笺-musjh93nv0e4"
+        },
+        {
+          "width": 1080,
+          "height": 1404,
+          "bytes": 1090814,
+          "rendered_name": "第三轮私笺-musjh93nv0e4"
+        }
+      ]
+    },
+    {
+      "id": "r3-save-failure-keeps-export",
+      "description": "Injected save HTTP 500 retains the current named card and actual PNG download works without retrying save",
+      "passed": true
+    },
+    {
+      "id": "r3-view-saved-card-does-not-adopt",
+      "description": "Viewing and closing an old work preserves the differently named current draft through reload; actual reopened payload retains raw fields and deduplicates by server record id",
+      "passed": true
+    },
+    {
+      "id": "r3-saved-card-continues-editing",
+      "description": "The saved card returns its original conditions, scene, words and name to studio; an actual support assignment edits a new draft",
+      "passed": true
+    },
+    {
+      "id": "r3-account-boundary-clears-storage",
+      "description": "Actual UI logout, account switch, and a real server-revoked session 401 clear private words and storage; reload cannot revive old drafts",
+      "passed": true
+    },
+    {
+      "id": "r3-malformed-draft-no-partial-injection",
+      "description": "Unknown profile and exclusion cause whole draft rejection; no illegal material or private words are injected, and the original stored exclusion data is preserved with visible feedback",
+      "passed": true
+    },
+    {
+      "id": "r3-mobile-primary-action-preserved",
+      "description": "360/390px fresh draft generation stays within 1330px despite new recovery/save capabilities",
+      "passed": true,
+      "metrics": [
+        {
+          "width": 360,
+          "generate_top": 1308.984375
+        },
+        {
+          "width": 390,
+          "generate_top": 1318.390625
+        }
+      ]
+    },
+    {
+      "id": "r3-browser-errors",
+      "description": "No browser script errors across refresh, pure export, save failure, account changes, invalid storage and mobile layouts",
+      "passed": true
+    },
+    {
+      "id": "r4-confirm-scope-and-strict-timer",
+      "description": "Actual HTTP rejects unconfirmed start/timer, requires server confirmation, rejects noninteger/out-of-range timers, hides foreign instances and revokes replaced/logout instances",
+      "passed": true,
+      "invalid": [
+        {
+          "value": 1.9,
+          "status": 400,
+          "code": "invalid_timer"
+        },
+        {
+          "value": true,
+          "status": 400,
+          "code": "invalid_timer"
+        },
+        {
+          "value": "5",
+          "status": 400,
+          "code": "invalid_timer"
+        },
+        {
+          "value": 0,
+          "status": 400,
+          "code": "invalid_timer"
+        },
+        {
+          "value": 121,
+          "status": 400,
+          "code": "invalid_timer"
+        }
+      ]
+    },
+    {
+      "id": "r4-concurrent-edit-cas",
+      "description": "Two real manager pages share a base revision; first update succeeds, second receives 409 without losing text, explicit reload shows server values and a new revision before the user saves again",
+      "passed": true
+    },
+    {
+      "id": "r4-dirty-form-survives-delayed-refresh",
+      "description": "An actual products GET is held while the visible old form accepts URL/checkbox input; releasing the response preserves the user input instead of redrawing it away",
+      "passed": true
+    },
+    {
+      "id": "r4-publication-cas-and-permissions",
+      "description": "Stale publication receives 409 without losing public checkbox choices, URL or price; explicit latest-value review enables a new revision save; ordinary publication and foreign edits remain denied",
+      "passed": true,
+      "selected_fields": [
+        "ingredients",
+        "notes",
+        "source_url"
+      ]
+    },
+    {
+      "id": "r4-real-ui-countdown-auto-stop",
+      "description": "Actual one-minute timer ticks in seconds and the frontend receives server auto_stop history and a stopped state",
+      "passed": true,
+      "initial": "01:00\n距软件模拟定时结束",
+      "later": "00:59\n距软件模拟定时结束",
+      "elapsed_seconds": 60.472,
+      "history": [
+        {
+          "action": "handoff",
+          "at": "2026-10-03T23:20:56+08:00",
+          "note": "软件模拟接收设计；确认后可运行，不涉及真实耗材或设备。"
+        },
+        {
+          "action": "confirm",
+          "at": "2026-10-03T23:20:56+08:00",
+          "note": "已确认本次软件模拟。"
+        },
+        {
+          "action": "set_timer",
+          "at": "2026-10-03T23:20:56+08:00"
+        },
+        {
+          "action": "start",
+          "at": "2026-10-03T23:20:56+08:00"
+        },
+        {
+          "action": "auto_stop",
+          "at": "2026-10-03T23:21:56+08:00",
+          "note": "软件模拟定时已到，后台自动关闭；不涉及真实设备。"
+        }
+      ]
+    },
+    {
+      "id": "r4-browser-errors",
+      "description": "No browser errors across server confirmation, real timers and concurrent manager conflicts",
+      "passed": true
+    },
+    {
+      "id": "r5-library-search-family-and-domain",
+      "description": "Actual name/reported-label/family filtering finds correct references; a chosen modern reference is visible and requires role selection, while traditional material pages never enter the modern composition",
+      "passed": true
+    },
+    {
+      "id": "r5-negation-unknown-compact",
+      "description": "Several negation families reduce the stated facet without reversing it; material dislike stays unknown, explicit exclusion only adds, and unmapped feedback is compact",
+      "passed": true
+    },
+    {
+      "id": "r5-lock-save-signature-both-directions",
+      "description": "Lock-only changes create real 201 saves in both directions for new same-name signatures; existing signatures deduplicate without another request, and all four versions reopen with their own actual lock state",
+      "passed": true
+    },
+    {
+      "id": "r5-cross-tab-user-binding",
+      "description": "Actual shared-cookie account switch returns identity conflict before another owner's data, clears old tab private state/draft and never renders the new account's data",
+      "passed": true
+    },
+    {
+      "id": "r5-module-tests",
+      "description": "Actual module tests: test_intent, test_simulation, test_conflict, test_session_race, test_iterations",
+      "passed": true
+    },
+    {
+      "id": "r4-real-background-auto-stop",
+      "description": "Actual closed-browser one-minute timer stops in the background before any owner status request",
+      "passed": true
+    },
+    {
+      "id": "r5-complete-original-regression",
+      "description": "Full original HTTP/privacy/upload/publication/matching/48-layout/knowledge regression adapted to explicit save and server confirmation",
+      "passed": true
+    },
+    {
+      "id": "r5-source-stable",
+      "description": "Runtime source unchanged during acceptance",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "behavior_evidence": [
+    {
+      "description": "390px actual composition and generation position",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r1-mobile-390.png"
+    },
+    {
+      "description": "360px actual composition and generation position",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r1-mobile-360.png"
+    },
+    {
+      "description": "Folded adjustments and conflicting preset retain explicit exclusion",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r1-folded-exclusion.png"
+    },
+    {
+      "description": "Actual two candidate titles, material roles, and reported-label explanations",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r1-candidate-differences.png"
+    },
+    {
+      "description": "One legal supported reference reaches the actual scent card preview",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r1-single-reference-card.png"
+    },
+    {
+      "description": "Actual PNG export from the constrained single reference",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r1-single-reference.png"
+    },
+    {
+      "description": "Actual HTTP interpretation requests, explicit recognitions, unknown text and manual/self-conflict responses",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r2-intent-responses.json"
+    },
+    {
+      "description": "Interpreted text is shown as an unapplied proposal",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r2-proposal-before-apply.png"
+    },
+    {
+      "description": "Actual manual-versus-text conflict with an explicit text resolution selection",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r2-explicit-conflict-resolution.png"
+    },
+    {
+      "description": "390px actual unmapped-question feedback without guessing or auto-application",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r2-mobile-unmapped-question.png"
+    },
+    {
+      "description": "Actual refreshed draft preserves composition, manual conditions, exclusions, words and lock without restoring derived results",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r3-restored-draft.png"
+    },
+    {
+      "description": "Actual pure Canvas export without a design save request",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r3-pure-download-1.png"
+    },
+    {
+      "description": "Actual pure Canvas export without a design save request",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r3-pure-download-2.png"
+    },
+    {
+      "description": "Actual native Canvas fillText calls, forwarded unchanged into the downloaded image, prove the current unsaved card snapshot",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r3-exported-canvas-text.json"
+    },
+    {
+      "description": "Actual current card PNG still exported after an injected save HTTP 500",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r3-export-after-save-failure.png"
+    },
+    {
+      "description": "Actual retained card and save failure feedback with an independent export control",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r3-card-after-save-failure.png"
+    },
+    {
+      "description": "Actual saved card resumes in studio and accepts a new material role without overwriting its saved version",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r3-saved-card-continues.png"
+    },
+    {
+      "description": "Actual invalid material/exclusion draft is rejected as a whole with visible feedback and retained raw recovery data",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r3-rejected-invalid-draft.png"
+    },
+    {
+      "description": "360px fresh draft retains the primary action distance improvement",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r3-mobile-360.png"
+    },
+    {
+      "description": "390px fresh draft retains the primary action distance improvement",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r3-mobile-390.png"
+    },
+    {
+      "description": "Actual one-minute software countdown with a server confirmed running state",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r4-real-running-countdown.png"
+    },
+    {
+      "description": "Actual start receipt for a one-minute instance whose independent Chrome process then closed",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r4-live-job.json"
+    },
+    {
+      "description": "Actual HTTP 409 from a stale manager editor leaves the user's edited text intact",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r4-edit-conflict-retains-input.png"
+    },
+    {
+      "description": "Actual publication HTTP 409 preserves the chosen public fields, price and URL",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r4-publication-conflict-retains-fields.png"
+    },
+    {
+      "description": "Actual one-minute expiry is shown only after the frontend receives server auto_stop history",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r4-real-auto-stop.png"
+    },
+    {
+      "description": "A searched modern reference is visibly selected in the mobile carousel and assigned only by an explicit role click",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r5-selected-modern-reference.png"
+    },
+    {
+      "description": "A genuinely unmapped sentence shows compact feedback with current conditions folded and no misleading apply control",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r5-compact-unknown.png"
+    },
+    {
+      "description": "Actual generalized negation and explicit material exclusion interpretation responses",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r5-negation-requests.json"
+    },
+    {
+      "description": "Actual 201 save responses in both lock-only change directions, omitted unlocked fields, no duplicate request for an existing signature, and four actual reopen checkbox states",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r5-lock-save-responses.json"
+    },
+    {
+      "description": "A saved locked version is reopened and continued with its actual main lock checked",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r5-reopened-lock-state.png"
+    },
+    {
+      "description": "Actual shared-cookie two-tab account change, old tab request and rendered private data or identity rejection",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r5-cross-tab-identity.json"
+    },
+    {
+      "description": "Actual old tab after another tab logs out and switches the shared cookie to another account",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r5-cross-tab-identity.png"
+    },
+    {
+      "description": "Actual GET/POST private endpoint identity rejection plus unchanged legacy owner records",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/r5-private-endpoint-identity.json"
+    },
+    {
+      "description": "Actual output of all round-specific module tests",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/模块验收.json"
+    },
+    {
+      "description": "Actual internal server state before any status request, then matching HTTP state after >=60 real seconds with the controlling Chrome process closed",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/真实后台定时验收.json"
+    },
+    {
+      "description": "Actual command output of the full original regression suite",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/完整回归命令.json"
+    },
+    {
+      "description": "Actual full regression artifact: 手机调香-360.png",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/完整回归/手机调香-360.png"
+    },
+    {
+      "description": "Actual full regression artifact: 手机调香-390.png",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/完整回归/手机调香-390.png"
+    },
+    {
+      "description": "Actual full regression artifact: 手机调香-768.png",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/完整回归/手机调香-768.png"
+    },
+    {
+      "description": "Actual full regression artifact: 接口验收.json",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/完整回归/接口验收.json"
+    },
+    {
+      "description": "Actual full regression artifact: 整体验收.json",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/完整回归/整体验收.json"
+    },
+    {
+      "description": "Actual full regression artifact: 浏览器验收.json",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/完整回归/浏览器验收.json"
+    },
+    {
+      "description": "Actual full regression artifact: 知识边界验收.json",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/完整回归/知识边界验收.json"
+    },
+    {
+      "description": "Actual full regression artifact: 调香工作台.png",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/完整回归/调香工作台.png"
+    },
+    {
+      "description": "Actual full regression artifact: 首页.png",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/完整回归/首页.png"
+    },
+    {
+      "description": "Actual full regression artifact: 香材图鉴.png",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/完整回归/香材图鉴.png"
+    },
+    {
+      "description": "Actual full regression artifact: 香笺.png",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/完整回归/香笺.png"
+    },
+    {
+      "description": "Actual full regression artifact: 香笺预览.png",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/完整回归/香笺预览.png"
+    },
+    {
+      "description": "Actual assertions, measured positions, source based candidate descriptions and export details",
+      "path": "app/verification/iterations/round-5/attempt-mbyvi8oq/浏览器行为.json"
+    }
+  ],
+  "scope": "Disposable local Chrome behavior checks; no existing accounts, actual scent, real devices, or production acceptance.",
+  "source_sha256": {
+    "app/intent.py": "ae4977560d02bf26c8c60d4e86179e40d46b7acfb550f6dd576145cdad5b8577",
+    "app/ocr.swift": "16672a6267d2d162850d13e0b2d3a467b4848b05c1d1ecdae715b8b18c20aeda",
+    "app/presets.json": "3256e6cc3770afebaa612e82e8002298566d4601be30333837bd07acf154731e",
+    "app/seed_demo.py": "272b98b980e17d55ad7af5639dce53ce2bf7ab8a048f7150985e62b0ca367022",
+    "app/server.py": "1e6e31efc8a249b7078e424c703dac3ddeea255222c162b948341f1b26e783bd",
+    "app/services.py": "d059661b01010cc2b7d5f51193456ae4b936e1577094582cf96586e67f781e73",
+    "app/simulation.py": "0e72f80ec49df68b2c33025d7413ef6b1756b475c60f6e496cb553cf0d029549",
+    "app/static/app.js": "87872a43168ee470659f8fe1f4a73ea7d22a9087fa5e03d318e7f615c7cdec0e",
+    "app/static/assets/夜间草案.svg": "b034a43ea966a681b6b272ab2028bcbd1ab97c68e78d8a050bf4c4865baa253c",
+    "app/static/assets/待客草案.svg": "9751df4a205811b0526c076a2e566092f29e9d0bb465e45e731302316fb0a7ca",
+    "app/static/assets/晨间草案.svg": "c983ae0e30566af2418651d1094ce673895583903ec4130bbffb30981feb725e",
+    "app/static/assets/香事案头.svg": "80e28fb7a0a87bd8855061babd2a665b389d98783cd257623fbc2493ee1e74db",
+    "app/static/index.html": "aa1679b1be54ea84b9e60b79ce87ec8a1e4fd66dc91cc43272e26351ba520fe3",
+    "app/static/modules/account.js": "0ddb720cb7721e0fb8b03b114a288868852635aebaeef05d3ed70e8f6736343d",
+    "app/static/modules/card.js": "da144934158b38d968aaf3440b066d75da43b52c09b84f6f0af205575e4e71d0",
+    "app/static/modules/core.js": "6ecc8b7a085a2684c367584484ac8763c927ed4148978b26f4dacb173af42e58",
+    "app/static/modules/creator.js": "ca99754735aaa12c1e087808e1453dbb7e60bbf9d2363fdd019ec8bbdce2ec92",
+    "app/static/modules/draft.js": "4f46175e0be585f8984639abc75a04976fb1d355fb1a22031c732421eaed25b8",
+    "app/static/modules/home.js": "84813d10fc5c10c1a08af165f282bef2eae31c182f525993603946c875b1258b",
+    "app/static/modules/integration.js": "3c51d71850e0f534cc2a6670c234a461e34888daeae8335a7ed2ac9c56c51a28",
+    "app/static/modules/intent.js": "ac63be0eb8f29cc0d86c28514e22421a0c771838e07e3bf3a162c1acf4c9c5c9",
+    "app/static/modules/library.js": "63183fdb6bc889020a8f8cca31fee5e9b5c1678c0ec4a636a0103edf8ff3a4d9",
+    "app/static/modules/navigation.js": "61aa5e54458cb655c7bd82383f5e5dfc5b2b934d724cf514c95a4d8833a43589",
+    "app/static/modules/products.js": "836bc36fa1a8f01768c8cb0ff27ffb6990dd7a7ed7d8519c94295b2ce1fd4c77",
+    "app/static/modules/studio.js": "5d06a592b67b0cff0b0db2c0e87018db270463f7fa4c6ff89ec05c5703a714d4",
+    "app/static/style.css": "630d0e0dbc02e4f8e93fafded594cbf7eb7ab91ecd77cf44bbf55775eb139a04",
+    "app/static/styles/base.css": "5d5cabef7af11fc255be8b846e1ce9ff236ae3215e29be24d2fd4b711f9cab5a",
+    "app/static/styles/components.css": "bcacb102c9a244a376d9a9cd60662997a0377ba6f535b469a2dd1edf364516bb",
+    "app/static/styles/creator.css": "832eff738af0c3c2a300a34cb197732306d8e2b9fef93347d2a234def40d1236",
+    "app/static/styles/hall.css": "ef6f6f91fdc1fa981790d3d88fccc8bf1522df6653c1a9f66f16f3894a55baf0",
+    "app/static/styles/intent.css": "cc432fe5e2669bb6d5c4ba9714892c524d185e727271c736a772a1231765bdeb",
+    "app/static/styles/iteration.css": "51d2a6cbbfb49424189d02361313a0f531f205b9dbeccd31a5107c9100310cf5",
+    "app/static/styles/layout.css": "cb828b819ca71c7f38ae4bf0e5be0c45266ce396f10562edc2944c62fda1e736",
+    "app/static/styles/records-library.css": "e3b7344138558d3824966cc995d5b89ad1c1813c7d0d4d8a0ff71e19fb9b408d",
+    "app/static/styles/responsive.css": "b28163be8919db36257510badc678996256e6ff2a526cd898f2a22e3331817bf",
+    "app/static/styles/studio.css": "53416ec0989a85c0486c25c340f7cf31bddbcecb68566f4c4a5555e0cfbda247",
+    "app/static/styles/tokens.css": "772c44c00f9802785b1d35ab7519b5c000b5200be30048619e484558fb22d4b6",
+    "app/static/styles/作品.css": "000dc70026367dbf7b7080891fa327e997b645bea83f3ec0c487087d10bf6671",
+    "app/static/styles/接入.css": "95b380e070f7ced67b7b506ff30c5130b3fa7613a0196c9da53e88c9fe2f1f90",
+    "知识库/复合调香规则.json": "ba181abe397226e76419684c89e4510f8565225064b9a51b838d8dc4f06ae7de",
+    "知识库/数字调香.py": "e1abaf5e1f78b158e09a3da2b738167e969aa8138ec7303eef197603aff69e40",
+    "知识库/知识条目.json": "a4dc5c4baca258132788a8a815ea04e25a3439d4cae331c053a491786878c7c9"
+  }
+}

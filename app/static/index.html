@@ -11,19 +11,54 @@
 <body>
   <a class="skip-link" href="#main">跳到内容</a>
   <header class="site-header">
-    <div class="brand"><span class="brand-seal" aria-hidden="true">合</span><div><a href="#home" class="brand-name">合香</a><span class="brand-subtitle">一案清事</span></div></div>
-    <nav class="main-nav" aria-label="主要导航">
+    <div class="brand"><span class="brand-seal" aria-hidden="true">合</span><div><a href="#hall" class="brand-name">合香</a><span class="brand-subtitle">一案清事 · 双端口</span></div></div>
+    <nav class="main-nav" id="experience-nav" aria-label="香事导航">
       <button type="button" data-page="home" class="nav-button active">推荐香品</button>
       <button type="button" data-page="studio" class="nav-button">调香案</button>
       <button type="button" data-page="collection" class="nav-button">我家的香</button>
       <button type="button" data-page="library" class="nav-button">香材图鉴</button>
       <button type="button" data-page="integration" class="nav-button">空间接入</button>
-      <button type="button" data-page="manage" class="nav-button manager-only" hidden>商品管理</button>
+    </nav>
+    <nav class="main-nav creator-nav" id="creator-nav" aria-label="创作者导航" hidden>
+      <button type="button" data-page="workbench" class="nav-button">工作台</button>
+      <button type="button" data-page="works" class="nav-button">我的作品</button>
+      <button type="button" data-page="manage" class="nav-button">我的商品</button>
+      <button type="button" data-page="hall" class="nav-button">端口大厅</button>
+      <button type="button" data-page="home" class="nav-button">回到香事</button>
     </nav>
     <div id="account-area" class="account-area"><button type="button" class="button quiet" id="open-auth">登录 / 注册</button></div>
   </header>
   <main id="main" tabindex="-1">
     <div id="connection-error" class="notice danger" hidden></div>
+
+    <section id="page-hall" class="page" aria-labelledby="hall-title" hidden>
+      <div class="hall-wrap">
+        <div class="hall-head">
+          <p class="eyebrow"><span aria-hidden="true"></span> 合香 · 一案清事 · 双端口</p>
+          <h1 id="hall-title">两个端口，一炉香事。</h1>
+          <p class="hall-intro">左边进香事：调配属于这一刻的芳香构图，再找到接近的现成香。右边进创作者端：上传作品与商品，让更多人的案头，从你的香开始。</p>
+        </div>
+        <div class="hall-doors">
+          <article class="hall-door door-experience">
+            <p class="door-tag">消费者端口 · 免登录</p>
+            <h2 class="door-vertical">体验香事</h2>
+            <p class="door-desc">从三炉草案或创作者作品起笔，挑材入案、比较两份候选、留下香笺，或直接挑选接近设计的现成香。</p>
+            <ul class="door-steps"><li>挑材入案</li><li>生成候选</li><li>留笺带走</li><li>匹配现成香</li></ul>
+            <button type="button" class="button primary" data-page="home">进入香事体验 →</button>
+            <span class="door-seal" aria-hidden="true">香</span>
+          </article>
+          <article class="hall-door door-creator">
+            <p class="door-tag">OPC 端口 · 创作者入驻</p>
+            <h2 class="door-vertical">创作者端</h2>
+            <p class="door-desc">上传你的作品与已有香品：作品成为访客的设计起点，商品进入首页推荐位并带购买入口，推动真实售卖。</p>
+            <ul class="door-steps"><li>发布作品</li><li>上架商品</li><li>自选公开字段</li><li>首页推荐售卖</li></ul>
+            <button type="button" class="button primary" data-page="workbench">进入创作者端 →</button>
+            <span class="door-seal" aria-hidden="true">创</span>
+          </article>
+        </div>
+        <p class="hall-note">访客无需注册即可体验完整调香流程；创作者入驻后，发布的内容才会进入首页推荐。购买在商家渠道完成。</p>
+      </div>
+    </section>
 
     <section id="page-home" class="page active" aria-labelledby="home-title">
       <div class="home-hero">
@@ -44,8 +79,12 @@
         <div class="section-heading"><div><p class="eyebrow">三份草案 · 三种起笔</p><h2 id="home-designs-title">这一案，从什么开始？</h2></div><p>选一份设计意图，再按自己的偏好调整。</p></div>
         <div id="home-presets" class="home-presets"></div>
       </section>
+      <section class="home-works" id="home-works-section" aria-labelledby="home-works-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow">创作者作品 · OPC 上架</p><h2 id="home-works-title">从创作者的设计起笔</h2></div><p>已发布作品来自入驻创作者：公开名称、构图与设计方向，署创作者名。</p></div>
+        <div id="home-works" class="home-presets"></div>
+      </section>
       <section class="home-catalog" aria-labelledby="home-catalog-title">
-        <div class="section-heading"><div><p class="eyebrow">已有香品 · 明确来源</p><h2 id="home-catalog-title">也可以，选一份现成的香</h2></div><p>管理者选择公开的香品与资料。</p></div>
+        <div class="section-heading"><div><p class="eyebrow">现成香 · 创作者上架</p><h2 id="home-catalog-title">也可以，选一份现成的香</h2></div><p>入驻创作者选择公开的香品与资料，购买在商家渠道完成。</p></div>
         <div id="home-products" class="product-grid"></div>
       </section>
       <div class="home-bottom"><div class="small-panel"><span class="panel-index">一</span><div><h2>从熟悉的香开始</h2><p>拍下家中香品的包装，记录标签与自己的感受，留一份私人档案。</p><button type="button" class="text-button" data-go="collection">看看我家的香 →</button></div></div><div class="small-panel"><span class="panel-index">二</span><div><h2>把这一案，留在香笺上</h2><p>挑选材料，比较两份构图，给喜欢的那一份落款。</p><button type="button" class="text-button" data-go="studio">开始一份设计 →</button></div></div></div>
@@ -92,8 +131,57 @@
       </div>
     </section>
 
+    <section id="page-creator-gate" class="page" aria-labelledby="gate-title" hidden>
+      <div class="page-heading"><div><p class="eyebrow">OPC 创作者入驻</p><h1 id="gate-title">把你的香，放到别人的案头</h1><p class="section-intro">创作者（OPC）端口面向个人创作者与开发者：作品成为访客的设计起点，商品进入首页推荐位并带购买入口。</p></div></div>
+      <div class="gate-layout">
+        <div class="panel gate-value">
+          <h2>入驻创作者能做什么</h2>
+          <ul class="gate-list">
+            <li><strong>作品上架</strong>——把调香案里保存的设计发布到首页「设计起点」，署你的名字，访客可一键以此起稿。</li>
+            <li><strong>商品售卖</strong>——上传已有香品，自主选择公开字段与购买链接，进入首页「现成香」推荐位。</li>
+            <li><strong>资料分析</strong>——上传资料获得成分、香调与来源分层分析；秘密配方不必公开。</li>
+          </ul>
+          <p class="fine-note">作品公开只包含设计事实（构图、场景、方向与署名）；你的原话、原始偏好与私人附件不公开。</p>
+        </div>
+        <div class="gate-side">
+          <div class="panel gate-action">
+            <h2>还没有账号</h2>
+            <p>注册时选择「创作者（OPC）入驻」，即可开通发布能力。</p>
+            <button type="button" class="button primary" data-action="login">登录 / 注册</button>
+          </div>
+          <div class="panel gate-action" data-auth-content hidden>
+            <h2>你已登录</h2>
+            <p>当前账号不是创作者角色。创作者入驻在注册时选择开启；你可以先以香友身份体验香事，或退出后重新注册创作者账号。</p>
+            <button type="button" class="button quiet" data-page="home">回到香事体验 →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="page-workbench" class="page" aria-labelledby="workbench-title" hidden>
+      <div class="page-heading"><div><p class="eyebrow">OPC 创作者工作台</p><h1 id="workbench-title">作品当起点，商品当出口</h1><p class="section-intro">你发布的设计会成为访客的起笔草案；你公开的商品进入首页「现成香」推荐位，购买在商家渠道完成。</p></div><div class="heading-actions"><button type="button" class="button quiet" data-page="home">查看首页呈现 →</button></div></div>
+      <div class="workbench-grid">
+        <div class="panel stat-panel"><h2>我的作品</h2><p class="stat-number" id="workbench-works">–</p><p class="subtle" id="workbench-works-note">调香案保存的构图，可发布为设计起点</p><button type="button" class="text-button" data-page="works">管理作品 →</button></div>
+        <div class="panel stat-panel"><h2>我的商品</h2><p class="stat-number" id="workbench-products">–</p><p class="subtle">已有香品档案，公开后进入首页推荐</p><button type="button" class="text-button" data-page="manage">管理商品 →</button></div>
+        <div class="panel stat-panel"><h2>正在首页展示</h2><p class="stat-number" id="workbench-published">–</p><p class="subtle">已发布作品与已上架商品合计</p><button type="button" class="text-button" data-page="hall">回到端口大厅 →</button></div>
+      </div>
+      <div class="panel how-panel"><h2>两端如何接起来</h2>
+        <div class="how-grid">
+          <div><span class="how-index">一</span><h3>上传作品 / 商品</h3><p>作品来自调香案保存的构图；商品来自已有香品资料，上传后自动获得分层分析。</p></div>
+          <div><span class="how-index">二</span><h3>选择公开内容</h3><p>作品公开设计事实与你的署名；商品由你逐字段选择公开，秘密配方不必交出。</p></div>
+          <div><span class="how-index">三</span><h3>进入消费者首页</h3><p>作品出现在「设计起点」，商品出现在「现成香」并带购买入口；访客从你的设计走向购买。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="page-works" class="page" aria-labelledby="works-title" hidden>
+      <div class="page-heading"><div><p class="eyebrow">作品 · 设计起点</p><h1 id="works-title">我的作品</h1><p class="section-intro">这里是在调香案保存的构图。发布后进入首页「设计起点」，公开名称、场景、构图与方向，署你的名字。</p></div><div class="heading-actions"><button type="button" class="button quiet" data-go="studio">去调香案创作 →</button></div></div>
+      <div class="works-auth" data-auth-required hidden></div>
+      <div id="works-list" class="record-list" data-auth-content></div>
+    </section>
+
     <section id="page-manage" class="page" aria-labelledby="manage-title" hidden>
-      <div class="page-heading"><div><p class="eyebrow">管理者工作台</p><h1 id="manage-title">自己的商品，自己选择公开</h1><p class="section-intro">先记录与分析，再选择首页字段和图片。完整附件与分析记录仍然私有。</p></div></div>
+      <div class="page-heading"><div><p class="eyebrow">OPC 商品架</p><h1 id="manage-title">我的商品，自己选择公开</h1><p class="section-intro">先记录与分析，再选择首页字段和购买入口。完整附件与分析记录仍然私有。</p></div></div>
       <div id="manager-access-message" class="notice" hidden></div>
       <div id="manager-content" class="collection-layout"><div class="panel upload-panel"><h2>添加已有香品</h2><form id="manager-upload-form" class="upload-form" data-purpose="product"><div class="field"><label for="manager-name">产品名称</label><input id="manager-name" name="name" required maxlength="120"></div><div class="field"><label for="manager-form">产品形态</label><select id="manager-form" name="product_form"><option value="unknown">还不确定</option><option value="incense">线香 / 燃香</option><option value="scent_bead">香珠 / 香牌</option><option value="sachet">香包</option><option value="perfume">香水</option><option value="essential_oil">精油</option><option value="diffuser">扩香液</option><option value="candle">香薰蜡烛</option><option value="other">其他</option></select></div><div class="field"><label for="manager-description">标签、产品说明与资料声明</label><textarea id="manager-description" name="description" rows="5" maxlength="12000" placeholder="不需要提交秘密配方。可注明资料出自哪里。"></textarea></div><div class="field"><label for="manager-url">公开资料链接 <span class="subtle">可选</span></label><input id="manager-url" name="source_url" type="url" placeholder="https://"></div><div class="field"><label for="manager-files">产品照片 / 标签 / 文档 <span class="subtle">一份附件，不超过 8 MB</span></label><input id="manager-files" name="files" type="file" accept="image/png,image/jpeg,image/webp,.pdf,.txt,.md,.docx"><div class="file-selection"></div></div><button class="button primary" type="submit">保存并分析</button><p class="fine-note">保存不会上首页。在右侧商品档案中自主选择公开信息。</p></form><div id="manager-upload-message" class="notice" hidden></div></div><div class="records-panel"><div class="panel-heading"><h2>我的商品档案</h2><button type="button" class="text-button" id="refresh-products">刷新</button></div><div id="manager-records" class="record-list"></div></div></div>
     </section>
@@ -115,7 +203,7 @@
   <footer class="site-footer"><span class="footer-brand">合香 <i aria-hidden="true">·</i> 一案清事</span><span>设计意图、资料陈述与实闻结果分别记录。</span><span id="data-version"></span></footer>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
-  <dialog id="auth-dialog" class="modal auth-modal"><button type="button" class="close-dialog" aria-label="关闭">×</button><p class="eyebrow">保存自己的香品</p><h2>进入你的案头</h2><div class="auth-tabs"><button type="button" class="tab-button active" data-auth-mode="login">登录</button><button type="button" class="tab-button" data-auth-mode="register">注册普通账号</button></div><form id="auth-form"><div class="field"><label for="auth-username">账号</label><input id="auth-username" name="username" autocomplete="username" required minlength="3" maxlength="80"></div><div class="field"><label for="auth-password">密码</label><input id="auth-password" name="password" type="password" autocomplete="current-password" required minlength="8" maxlength="128"></div><div id="auth-message" class="notice" hidden></div><button class="button primary full-width" id="auth-submit" type="submit">登录</button></form><p class="fine-note">管理者使用本机运行者配置的账号登录；普通账号不能自行升级权限。</p></dialog>
+  <dialog id="auth-dialog" class="modal auth-modal"><button type="button" class="close-dialog" aria-label="关闭">×</button><p class="eyebrow">保存自己的香品</p><h2>进入你的案头</h2><div class="auth-tabs"><button type="button" class="tab-button active" data-auth-mode="login">登录</button><button type="button" class="tab-button" data-auth-mode="register">注册香友</button><button type="button" class="tab-button" data-auth-mode="register-creator">创作者入驻</button></div><form id="auth-form"><div class="field"><label for="auth-username">账号</label><input id="auth-username" name="username" autocomplete="username" required minlength="3" maxlength="80"></div><div class="field"><label for="auth-password">密码</label><input id="auth-password" name="password" type="password" autocomplete="current-password" required minlength="8" maxlength="128"></div><div id="auth-message" class="notice" hidden></div><button class="button primary full-width" id="auth-submit" type="submit">登录</button></form><p class="fine-note">香友账号体验香事并保存私人档案；创作者（OPC）在注册时选择入驻，可发布作品与商品。已有账号不能事后升级。</p></dialog>
   <dialog id="detail-dialog" class="modal detail-modal"><button type="button" class="close-dialog" aria-label="关闭">×</button><div id="detail-content"></div></dialog>
   <dialog id="card-dialog" class="modal card-modal"><button type="button" class="close-dialog" aria-label="关闭">×</button><p class="eyebrow">个人香笺</p><h2>给这一份落个名字</h2><div class="field"><label for="card-name">香名</label><input id="card-name" maxlength="30" placeholder="未名"></div><div id="card-preview" class="scent-card"></div><div id="card-save-status" class="notice" role="status" hidden></div><div class="card-actions"><button type="button" class="button primary" id="save-card">保存到我的香笺</button><button type="button" class="button secondary" id="download-card">下载 PNG 香笺</button><button type="button" class="button quiet" id="card-to-studio">回案头继续调整</button><button type="button" class="button quiet" id="card-to-integration">试试空间接入</button></div><p class="fine-note">保存留在本人账号，PNG 可直接下载。香笺保留来源、排除与未验证状态，不包含制作比例或工艺。</p></dialog>
 </body>
